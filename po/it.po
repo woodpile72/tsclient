@@ -1,0 +1,454 @@
+# Terminal Server Client (tsclient)
+# Copyright (C) 2002 Erick Woods <erick@gnomepro.com>.
+# Questo file è distribuito sotto la stessa licenza del pacchetto tsclient.
+# Luigi Calabrese <lui.cal@libero.it>, 2003.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.120\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2003-07-22 19:30-0100\n"
+"Last-Translator: Luigi Calabrese <lui.cal@libero.it>\n"
+"Language-Team: Italiano <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "Connetti a un computer remoto"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "Client Terminal Server"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "Applet Terminal Server Client"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr ""
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 punti"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 punti"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 punti"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 punti"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 punti"
+
+#: src/connect.c:60
+#, fuzzy
+msgid "1400 x 1050 pixels"
+msgstr "800 x 600 punti"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 colori"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "High Color (15 bit)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "High Color (16 bit)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "True Color (24 bit)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "Impostazioni di logon"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "Digitare il nome del computer o sceglierlo dall'elenco a tendina."
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "Compu_ter:"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "Pro_tocollo:"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "Nome _utente:"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "Pass_word:"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "Do_minio:"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "Nome c_lient:"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "File del prot_ocollo:"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "Inserire il nome o l'indirizzo del sistema remoto."
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "Selezionare il protocollo da usare per questa connessione."
+
+#: src/connect.c:441
+#, fuzzy
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr ""
+"Il protocollo RDP è usato per connettersi ai Microsoft Terminal Servers e a "
+"Windows XP sistemi con condivisione del desktop."
+
+#: src/connect.c:448
+#, fuzzy
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr ""
+"Il protocollo RDP è usato per connettersi ai Microsoft Terminal Servers e a "
+"Windows XP sistemi con condivisione del desktop."
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr ""
+"Il protocollo VNC è usato per connettersi a sistemi che condividono il "
+"desktop tramite VNC."
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr "Il protocollo XDMCP usa Xnest per connettersi a server che eseguono X."
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "Il protocollo ICA è usato per connettersi verso server Citrix."
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"Inserire il nome utente per il sistema remoto.\n"
+"Per connessioni VNC, inserire il percorso al file delle password salvato."
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "Inserire la password per il sistema remoto."
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "Inserire il dominio del sistema remoto."
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "Inserire l'hostname locale per questo sistema."
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+"Alcuni protocolli richiedono un file contenente le impostazioni. Se "
+"richiesto, inserire il percorso del file qui."
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "Dimensioni del desktop remoto"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "Usa dimensioni standard per lo schermo"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "Usa le dimensioni standard dello schermo."
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "Usa dimensioni dello schermo specifiche"
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "Usa l'elenco per scegliere le dimensioni dello schermo."
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "Opera in modalità schermo intero"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "Lavora in modalità schermo intero."
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "Usa opzione alternativa (-F) per lo schermo intero"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "Selezionare qui se si usa rdesktop con patch unificate."
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "Colori"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "Usa profondità di colore standard"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "Usa la profondità di colore standard."
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "Usa profondità di colore specifica"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "Usa l'elenco per scegliere la profondità di colore."
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "_Suono sul computer remoto"
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "Suono sul computer remoto"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "Sul computer locale"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "Sul computer remoto"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "Non eseguire"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "_Tastiera"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "Tastiera"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "Solamente a pieno schermo"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"Usa la seguente lingua per la tastiera\n"
+"(codice a 2 caratteri)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Applica le combinazioni di tasti di Windows\n"
+"(per esempio ALT+TAB) (non supportata)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "Esegui un programma"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "Eseguire il seguente programma a connessione avvenuta"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "Nome file e percorso programma"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "Comincia nella seguente cartella"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "Ottimizza le prestazioni"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "Sfondo desktop (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "Mostra contenuto finestra durante il trascinamento (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "Animazione menu e finestre (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "Temi (u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "Abilita cache bitmap"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "Non inviare eventi di moto"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "Abilita le associazioni di tasti del gestore finestre"
+
+#: src/connect.c:921
+#, fuzzy
+msgid "Hide window manager's decorations"
+msgstr "Abilita le associazioni di tasti del gestore finestre"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr ""
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "Opzioni disponibili per ottimizzare le prestazioni"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "_Generale"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "_Schermo"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "_Risorse locali"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "_Programmi"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "Prestazi_oni"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "Selezionare un profilo salvato per attivarlo immediatamente."
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "Co_nnetti"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "Inserire il nome file da salvare come..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "Selezionare un file RDP da aprire..."
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"rdesktop non è stato trovato nel percorso definito.\n"
+"Prego verificare l'installazione di rdesktop."
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"vncviewer o xvncviewer non sono\n"
+" stati trovati nel percorso definito.\n"
+"Prego verificare l'installazione di vnc."
+
+#: src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"Xnest non è stato trovato nel percorso definito.\n"
+"Prego verificare l'installazione di Xnest."
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr ""
+
+#: src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"wfica non è stato trovato nel percorso definito.\n"
+"Prego verificare l'installazione di ICAClient."
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"Generazione fallita.\n"
+"Prego verificare l'installazione."
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "Errore del Terminal Server Client"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "Si è verificato un errore."
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""
+
+#~ msgid "Prof_ile Launcher:"
+#~ msgstr "Gestione Prof_ili:"
+
+#~ msgid "_More"
+#~ msgstr "_Espandi"
+
+#~ msgid "Connection Profile"
+#~ msgstr "Profilo di connessione"
+
+#~ msgid "_Less"
+#~ msgstr "_Compatta"

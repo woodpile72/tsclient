@@ -1,0 +1,487 @@
+# Terminal Server Client (tsclient)
+# Copyright (C) 2002 Erick Woods
+# This file is distributed under the same license as the tsclient package.
+# Erick Woods <erick@gnomepro.com>, 2002.
+# BÁRTHÁZI András <andras@barthazi.hu>, 2003.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-21 02:12+0200\n"
+"PO-Revision-Date: 2007-04-21 02:24+0100\n"
+"Last-Translator: Kelemen Gábor <kelemeng@gnome.hu>\n"
+"Language-Team: Hungarian <gnome@gnome.hu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "Csatlakozás a távoli géphez"
+
+#: ../tsclient.desktop.in.h:2
+#: ../src/connect.c:242
+#: ../src/support.c:379
+#: ../src/support.c:1018
+msgid "Terminal Server Client"
+msgstr "Távoli asztali kapcsolat"
+
+#: ../applet/applet.c:45
+#: ../applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "Távoli asztali kapcsolat kisalkalmazás"
+
+#: ../applet/applet.c:234
+msgid "New Connection..."
+msgstr "Új kapcsolat..."
+
+#: ../src/connect.c:54
+msgid "640 x 480 pixels"
+msgstr "640 x 480 képpont"
+
+#: ../src/connect.c:55
+msgid "800 x 600 pixels"
+msgstr "800 x 600 képpont"
+
+#: ../src/connect.c:56
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 képpont"
+
+#: ../src/connect.c:57
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 képpont"
+
+#: ../src/connect.c:58
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 képpont"
+
+#: ../src/connect.c:59
+msgid "1400 x 1050 pixels"
+msgstr "1400 x 1050 képpont"
+
+#: ../src/connect.c:63
+msgid "256 Colors"
+msgstr "256 szín"
+
+#: ../src/connect.c:64
+msgid "High Color (15 bit)"
+msgstr "15 bites színmélység"
+
+#: ../src/connect.c:65
+msgid "High Color (16 bit)"
+msgstr "16 bites színmélység"
+
+#: ../src/connect.c:66
+msgid "True Color (24 bit)"
+msgstr "24 bites színmélység"
+
+#: ../src/connect.c:316
+#: ../src/connect.c:317
+msgid "Logon Settings"
+msgstr "Bejelentkezés beállításai"
+
+#: ../src/connect.c:324
+msgid "Type the name of the computer or choose a computer from the drop-down list."
+msgstr "Adja meg a kiszolgáló nevét vagy válasszon egyet a listából."
+
+#: ../src/connect.c:345
+msgid "Compu_ter:"
+msgstr "_Számítógép:"
+
+#: ../src/connect.c:352
+msgid "Pro_tocol:"
+msgstr "Protok_oll:"
+
+#: ../src/connect.c:359
+msgid "_User Name:"
+msgstr "_Felhasználónév:"
+
+#: ../src/connect.c:366
+msgid "Pass_word:"
+msgstr "_Jelszó:"
+
+#: ../src/connect.c:373
+msgid "Do_main:"
+msgstr "_Tartomány:"
+
+#: ../src/connect.c:380
+msgid "C_lient Hostname:"
+msgstr "_Kliens gépneve:"
+
+#: ../src/connect.c:387
+msgid "Prot_ocol File:"
+msgstr "Protok_ollfájl:"
+
+#: ../src/connect.c:404
+msgid "Enter the name or address of the remote system."
+msgstr "Adja meg a távoli gép nevét vagy címét."
+
+#: ../src/connect.c:410
+msgid "Select the protocol to use for this connection."
+msgstr "Válassza ki a protokollt ehhez a kapcsolathoz."
+
+#: ../src/connect.c:416
+msgid "RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr "Az RDP protokoll segítségével Microsoft Windows 2000 és régebbi rendszerekhez lehet csatlakozni."
+
+#: ../src/connect.c:423
+msgid "RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr "Az RDPv5 protokoll segítségével Microsoft Windows XP és újabb rendszerekhez lehet csatlakozni."
+
+#: ../src/connect.c:430
+msgid "VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr "A VNC protokoll a VNC segítségével megosztott asztalhoz csatlakozásra használatos."
+
+#: ../src/connect.c:441
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr "Az XDMCP protokoll Xnestet használ az X-et futtató kiszolgálókhoz történő csatlakozáshoz."
+
+#: ../src/connect.c:448
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "Az ICA protokoll a Citrix kiszolgálókhoz történő csatlakozáshoz használatos."
+
+#: ../src/connect.c:463
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"Írja be a felhasználónevet a távoli géphez.\n"
+"A VNC-hez az elmentett VNC jelszóállomány útvonalát írja be."
+
+#: ../src/connect.c:471
+msgid "Enter the password for the remote system."
+msgstr "Írja be jelszavát a távoli rendszerhez!"
+
+#: ../src/connect.c:478
+msgid "Enter the domain for the remote system."
+msgstr "Írja be a tartományt a távoli rendszerhez."
+
+#: ../src/connect.c:485
+msgid "Enter the local hostname for this system."
+msgstr "Írja be a helyi gépnevet ehhez a rendszerhez."
+
+#: ../src/connect.c:495
+msgid "Some protocols require a file containing settings. If required, enter the path to the file here."
+msgstr "Néhány protokollhoz szükséges egy, a beállításokat tartalmazó fájl. Ha szükséges, itt megadhatja a fájl elérési útvonalát."
+
+#: ../src/connect.c:511
+#: ../src/connect.c:512
+msgid "Remote Desktop Size"
+msgstr "Távoli asztal mérete"
+
+#: ../src/connect.c:527
+msgid "Use default screen size"
+msgstr "Alapértelmezett képernyőméret"
+
+#: ../src/connect.c:530
+msgid "Use the default screen size."
+msgstr "Az alapértelmezett képernyőméret használata."
+
+#: ../src/connect.c:535
+msgid "Use specified screen size"
+msgstr "Az itt megadott képméret használata:"
+
+#: ../src/connect.c:538
+msgid "Use the list to choose the screen size to use."
+msgstr "Válassza ki a listából a használandó képméretet!"
+
+#: ../src/connect.c:548
+msgid "Operate in full screen mode"
+msgstr "Teljes képernyős üzemmód"
+
+#: ../src/connect.c:551
+msgid "Work in full screen mode."
+msgstr "Munka teljes képernyős üzemmódban."
+
+#: ../src/connect.c:559
+msgid "Use alternate full screen switch (-F)"
+msgstr "A (-F) kapcsoló használata teljes képernyőhöz"
+
+#: ../src/connect.c:562
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "Akkor állítsa be, ha javított rdesktopot használ."
+
+#: ../src/connect.c:570
+#: ../src/connect.c:571
+msgid "Colors"
+msgstr "Színek"
+
+#: ../src/connect.c:586
+msgid "Use default color depth"
+msgstr "Alapértelmezett színmélység"
+
+#: ../src/connect.c:589
+msgid "Use the default color depth."
+msgstr "Az alapértelmezett színmélység használata."
+
+#: ../src/connect.c:594
+msgid "Use specified color depth"
+msgstr "A megadott színmélység használata:"
+
+#: ../src/connect.c:597
+msgid "Use the list to choose the color depth to use."
+msgstr "Válassza ki a listából a használni kívánt színmélységet!"
+
+#: ../src/connect.c:617
+msgid "Remote Computer _Sound"
+msgstr "_Hang a távoli gépről"
+
+#: ../src/connect.c:618
+msgid "Remote Computer Sound"
+msgstr "Hang a távoli gépről"
+
+#: ../src/connect.c:637
+#: ../src/connect.c:640
+#: ../src/connect.c:681
+msgid "On the local computer"
+msgstr "A helyi számítógépen"
+
+#: ../src/connect.c:645
+#: ../src/connect.c:648
+#: ../src/connect.c:684
+msgid "On the remote computer"
+msgstr "A távoli számítógépen"
+
+#: ../src/connect.c:652
+#: ../src/connect.c:655
+msgid "Do not play"
+msgstr "Ne játssza le"
+
+#: ../src/connect.c:665
+msgid "_Keyboard"
+msgstr "_Billentyűzet"
+
+#: ../src/connect.c:666
+msgid "Keyboard"
+msgstr "Billentyűzet"
+
+#: ../src/connect.c:687
+msgid "In full screen mode only"
+msgstr "Csak teljes képernyőn"
+
+#: ../src/connect.c:693
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"A következő billentyűzetkiosztás használata\n"
+"(2 betűs kód)"
+
+#: ../src/connect.c:718
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Windows billentyűkombinációk használata\n"
+"(például: ALT+TAB) (nem támogatott)"
+
+#: ../src/connect.c:738
+#: ../src/connect.c:739
+msgid "Start a Program"
+msgstr "Program indítása"
+
+#: ../src/connect.c:752
+msgid "Start the following program on connection"
+msgstr "A következő program elindítása csatlakozáskor"
+
+#: ../src/connect.c:758
+msgid "Program path and filename"
+msgstr "Elérési út és fájlnév:"
+
+#: ../src/connect.c:769
+msgid "Start in the following folder"
+msgstr "Indítás a következő mappában:"
+
+#: ../src/connect.c:788
+#: ../src/connect.c:789
+msgid "Optimize Performance"
+msgstr "Sebesség optimalizálása"
+
+#: ../src/connect.c:807
+msgid "Desktop background (u)"
+msgstr "Asztali háttér (nem működik)"
+
+#: ../src/connect.c:810
+msgid "Show content of window while dragging (u)"
+msgstr "Ablak tartalmának mutatása húzása közben (nm)"
+
+#: ../src/connect.c:813
+msgid "Menu and window animation (u)"
+msgstr "Menü és ablak animációk (nm)"
+
+#: ../src/connect.c:816
+msgid "Themes (u)"
+msgstr "Témák (nm)"
+
+#: ../src/connect.c:819
+msgid "Enable bitmap caching"
+msgstr "Bitmap gyorsítótár engedélyezése"
+
+#: ../src/connect.c:822
+msgid "Do not send motion events"
+msgstr "Mozgási események tiltása"
+
+#: ../src/connect.c:825
+msgid "Enable window manager's key bindings"
+msgstr "Ablakkezelő billentyűtársításainak engedélyezése"
+
+#: ../src/connect.c:828
+msgid "Hide window manager's decorations"
+msgstr "Ablakkezelő dekorációinak elrejtése"
+
+#: ../src/connect.c:831
+msgid "Attach to console"
+msgstr "Csatlakozás konzolhoz"
+
+#: ../src/connect.c:835
+msgid "Options available for optimizing performance"
+msgstr "Gyorsítási lehetőségek"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: ../src/connect.c:847
+msgid "_General"
+msgstr "Á_ltalános"
+
+#: ../src/connect.c:851
+msgid "_Display"
+msgstr "_Képernyő"
+
+#: ../src/connect.c:855
+msgid "Local _Resources"
+msgstr "_Helyi erőforrások"
+
+#: ../src/connect.c:859
+msgid "_Programs"
+msgstr "_Programok"
+
+#: ../src/connect.c:863
+msgid "Perf_ormance"
+msgstr "_Sebesség"
+
+#: ../src/connect.c:885
+msgid "Select a saved profile to launch it immediately."
+msgstr "Válasszon ki egy elmentett profilt az azonnali csatlakozáshoz."
+
+#: ../src/connect.c:889
+msgid "Quick Connect"
+msgstr "Gyors csatlakozás"
+
+#: ../src/connect.c:937
+msgid "Co_nnect"
+msgstr "_Csatlakozás"
+
+#: ../src/connect.c:1331
+msgid "Input a filename to save as..."
+msgstr "Írja be az állomány nevét mentéshez..."
+
+#: ../src/connect.c:1339
+#: ../src/connect.c:1409
+msgid "RDP Files"
+msgstr "RDP fájlok"
+
+#: ../src/connect.c:1345
+msgid "All Files"
+msgstr "Minden fájl"
+
+#: ../src/connect.c:1401
+msgid "Choose a RDP file to open..."
+msgstr "Válasszon ki egy megnyitandó RDP fájlt..."
+
+#: ../src/connect.c:1451
+msgid "Choose an RDP file to open..."
+msgstr "Válasszon ki megnyitásra egy RDP fájlt..."
+
+#: ../src/support.c:372
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"Az rdesktop nem található az elérési úton.\n"
+"Kérem ellenőrizze, hogy az rdesktop telepítve van-e!"
+
+#: ../src/support.c:544
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+" a vncviewer vagy az xvncviewer \n"
+"nem található az elérési útvonalon.\n"
+"Kérem ellenőrizze, hogy a vnc telepítve van-e!"
+
+#: ../src/support.c:653
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"Az Xnest nem található az elérési útvonalon.\n"
+"Kérem ellenőrizze, hogy az Xnest telepítve van-e!"
+
+#: ../src/support.c:662
+msgid "Could not find a free X display."
+msgstr "Nem található szabad X megjelenítő."
+
+#: ../src/support.c:722
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"A wfica nem található az elérési útvonalon.\n"
+"Kérem ellenőrizze, hogy az ICAClient telepítve van-e!"
+
+#: ../src/support.c:848
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"Hiba a beállított program indításakor.\n"
+"Kérem ellenőrizze a beállításait! "
+
+#. create the widgets
+#: ../src/support.c:919
+#: ../src/support.c:982
+msgid "Terminal Server Client Error"
+msgstr "Távoli asztali kapcsolat hiba"
+
+#: ../src/support.c:928
+#: ../src/support.c:934
+#: ../src/support.c:988
+#: ../src/support.c:994
+msgid "An error has occurred."
+msgstr "Hiba történt."
+
+#. Create the expander
+#: ../src/support.c:947
+msgid "Details"
+msgstr "Részletek"
+
+#: ../src/support.c:1035
+msgid ""
+"Terminal Server Client is licensed under the \n"
+"GNU General Public License (GPL)\n"
+"<http://www.gnu.org/licenses/gpl.html>"
+msgstr ""
+"A Távoli asztali kapcsolat a\n"
+"GNU General Public License (GPL)\n"
+"<http://www.gnu.org/licenses/gpl.html>\n"
+"feltételei szerint terjeszthető."
+
+#: ../src/support.c:1039
+msgid ""
+"Terminal Server Client is a frontend for \n"
+"rdesktop, vncviewer, wfica and xnest."
+msgstr ""
+"A Távoli asztali kapcsolat egy előtét a\n"
+"rdesktop, vncviewer, wfica és xnest programokhoz."
+
+#. Translators comment: put your own name here to appear in the about dialog.
+#: ../src/support.c:1043
+msgid "translator-credits"
+msgstr "Bártházi András <andras@barthazi.hu>Kelemen Gábor <kelemeng@gnome.hu>"
+

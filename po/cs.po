@@ -1,0 +1,439 @@
+# Czech translations for tsclient package
+# Copyright (C) 2005 THE tsclient'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the tsclient package.
+# Lucas Lommer <drom@kdyne.net>, 2005.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: tsclient 0.140\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2005-11-02 14:11+0100\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "Připojit ke vzdálenénu počítači"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "Terminal Server Klient"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "Applet pro Terminal Server Klienta"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr "Nové spojení..."
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 pixelů"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 pixelů"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 pixelů"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 pixelů"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 pixelů"
+
+#: src/connect.c:60
+msgid "1400 x 1050 pixels"
+msgstr "1400 x 1050 pixelů"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 barev"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "High Color (15 bitů)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "High Color (16 bitů)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "True Color (24 bitů)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "Nastavení přihlášení"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "Napište jméno počítače nebo vyberte počítač z nabídky."
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "Počí_tač:"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "Pro_tokol:"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "_Uživatelské jméno:"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "_Heslo:"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "Do_ména:"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "Jméno hostite_le:"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "S_oubor protokolu:"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "Zadejte jméno nebo adresu vzdáleného systému."
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "Vyberte protokol, který má být použit při tomto spojení."
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr ""
+"Protokol RDP je používán pro připojení k Microsoft Windows 2000 a starším "
+"systémům."
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr ""
+"Protokol RDPv5 je používán pro připojení k Microsoft Windows XP a novějším "
+"systémům."
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr ""
+"VNC protocol je používán pro připojení k systémům sdílejícím plochu "
+"prostřednictvím VNC."
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr ""
+"XDMCP protokol využívá Xnest pro připojení k systémům s běžícím X serverem."
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "ICA protokol je používán pro připojení k serverům Citrix."
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"Vložte uživatelské jméno pro vzdálený systém.\n"
+"Pro VNC vložte cestu k uloženému souboru hesel VNC."
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "Vložte heslo pro vzdálený systém."
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "Vložte doménu vzdáleného systému."
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "Vložte jméno místního systému."
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+"Některé protokoly vyžadují soubor s nastavením. Pokud je potřeba, zadejtesem "
+"cestu k souboru."
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "Rozlišení vzdálené plochy"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "Použít výchozí rozlišení"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "Použít výchozí rozlišení obrazovky."
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "Použít vlastní rozlišení"
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "Vyberte rozlišení ze seznamu níže."
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "Přepnout na celou obrazovku"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "Přepnout vzdálenou plochu na celou obrazovku."
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "Použít alternativní přepínač pro celou obrazovku (-F)"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "Zvolte, pokud používáte rdesktop a normalizované patche."
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "Barvy"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "Použít výchozí barevnou hloubku"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "Použít výchozí barevnou hloubku."
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "Použít vlastní barevnou hloubku"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "Vyberte barevnou hloubku ze seznamu níže."
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "Ozvučení vzdáleného _systému"
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "Ozvučení vzdáleného systému"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "Na místním počítači"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "Na vzdáleném počítači"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "Bez zvuku"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "_Klávesnice"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "Klávesnice"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "Pouze při zobrazení na celou obrazovku"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"Použít následující jazyk klávesnice\n"
+"(dvouznakový kód)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Aplikovat klávesové zkratky Windows\n"
+"(například ALT+TAB) (nepodporováno)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "Spustit program"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "Při připojení spustit následující program"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "Cesta k programu a jméno souboru"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "Spustit v následující adresáři"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "Optimalizace výkonu"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "Pozadí plochy (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "Zobrazovat obsah okna při přetahování (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "Menu a animace okna (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "Témata (u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "Povolit cachovani bitmap"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "Pouze prohlížet"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "Povolit ovládání klávesami podle správce oken"
+
+#: src/connect.c:921
+msgid "Hide window manager's decorations"
+msgstr "Skrýt dekorace správce oken"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr "Propojit do konzole"
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "Nastavení pro optimalizaci výkonu"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "_Hlavní"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "_Display"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "Místní zd_roje"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "_Programy"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "Výk_on"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "Spustit zvolený profil z uložených."
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "_Připojit"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "Jméno souboru pro uložení..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "Zvolte RDP soubor k otevření..."
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"Cesta k rdesktop nebyla nalezena.\n"
+"Zkontrolujte prosím instalaci rdesktop."
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"Cesta k vncviewer nebo\n"
+" xvncviewer nebyla nalezena.\n"
+"Zkontrolujte prosím instalaci vnc."
+
+#: src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"Cesta k Xnest nebyla nalezena.\n"
+"Zkontrolujte prosím instalaci Xnest."
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr "Nelze nalézt volný X display."
+
+#: src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"Cesta k wfica nebyla nalezena.\n"
+"Zkontrolujte prosím instalaci ICAClient."
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"Protokol nelze použít.\n"
+"Zkontrolujte prosím instalaci."
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "Chyba Terminal Server Klienta"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "Došlo k chybě."
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""

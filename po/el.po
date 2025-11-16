@@ -1,0 +1,483 @@
+# translation of gr.po to hellenic
+# Terminal Server Client (tsclient)
+# Copyright (C) 2002 Erick Woods
+# This file is distributed under the same license as the tsclient package.
+# Erick Woods <erick@gnomepro.com>, 2002.
+# Nick Apostolakis <nickapos@agriroot.aua.gr>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tsclient\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2006-03-26 13:30+0200\n"
+"Last-Translator: christosvas <christosvas@in.gr>\n"
+"Language-Team: hellenic <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "Σύνδεση σε ένα απομακρυσμένο υπολογιστή"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "Πελάτης Εξυπηρέτη Τερματικού"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "Εφαρμογίδιο Πελάτη Εξυπηρέτη Τερματικού"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr "Νέα Σύνδεση..."
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 pixels"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 pixels"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 pixels"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 pixels"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 pixels"
+
+#: src/connect.c:60
+msgid "1400 x 1050 pixels"
+msgstr "1400 x 1050 pixels"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 Χρώματα"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "High Color (15 bit)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "High Color (16 bit)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "True Color (24 bit)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "Ρυθμίσεις Εισαγωγής στο σύστημα"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr ""
+"Πληκτρολογείστε το όνομα του υπολογιστή ή επιλέξτε ένα υπολογιστή απο την "
+"λίστα."
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "Υπολογιστ_ής"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "Πρω_τόκολλο:"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "_Όνομα χρήστη"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "Συνθηματικό"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "Περιοχή"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "Όνομα Π_ελάτη:"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "Αρχείο Πρωτ_οκόλου:"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "Εισάγετε το όνομα και τη διεύθυνση του απομακρυσμένου υπολογιστή."
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "Επιλέξτε το πρωτόκολλο για αυτή τη σύνδεση."
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr ""
+"Το πρωτόκολλο RDP χρησιμοποιείται για τη σύνδεση με τα Windows 2000 και "
+"παλαιότερα."
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr ""
+"Το πρωτόκολλο RDPv5 χρησιμοποιείται για τη σύνδεση με Windows XP και νεότερα."
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr ""
+"Το πρωτόκολλο VNC χρησιμοποιείται για σύνδεση επιφάνειας εργασίας με τη "
+"χρήση VNC."
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr ""
+"Το πρωτόκολλο XDMCP χρησιμοποιεί το Xnest για σύνδεση με διακομιστές που "
+"εκτελούν X."
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "Το πρωτόκολλο χρησιμοποιείται για σύνδεση με διακομιστές Citrix."
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"Εισάγετε το όνομα χρήστη για το απομακρυσμένο σύστημα.\n"
+"Για το VNC, εισάγετε τη διαδρομή στον αποθηκευμένο vnc κωδικό."
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "Εισάγετε τον κωδικό πρόσβασης για το απομακρυσμένο σύστημα."
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "Εισάγετε τον τομέα για το απομακρυσμένο σύστημα."
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "Εισάγετε το τοπικό όνομα αυτού του συστήματος."
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+"Μερικά πρωτόκολλα απαιτούν ένα αρχείο με ρυθμίσεις. Αν απαιτείται, εισάγετε "
+"τη διαδρομή για το αχείο εδώ."
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "Μέγεθος απομακρυσμένης επιφάνειας εργασίας"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "Χρήση του εξ'ορισμού μέγεθους οθόνης"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "Χρήση του εξ'ορισμού μέγεθους οθόνης"
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "Χρήση το καθορισμένου μέγεθους οθόνης"
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr ""
+"Χρησιμοποιήστε τη λίστα για να επιλέξετε το μέγεθος οθόνης που θα "
+"χρησιμοποιηθεί."
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "Λειτουργία σε πλήρη οθόνη"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "Λειτουργία σε πλήρη οθόνη"
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "Χρήση του εναλλακτικού διακόπτη πλήρους οθόνης (-F) "
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "Επελέξτε το έαν χρησιμοποιείτε το rdesktop με τα ενοποιημένα patches"
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "Χρώματα"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "Χρήση του εξ'ορισμού βάθους χρώματος"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "Χρήση του εξ'ορισμού βάθους χρώματος"
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "Χρήση του καθορισμένου βάθους χρώματος"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr ""
+"Χρησιμοποιείστε την πλάγια μπάρα για να επιλέξετε το βάθος χρώματος που θα "
+"χρησιμοποιείσετε."
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "Ήχοι απομακρυσμένου _Υπολογιστή"
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "Ήχοι απομακρυσμένου Υπολογιστή"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "Στον τοπικό υπολογιστή"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "Στον απομακρυσμένο υπολογιστή"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "Μη αναπαραγωγή"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "_Πληκτρολόγιο"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "Πληκτρολόγιο"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "Μόνο σε λειτουργιά πλήρους οθόνης"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"Χρήση των παρακάτω γλωσσών πληκτρολογίου\n"
+"(κωδικός 2 χαρακτήρων)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Εφαρμογή των συνδιασμών πλήκτρων του παραθύρου\n"
+"(για παράδειγμα ALT+TAB) (δεν υποστηρίζεται)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "Εκκίνηση ενός προγράμματος"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "Εκκίνηση του παρακάτω προγράμματος μόλις γίνει η σύνδεση"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "Τοποθεσία και όνομα προγράμματος"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "Ξεκίνησε στον παρακάτω κατάλογο"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "Βελτιστοποίηση απόδοσης"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "Φόντο επιφάνειας εργασίας (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr ""
+"Εμφάνιση των περιεχομένων του παραθύρου κατα τη διάρκεια του τραβήγματος (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "Animation παραθύρου και καταλόγου επιλογών (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "Θέματα (u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "Ενεργοποίηση του bitmap caching"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "Μη στέλνεις γεγονότα κίνησης"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "Ενεργοποίηση των key bindings του διαχειριστή παραθύρων"
+
+#: src/connect.c:921
+msgid "Hide window manager's decorations"
+msgstr "Απόκρυψη των διακοσμητικών του διαχειριστή παραθύρων"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr "Προσάρτηση στην κονσόλα"
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "Διαθέσιμες επιλογές για την βελτιστοποίηση της απόδοσης"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "_Γενικά"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "_Οθόνη"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "Τοπικοί _Πόροι"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "_Προγράματα"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "Απόδοση"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "Επιλέξτε ένα αποθηκευμένο προφίλ για άμεση εκκίνηση."
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "Σύνδεση"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "Εσαγωγή όνοματος αρχείου προς αποθήκευση..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "Επιλέξτε ένα RDP αρχείο για άνοιγμα"
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"Το rdesktop δεν βρέθηκε στο path σας.\n"
+"Παρακαλώ ελέγξτετην εγκατάσταση του rdesktop σας."
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"Το vnc ή to xvncviewer\n"
+"δε βρέθηκε στο path σας.\n"
+"Παρακαλώ ελέγξτε την εγκατάσταση του vnc."
+
+#: src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"Το Xnest δεν βρέθηκε στο path σας.\n"
+"Παρακαλώ ελέγξτετην εγκατάσταση του Xnest σας."
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr "Δε βρέθηκε μια ελεύθερη Χ οθόνη."
+
+#: src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"Tο wfica δεν βρέθηκε στο path σας.\n"
+"Παρακαλώ ελέγξτετην εγκατάσταση του ICAClient σας."
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"Failed to spawn.\n"
+"Please verify your installation."
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "Terminal Server Client Error"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "Ένα λάθος έχει προκύψει."
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""
+
+#~ msgid "RDP Pic_ker:"
+#~ msgstr "RDP επιλογέας"
+
+#~ msgid "_More"
+#~ msgstr "_Περισσότερα"
+
+#~ msgid "_Less"
+#~ msgstr "_Λιγότερα"
+
+#~ msgid "Connection Settings"
+#~ msgstr "Ρυθμίσεις σύνδεσης"
+
+#~ msgid "Save the current settings or open saved connection"
+#~ msgstr ""
+#~ "Αποθηκεύστε τις τρέχουσες ρυθμίσεις X? ανοίξτε μια X?δη αποθηκευμένη "
+#~ "σύνδεση"
+
+#~ msgid "Small"
+#~ msgstr "Μικρό"
+
+#~ msgid "Large"
+#~ msgstr "Μεγάλο"
+
+#~ msgid "Less"
+#~ msgstr "Λιγότερα"
+
+#~ msgid "More"
+#~ msgstr "Περισσότερα"
+
+#~ msgid "Bring to this computer"
+#~ msgstr "Μετέφερε τον τοπικό υπολογιστX?"
+
+#~ msgid "Leave at remote computer"
+#~ msgstr "Άφησε στον απομακρυσμένο υπολογιστX?"

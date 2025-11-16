@@ -1,0 +1,440 @@
+# Swedish translation for tsclient
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the tsclient package.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tsclient 0.148\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-12 10:35+0000\n"
+"PO-Revision-Date: 2007-02-19 10:39+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "Anslut till en fjärrdator"
+
+#: ../tsclient.desktop.in.h:2
+#: ../src/connect.c:244
+#: ../src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "Terminalserverklient"
+
+#: ../applet/applet.c:45
+#: ../applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "Panelprogram för terminalserverklient"
+
+#: ../applet/applet.c:234
+msgid "New Connection..."
+msgstr "Ny anslutning..."
+
+#: ../src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 bildpunkter"
+
+#: ../src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 bildpunkter"
+
+#: ../src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 bildpunkter"
+
+#: ../src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 bildpunkter"
+
+#: ../src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 bildpunkter"
+
+#: ../src/connect.c:60
+msgid "1400 x 1050 pixels"
+msgstr "1400 x 1050 bildpunkter"
+
+#: ../src/connect.c:64
+msgid "256 Colors"
+msgstr "256 färger"
+
+#: ../src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "\"High Color\" (15 bitar)"
+
+#: ../src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "\"High Color\" (16 bitar)"
+
+#: ../src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "\"True Color\" (24 bitar)"
+
+#: ../src/connect.c:325
+#: ../src/connect.c:327
+msgid "Logon Settings"
+msgstr "Inloggningsinställningar"
+
+#: ../src/connect.c:335
+msgid "Type the name of the computer or choose a computer from the drop-down list."
+msgstr "Ange namnet på datorn eller välj en dator från rullgardinslistan."
+
+#: ../src/connect.c:359
+msgid "Compu_ter:"
+msgstr "Da_tor:"
+
+#: ../src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "Pro_tokoll:"
+
+#: ../src/connect.c:375
+msgid "_User Name:"
+msgstr "_Användarnamn:"
+
+#: ../src/connect.c:383
+msgid "Pass_word:"
+msgstr "Löseno_rd:"
+
+#: ../src/connect.c:391
+msgid "Do_main:"
+msgstr "Do_män:"
+
+#: ../src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "K_lientvärdnamn:"
+
+#: ../src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "Prot_okollfil:"
+
+#: ../src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "Ange namnet eller adressen till fjärrsystemet."
+
+#: ../src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "Välj det protokoll som ska användas för denna anslutning."
+
+#: ../src/connect.c:441
+msgid "RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr "RDP-protokollet används för att ansluta till system som kör Microsoft Windows 2000 och tidigare."
+
+#: ../src/connect.c:448
+msgid "RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr "RDPv5-protokollet används för att ansluta till system som kör Microsoft Windows XP och senare."
+
+#: ../src/connect.c:455
+msgid "VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr "VNC-protokollet används för att ansluta till system som delar ut skrivbordet genom att använda VNC."
+
+#: ../src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr "XDMCP-protokollet använder Xnest för att ansluta till servrar som kör X."
+
+#: ../src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "ICA-protokollet används för att ansluta till Citrix-servrar."
+
+#: ../src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"Ange användarnamnet för fjärrsystemet.\n"
+"För VNC, ange sökvägen till din sparade lösenordsfil."
+
+#: ../src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "Ange lösenordet för fjärrsystemet."
+
+#: ../src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "Ange domänen för fjärrsystemet."
+
+#: ../src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "Ange det lokala värdnamnet för detta system."
+
+#: ../src/connect.c:526
+msgid "Some protocols require a file containing settings. If required, enter the path to the file here."
+msgstr "Vissa protokoll kräver en fil innehållandes inställningar. Om den krävs, ange sökvägen till filen här."
+
+#: ../src/connect.c:545
+#: ../src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "Storlek på fjärrskrivbord"
+
+#: ../src/connect.c:565
+msgid "Use default screen size"
+msgstr "Använd standardskärmstorlek"
+
+#: ../src/connect.c:569
+msgid "Use the default screen size."
+msgstr "Använd standardskärmstorleken."
+
+#: ../src/connect.c:574
+msgid "Use specified screen size"
+msgstr "Använd angiven skärmstorlek"
+
+#: ../src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "Använd listan för att välja önskad skärmstorlek."
+
+#: ../src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "Arbeta i helskärmsläge"
+
+#: ../src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "Arbeta i helskärmsläge."
+
+#: ../src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "Använd alternativ helskärmsväxlare (-F)"
+
+#: ../src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "Kryssa denna om du använder rdesktop med enhetliga programfixar."
+
+#: ../src/connect.c:616
+#: ../src/connect.c:618
+msgid "Colors"
+msgstr "Färger"
+
+#: ../src/connect.c:636
+msgid "Use default color depth"
+msgstr "Använd standardfärgdjup"
+
+#: ../src/connect.c:640
+msgid "Use the default color depth."
+msgstr "Använd standardfärgdjupet."
+
+#: ../src/connect.c:645
+msgid "Use specified color depth"
+msgstr "Använd angivet färgdjup"
+
+#: ../src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "Använd listan för att välja önskat färgdjup."
+
+#: ../src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "Ljud på _fjärrdator"
+
+#: ../src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "Ljud på fjärrdator"
+
+#: ../src/connect.c:697
+#: ../src/connect.c:701
+#: ../src/connect.c:748
+msgid "On the local computer"
+msgstr "På den lokala datorn"
+
+#: ../src/connect.c:706
+#: ../src/connect.c:710
+#: ../src/connect.c:751
+msgid "On the remote computer"
+msgstr "På fjärrdatorn"
+
+#: ../src/connect.c:714
+#: ../src/connect.c:718
+msgid "Do not play"
+msgstr "Inget ljud"
+
+#: ../src/connect.c:729
+msgid "_Keyboard"
+msgstr "_Tangentbord"
+
+#: ../src/connect.c:731
+msgid "Keyboard"
+msgstr "Tangentbord"
+
+#: ../src/connect.c:754
+msgid "In full screen mode only"
+msgstr "Endast i helskärmsläge"
+
+#: ../src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"Använd följande tangentbordsspråk\n"
+"(2-teckenskod)"
+
+#: ../src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Verkställ Windows-tangentkombinationer\n"
+"(till exempel ALT+TAB) (stöds inte)"
+
+#: ../src/connect.c:811
+#: ../src/connect.c:813
+msgid "Start a Program"
+msgstr "Starta ett program"
+
+#: ../src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "Starta följande program vid anslutning"
+
+#: ../src/connect.c:835
+msgid "Program path and filename"
+msgstr "Sökväg och filnamn till program"
+
+#: ../src/connect.c:848
+msgid "Start in the following folder"
+msgstr "Starta i följande mapp"
+
+#: ../src/connect.c:870
+#: ../src/connect.c:872
+msgid "Optimize Performance"
+msgstr "Optimera prestanda"
+
+#: ../src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "Skrivbordsbakgrund (u)"
+
+#: ../src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "Visa fönsterinnehåll när det flyttas (u)"
+
+#: ../src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "Meny- och fönsteranimering (u)"
+
+#: ../src/connect.c:905
+msgid "Themes (u)"
+msgstr "Teman (u)"
+
+#: ../src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "Aktivera mellanlagring av bilder"
+
+#: ../src/connect.c:913
+msgid "Do not send motion events"
+msgstr "Skicka inte rörelsehändelser"
+
+#: ../src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "Aktivera fönsterhanterarens tangentbindningar"
+
+#: ../src/connect.c:921
+msgid "Hide window manager's decorations"
+msgstr "Dölj fönsterhanterarens dekorationer"
+
+#: ../src/connect.c:925
+msgid "Attach to console"
+msgstr "Fäst vid konsoll"
+
+#: ../src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "Alternativ tillgängliga för optimering av prestanda"
+
+#.
+#: ../src/connect.c:943
+msgid "_General"
+msgstr "_Allmänt"
+
+#: ../src/connect.c:948
+msgid "_Display"
+msgstr "_Visning"
+
+#: ../src/connect.c:953
+msgid "Local _Resources"
+msgstr "Lokala _resurser"
+
+#: ../src/connect.c:958
+msgid "_Programs"
+msgstr "_Program"
+
+#: ../src/connect.c:963
+msgid "Perf_ormance"
+msgstr "Pre_standa"
+
+#: ../src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "Välj en sparad profil att starta direkt."
+
+#: ../src/connect.c:1047
+msgid "Co_nnect"
+msgstr "A_nslut"
+
+#: ../src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "Mata in ett filnamn att spara som..."
+
+#: ../src/connect.c:1500
+#: ../src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "Välj en RDP-fil att öppna..."
+
+#: ../src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"rdesktop hittades inte i din sökväg.\n"
+"Kontrollera din installation av rdesktop."
+
+#: ../src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"vncviewer eller xvncviewer hittades\n"
+" inte i dina sökvägar.\n"
+"Kontrollera din installation av vnc."
+
+#: ../src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"Xnest hittades inte i dina sökvägar.\n"
+"Kontrollera din installation av Xnest."
+
+#: ../src/support.c:651
+msgid "Could not find a free X display."
+msgstr "Kunde inte hitta en ledig X-display."
+
+#: ../src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"wfica hittades inte i dina sökvägar.\n"
+"Kontrollera din installation av ICAClient."
+
+#: ../src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"Misslyckades med att starta process.\n"
+"Kontrollera din installation."
+
+#: ../src/support.c:908
+#: ../src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "Terminalserverklientfel"
+
+#: ../src/support.c:917
+#: ../src/support.c:923
+#: ../src/support.c:977
+#: ../src/support.c:983
+msgid "An error has occurred."
+msgstr "Ett fel har inträffat."
+
+#: ../src/support.c:936
+msgid "Details"
+msgstr "Detaljer"
+
+
+ 	  	 

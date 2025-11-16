@@ -1,0 +1,66 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH TSCLIENT 1 "November 8, 2003"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+tsclient
+.SH SYNOPSIS
+.B tsclient [OPTION]... FILE
+.br
+.SH DESCRIPTION
+This manual page documents briefly describes the
+.B tsclient
+command.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
+.\" respectively.
+\fBtsclient\fP is a GNOME 2 program for remotely accessing Microsoft Windows
+NT/2000 Terminal Services and XP Remote Desktop Sharing as implemented by the
+Remote Desktop Protocol (RDP). Using the rdesktop program as a backend,
+tsclient allows users to access and view their desktops as stored on remote
+Windows NT/2000/XP servers.  It also supports connections using other remote
+desktop tools such as: vnc, Xnest and the Citrix ICA client.
+.PP
+The GNOME applet can be added to your panel by right-clicking the panel and
+choosing the following: \fBAdd to Panel -> Internet -> Terminal Server Client
+Applet.\fP
+.br
+
+.SH OPTIONS
+These programs follow the usual GNU command line syntax, with long options
+starting with two dashes (`-'). A summary of options for the \fBtsclient\fP
+command is included below.
+
+.TP
+.B FILE
+an rdp format file containing options
+
+.TP
+.B -h, --help
+display this help and exit
+
+.TP
+.B -v, --version
+output version information and exit
+
+.TP
+.B -x FILE
+launch rdesktop with options specified in FILE
+
+.SH AUTHOR
+This manual page was written by Andrew Lau <netsnipe@users.sourceforge.net> and
+last updated by Erick Woods <erick@gnomepro.com>.

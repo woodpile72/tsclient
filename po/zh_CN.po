@@ -1,0 +1,467 @@
+# Terminal Server Client (tsclient)
+# Copyright (C) 2002 Erick Woods
+# This file is distributed under the same license as the tsclient package.
+# Erick Woods <erick@gnomepro.com>, 2002.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2003-09-18 08:45+0800\n"
+"Last-Translator: Zhengang Li <iamme@etang.com>\n"
+"Language-Team: Simplified Chinese <i18n@linux.net.cn>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "连接到远程计算机"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "终端服务客户端"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "终端服务客户端Applet"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr ""
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 像素"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 像素"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 像素"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 像素"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 像素"
+
+#: src/connect.c:60
+#, fuzzy
+msgid "1400 x 1050 pixels"
+msgstr "800 x 600 像素"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 色"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "15位高彩色"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "16位高彩色"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "24位真彩色"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "登录选项"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "输入计算机名或者从列表中选择计算机."
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "计算机(T):"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "协议(T):"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "用户名(U):"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "密码(W):"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "域(M):"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "客户端主机名(L):"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "协议文件(O):"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "请输入远程系统的计算机名或地址."
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "请选择本次连接使用的协议"
+
+#: src/connect.c:441
+#, fuzzy
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr "微软终端服务器和Windows XP系统的桌面共享使用RDP协议连接"
+
+#: src/connect.c:448
+#, fuzzy
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr "微软终端服务器和Windows XP系统的桌面共享使用RDP协议连接"
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr "一些系统共享桌面使用VNC协议连接"
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr "XDMCP协议使用Xnest程序来连接到运行X的服务器上"
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "连接到Citrix服务器使用ICA协议"
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"请输入远程系统的用户名. \n"
+"如果使用VNC, 请输入你保存VNC密码文件的路径."
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "请输入远程系统的密码."
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "请输入远程系统的域."
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "请输入本地系统主机名."
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr " 某些协议需要指定含有设置文件. 如果需要, 请输入配置文件的路径."
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "远程桌面尺寸"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "使用默认屏幕尺寸"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "使用默认屏幕尺寸."
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "使用指定的屏幕尺寸"
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "从列表中选择屏幕尺寸."
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "全屏模式操作"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "在全屏模式下工作."
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "使用其他全屏切换(-F)"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "如果你的rdesktop使用了统一的补丁, 请选中本项. "
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "颜色"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "使用默认颜色深度"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "使用默认颜色深度. "
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "使用指定的颜色深度"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "从列表中选择颜色深度. "
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "远程计算机声音(S) "
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "远程计算机声音"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "在本机启用"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "在远程计算机启用"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "不播放"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "键盘(K)"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "键盘"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "只在全屏模式时使用"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"使用下列键盘布局\n"
+"(2字长键盘码)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"应用Windows组合键\n"
+"(比如Alt+Tab) (不支持)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "启动程序"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "连接时启动下列程序"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "程序路径和文件名"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "在下列位置启动"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "性能优化"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "桌面背景(不支持)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "拖动时显示窗口内容(不支持)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "菜单和窗口动画(不支持)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "主题(不支持)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "启用位图缓冲"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "不发送动作事件"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "启用窗口管理器快捷键"
+
+#: src/connect.c:921
+#, fuzzy
+msgid "Hide window manager's decorations"
+msgstr "启用窗口管理器快捷键"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr ""
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "性能优化选项"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "常规(G)"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "显示(D)"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "本地资源(R)"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "程序(P)"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "性能(O)"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "选择已保存的配置"
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "连接(N)"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "保存为..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "打开 RDP 文件..."
+
+#: src/support.c:365
+#, fuzzy
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"找不到rdesktop. \n"
+"请检查安装是否正确. "
+
+#: src/support.c:533
+#, fuzzy
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"找不到vncviewer或者xvncviewer. \n"
+"请检查安装是否正确. "
+
+#: src/support.c:642
+#, fuzzy
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"找不到Xnest. \n"
+"请检查安装是否正确. "
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr ""
+
+#: src/support.c:711
+#, fuzzy
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"找不到wfica. \n"
+"请检查安装是否正确. "
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"创建失败. \n"
+"请检查安装是否正确. "
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "终端服务客户端错误"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "发生一个错误."
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""
+
+#~ msgid "Prof_ile Launcher:"
+#~ msgstr "启动配置(L):"
+
+#~ msgid "_More"
+#~ msgstr "更多(M)"
+
+#~ msgid "Connection Profile"
+#~ msgstr "连接配置"
+
+#~ msgid "_Less"
+#~ msgstr "简单(L)"
+
+#~ msgid "RDP Pic_ker:"
+#~ msgstr "RDP选择(K):"
+
+#~ msgid "Save the current settings or open saved connection"
+#~ msgstr "保存当前设置或打开已保存连接"
+
+#~ msgid "Small"
+#~ msgstr "小"
+
+#~ msgid "Large"
+#~ msgstr "大"
+
+#~ msgid "Less"
+#~ msgstr "简单"
+
+#~ msgid "More"
+#~ msgstr "更多"

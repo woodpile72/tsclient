@@ -1,0 +1,443 @@
+# translation of ca.po to 
+# Terminal Server Client (tsclient)
+# Copyright (C) 2002 Erick Woods
+# This file is distributed under the same license as the tsclient package.
+# Erick Woods <erick@gnomepro.com>, 2002.
+# Carles Oriol <carles@kumbaworld>, 2004.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: ca\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2004-04-03 01:26+0200\n"
+"Last-Translator: Carles Oriol <carles@kumbaworld>\n"
+"Language-Team:  <ca@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "Connectar-se a un ordinador remot"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "Client de Terminal Server"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "Miniaplicació del client de \"Terminal Server\""
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr ""
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 píxels"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 píxels"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 píxels"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 píxels"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 píxels"
+
+#: src/connect.c:60
+#, fuzzy
+msgid "1400 x 1050 pixels"
+msgstr "800 x 600 píxels"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 Colors"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "Color d'alta definició (15 bits)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "Color d'alta definició (16 bits)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "Color veritable (24 bits)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "Paràmetres d'identificació"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "Escrigui el nom de l'ordinador o esculli'l de la llista desplegable"
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "Ordina_dor:"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "Pro_tocol"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "Nom d'usuari:"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "_Mot de pas:"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "_Domini"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr ""
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "Arxiu _de protocol:"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "Entra el nom o l'adreça del sistema remot."
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "Selecciona el protocol a utilitzar en aquesta connexió."
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr ""
+"El protocol RDP s'utilitza per connectar-se a Microsoft Windows 2000 i "
+"sistemes més antics."
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr ""
+"El protocol RDPv5 s'utilitza per connectar-se a Microsoft Windows XP i "
+"sistemes més moderns."
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr ""
+"El protocol VNC s'utilitza per connectar-se a sistemes que comparteixin "
+"l'escriptori usant VNC."
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr "El protocol XDMCP utilitza Xnest per connectar a servidors X."
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "El protocol ICA s'utilitza per connectar-se a servidors Citrix."
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"Escriu en nom d'usuari pel sistema remot.\n"
+"Per VNC, escriu el camí al arxiu de mot de pas vnc emmagatzemat."
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "Entra el mot de pas per el sistema remot."
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "Entra el domini per el sistema remot."
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "Entra en nom de màquina per aquest sistema."
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+"Alguns protocols requereixen d'un arxiu que contingui la configuració. Entra "
+"el camí a aquest arxiu."
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "Mida de l'escriptori remot."
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "Empra la mida de la pantalla predeterminada."
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "Empra la mida de la pantalla predeterminada."
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "Empra una mida específica."
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "Selecciona de la llista la mida de la pantalla a utilitzar"
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "Mostra a pantalla sencera"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "Treballa a pantalla sencera."
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "Empra (-F) per a pantalla sencera."
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr ""
+"Selecciona aquesta opció si estàs utilitzant rdesktop amb els pedaços "
+"unificats."
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "Colors"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "Empra la profunditat de color per defecte"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "Empra la profunditat de color per defecte"
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "Empra una profunditat de color especificada"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "Empra llista per seleccionar la profunditat de color."
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "So en la màquina remota"
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "So en la màquina remota"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "So a la màquina local"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "A l'ordinador remot"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "No reproduir"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "Teclat"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "Teclat"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "Sols en mode de pantalla sencera"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"Empra el següent mapa de teclat\n"
+"(codi de dos caràcters)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Aplicar les combinacions de tecles de Windows\n"
+"(per exemple ALT+TAB) (no suportat)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "Executar un programa"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "Executar el programa següent al connectar-se."
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "Nom i camí al programa"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "Iniciar en la següent carpeta"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "Millorar el rendiment"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "Fons d'escriptori (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "Mostra el contingut de les finestres al desplaçar-les (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "Animació en finestres i menús (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "Estils (u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "Habilitar memòria cau d'imatges."
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "No enviar esdeveniments de moviment"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "Habilitar les combinacions de teclat del gestor de finestres"
+
+#: src/connect.c:921
+msgid "Hide window manager's decorations"
+msgstr "Amagar la decoració del gestor de finestres"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr ""
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "Opcions disponibles per millorar el rendiment"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "General"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "Pantalla"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "Recursos locals"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "Programes"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "Rendiment"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "Selecciona un perfil per executar immediatament"
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "_Connectar"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "Entra el nom de l'arxiu a desar..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "Escull un arxiu RDP a obrir..."
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"No s'ha trobat rdesktop en el camí d'execució\n"
+"Si us plau comprobeu la seva instal·lació."
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"No s'han trobat vncviewer ni\n"
+"xvncviewer en el camí d'execució\n"
+"Si us plau comprobeu la seva instal·lació."
+
+#: src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"No s'ha trobat Xnest en el camí d'execució\n"
+"Si us plau comprobeu la seva instal·lació."
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr ""
+
+#: src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"No s'ha trobat wfica en el camí d'execució\n"
+"Si us plau comprobeu la instal·lació del client d'ICA."
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"Error a l'engegar.\n"
+"Comproveu la vostra instal·lació."
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "Error del Client de Terminal Server"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "S'ha produït un error."
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""

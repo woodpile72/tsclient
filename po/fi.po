@@ -1,0 +1,462 @@
+# Terminal Server Client (tsclient)
+# Copyright (C) 2002 Erick Woods
+# This file is distributed under the same license as the tsclient package.
+# Erick Woods <erick@gnomepro.com>, 2002.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator:  Jaakko Isomursu <jaakko.isomursu@kolumbus.fi>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "Yhdistä etätietokoneeseen"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "Terminal Server Client"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "Terminal Server Client sovelma"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr ""
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 pikseliä"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 pikseliä"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 pikseliä"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 pikseliä"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 pikseliä"
+
+#: src/connect.c:60
+#, fuzzy
+msgid "1400 x 1050 pixels"
+msgstr "800 x 600 pikseliä"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 Väriä"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "32768 Väriä (15 bit)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "65536 Väriä (16 bit)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "True Color -tila (24 bit)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "Kirjautumisen asetukset"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "Kirjoita tietokoneen nimi tai valitse se alasvetovalikosta"
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "Tietokone:"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr ""
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "Käyttäjätunnus:"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "Salasana:"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "Toimialue:"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr ""
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr ""
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr ""
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr ""
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr ""
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr ""
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr ""
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr ""
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr ""
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr ""
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr ""
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr ""
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "Etätyöpöydän koko"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "Käytä oletusarvoista näytön kokoa"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "Käytä oletusarvoista näytön kokoa"
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "Käytä määritettyä näytön kokoa"
+
+#: src/connect.c:578
+#, fuzzy
+msgid "Use the list to choose the screen size to use."
+msgstr "Käytä liukuvalitsinta valitaksesi näytön koon"
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "Käytä kokonäytöntilaa"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "Työskentele kokonäytöntilassa"
+
+#: src/connect.c:603
+#, fuzzy
+msgid "Use alternate full screen switch (-F)"
+msgstr "Käytä vaihtoehtoista kokonäytön valitsinta (-F)"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "Rastita tämä jos käytät rdesktop:ia unified patch -lisäysten kanssa"
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "Värit"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "Käytä oletusarvoista värisyvyyttä"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "Käytä oletusarvoista värisyvyyttä"
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "Käytä määriteltyä värisyvyyttä"
+
+#: src/connect.c:649
+#, fuzzy
+msgid "Use the list to choose the color depth to use."
+msgstr "Käytä liukuvalitsinta valitaksesi värisyvyyden"
+
+#: src/connect.c:673
+#, fuzzy
+msgid "Remote Computer _Sound"
+msgstr "Etäkoneen äänet (ei tuettu)"
+
+#: src/connect.c:675
+#, fuzzy
+msgid "Remote Computer Sound"
+msgstr "Etäkoneen äänet (ei tuettu)"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "Paikallisella tietokoneella"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "Etätietokoneella"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "Älä soita"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "Näppäimistö"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "Näppäimistö"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "Ainoastaan kokonäytöntilassa"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"Käytä seuraavaa näppäimistön kieliasetusta\n"
+"(2 kirjaiminen koodi)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Käytä Windows näppäinyhdistelmiä\n"
+"(esim. ALT+TAB) (ei tuettu)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "Käynnistä ohjelma"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "Käynnistä seuraava ohjelma yhdistettäessä"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "Ohjelman polku ja tiedoston nimi"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "Aloita seuraavasta kansiosta"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "Tehokkuuden optimointi"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "Työpöydän taustakuva (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "Näytä ikkunan sisältö liikutettaessa (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "Valikko ja ikkuna -animaatiot (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "Teemat (u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "Tallenna kuvat välimuistiin"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "Älä lähetä tietoja hiiren liikkeistä"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "Käytä ikkunointijärjestelmän näppäinsidoksia"
+
+#: src/connect.c:921
+#, fuzzy
+msgid "Hide window manager's decorations"
+msgstr "Käytä ikkunointijärjestelmän näppäinsidoksia"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr ""
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "Valinnat suorituskyvyn optimointiin"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "Yleistä"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "Näyttö"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "Paikalliset resurssit"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "Ohjelmat"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "Suorituskyky"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr ""
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "Yhdistä"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "Syötä tallennettavan tiedoston nim"
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "Valitse avattava RDP tiedosto"
+
+#: src/support.c:365
+#, fuzzy
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr "Käynnistyminen epäonnistui. Tarkista asennuksesi."
+
+#: src/support.c:533
+#, fuzzy
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr "Käynnistyminen epäonnistui. Tarkista asennuksesi."
+
+#: src/support.c:642
+#, fuzzy
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr "Käynnistyminen epäonnistui. Tarkista asennuksesi."
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr ""
+
+#: src/support.c:711
+#, fuzzy
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr "Käynnistyminen epäonnistui. Tarkista asennuksesi."
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr "Käynnistyminen epäonnistui. Tarkista asennuksesi."
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "Terminal Server Client on suorittanut virheen"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "On tapahtunut virhe."
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""
+
+#~ msgid "_More"
+#~ msgstr "Enemmän"
+
+#, fuzzy
+#~ msgid "Connection Profile"
+#~ msgstr "Yhteysasetukset"
+
+#~ msgid "_Less"
+#~ msgstr "Vähemmän"
+
+#~ msgid "RDP Pic_ker:"
+#~ msgstr "RDP Valitsin"
+
+#~ msgid "Save the current settings or open saved connection"
+#~ msgstr "Tallenna nykyiset asetukset tai avaa tallennettu yhteys"
+
+#~ msgid "Small"
+#~ msgstr "Pieni"
+
+#~ msgid "Large"
+#~ msgstr "Suuri"
+
+#~ msgid "Less"
+#~ msgstr "Vähemmän"
+
+#~ msgid "More"
+#~ msgstr "Enemmän"
+
+#~ msgid "Bring to this computer"
+#~ msgstr "Tuo tälle koneelle"
+
+#~ msgid "Leave at remote computer"
+#~ msgstr "Jätä etätietokoneelle"

@@ -1,0 +1,7 @@
+{
+  "uuid": "tsclient@cinnamon",
+  "name": "Terminal Server Client",
+  "description": "Launch tsclient and reconnect to saved profiles from the Cinnamon panel.",
+  "icon": "tsclient",
+  "version": 1
+}

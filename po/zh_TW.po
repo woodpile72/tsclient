@@ -1,0 +1,432 @@
+# Tranditional Chinese Messages for tsclient
+# Copyright (C) 2003, 05 Free Software Foundation, Inc.
+# This file is distributed under the same license as the nano package.
+# Luis Wang <luis.wang@dwins.com>, 2003
+# Wei-Lun Chao <chaoweilun@pcmail.com.tw>, 2005
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: tsclient 0.132\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2005-04-25 14:31+0800\n"
+"Last-Translator: Wei-Lun Chao <chaoweilun@pcmail.com.tw>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "連線遠端電腦"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "終端伺服器用戶端"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "終端伺服器用戶端面板程式"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr ""
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 像素"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 像素"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 像素"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 像素"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 像素"
+
+#: src/connect.c:60
+#, fuzzy
+msgid "1400 x 1050 pixels"
+msgstr "800 x 600 像素"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 色"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "高彩 (15 位元)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "高彩 (16 位元)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "全彩 (24 位元)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "登入設定"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "鍵入電腦名稱或者自下拉選單中選取電腦名稱。"
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "電腦名稱(_T):"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "通訊協定(_T):"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "使用者名稱(_U):"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "密碼(_W):"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "網域(_M):"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "用戶端電腦名稱(_L):"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "通訊協定檔案(_O):"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "輸入遠端系統的電腦名稱或位址。"
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "選擇連線的通訊協定。"
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr "RDP 通訊協定用於連接安裝 Microsoft Windows 2000 及更舊的系統。"
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr "RDPv5 通訊協定用於連接安裝 Microsoft Windows XP 及更新的系統。"
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr "VNC 通訊協定用於連接遠端有安裝 VNC 伺服器的系統。"
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr "XDMCP 通訊協定使用 Xnest 去連接遠端 X 伺服器。"
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "ICA 通訊協定用於連接遠端 Citrix 伺服器。"
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"輸入遠端電腦使用者名稱。\n"
+"若為 VNC 則輸入存放你密碼檔的路徑。"
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "輸入遠端電腦密碼。"
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "輸入遠端電腦網域名稱。"
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "輸入本地端電腦名稱。"
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr "有些通訊協定需要設定檔。請輸入此設定檔之路徑。"
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "遠端桌面大小"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "使用預設螢幕大小"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "使用預設螢幕大小。"
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "自定螢幕大小"
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "使用下拉選單選取螢幕大小。"
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "全螢幕模式"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "全螢幕模式。"
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "使用全螢幕模式切換參數 (-F)"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "如果目前的 rdesktop 使用了修補程式。"
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "顏色"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "使用預設色彩"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "使用預設色彩。"
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "使用自定色彩"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "使用下拉選單選取色彩。"
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "遠端電腦音效(_S)"
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "遠端電腦音效"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "於本地端電腦"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "於遠端電腦"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "靜音"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "鍵盤(_K)"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "鍵盤"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "只適用於全螢幕模式"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"使用下述鍵盤配置\n"
+"(雙字元碼)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"套用視窗組合鍵\n"
+"(例如 ALT+TAB) (不支援)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "啟動程式"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "於連線時啟動下列程式"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "程式路徑與名稱"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "於下述路徑中啟動程式"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "效能最佳化"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "桌面背景 (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "於拖曳時顯示視窗內容 (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "使用選單及視窗動畫 (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "佈景主題 (u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "啟用點陣圖緩衝區"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "不要傳送移動事件"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "使用視窗管理之快速鍵"
+
+#: src/connect.c:921
+msgid "Hide window manager's decorations"
+msgstr "隱藏視窗管理之裝飾"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr ""
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "啟用效能最佳化選項"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "一般(_G)"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "顯示(_D)"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "本地端資源(_R)"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "程式(_P)"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "效能(_O)"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "使用現有之連線設定連接遠端電腦。"
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "連線(_N)"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "另存新檔..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "開啟 RDP 舊檔..."
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"在路徑中找不到 rdesktop。\n"
+"請確認是否已安裝 rdesktop。"
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"在路徑中找不到 vncviewer\n"
+"或者 xvncviewer。\n"
+"請確認是否已安裝 vnc。"
+
+#: src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"在路徑中找不到 Xnest。\n"
+"請確認是否已安裝 Xnest。"
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr ""
+
+#: src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"在路徑中找不到 wfica。\n"
+"請確認是否已安裝 ICAClient。"
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"無法啟動。\n"
+"請確認你的軟體安裝是否正確。"
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "終端伺服器用戶端錯誤"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "發生錯誤。"
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""

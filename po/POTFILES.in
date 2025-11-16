@@ -1,0 +1,16 @@
+# List of source files containing translatable strings.
+
+tsclient.desktop.in
+applet/applet.c
+applet/applet.h
+src/connect.c
+src/connect.h
+src/main.c
+src/main.h
+src/mrulist.c
+src/mrulist.h
+src/rdpfile.c
+src/rdpfile.h
+src/support.c
+src/support.h
+

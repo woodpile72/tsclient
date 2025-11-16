@@ -1,0 +1,15 @@
+[Desktop Entry]
+_Name=Terminal Server Client
+_Comment=Connect to a remote computer
+TryExec=tsclient
+Exec=tsclient
+Icon=tsclient
+Terminal=false
+Type=Application
+Version=1.0
+Actions=Full;
+Categories=GTK;GNOME;X-GNOME-NetworkSettings;Network;
+Encoding=UTF-8
+
+[Desktop Action Full]
+Exec=tsclient -f

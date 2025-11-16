@@ -1,0 +1,23 @@
+Source: tsclient
+Section: net
+Priority: optional
+Maintainer: Erick Woods <erick@gnomepro.com>
+Build-Depends: debhelper-compat (= 13),
+               intltool,
+               pkg-config,
+               libgtk-4-dev,
+               libglib2.0-dev,
+               libgdk-pixbuf-2.0-dev,
+               libpango1.0-dev,
+               libcairo2-dev
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Homepage: http://www.gnomepro.com/tsclient/
+
+Package: tsclient
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, rdesktop (>= 1.9.0)
+Description: Terminal Server Client for Linux desktops
+ Terminal Server Client (tsclient) is a GTK4 frontend for rdesktop, VNC viewers,
+ and other remote desktop tools. It provides JSON-based profile storage, a
+ Cinnamon panel applet for recent connections, and modern GTK4 UI components.

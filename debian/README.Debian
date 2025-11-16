@@ -1,0 +1,8 @@
+tsclient Debian package notes
+============================
+
+The Cinnamon panel applet that ships with tsclient is installed both under
+/usr/share/tsclient/cinnamon-applet (for documentation) and
+/usr/share/cinnamon/applets/tsclient@cinnamon so that Cinnamon can detect it
+automatically. After installing the package, open Cinnamon’s Applet picker,
+search for “Terminal Server Client”, and enable it.

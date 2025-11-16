@@ -1,0 +1,5 @@
+tsclient (3.0-1) unstable; urgency=medium
+
+  * Initial Debian packaging for the GTK4 port.
+
+ -- Erick Woods <erick@gnomepro.com>  Sat, 15 Nov 2025 23:59:00 -0600

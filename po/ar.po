@@ -1,0 +1,468 @@
+# Terminal Server Client (tsclient)
+# Copyright (C) 2002 Erick Woods
+# This file is distributed under the same license as the tsclient package.
+# Erick Woods <erick@gnomepro.com>, 2002.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2003-04-27 17:26+0300\n"
+"Last-Translator: Ossama M. Khayat <ossamak@nht.com.kw>\n"
+"Language-Team: Arabeyes <support@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "اتصل بجهار بعيد"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "مستخدم المحطّة الطّرفيّة"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "بريمج مستخدم المحطّة الطرفية"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr ""
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 × 480 نقطة"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 × 600 نقطة"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 × 768 نقطة"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 × 864 نقطة"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 × 960 نقطة"
+
+#: src/connect.c:60
+#, fuzzy
+msgid "1400 x 1050 pixels"
+msgstr "800 × 600 نقطة"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 لون"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "ألوان عالية )15 بت("
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "ألوان عالية )16 بت("
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "ألوان حقيقة )24 بت("
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "إعدادات الدخول"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "أكتب إسم الجهاز أو اختر واحداً من القائمة"
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "ج_هاز"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr ""
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "إ_سم المستخدم:"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "_كلمة السر"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "الم_جال"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "إسم جهاز المستخدم:"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr ""
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr ""
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr ""
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr ""
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr ""
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr ""
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr ""
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr ""
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr ""
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr ""
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr ""
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "حجم سطح المكتب البعيد"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "استخدم حجم الشاشة الافتراضي"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "استخدم حجم الشاشة الافتراضي"
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "استخدم حجم الشاشة المحدّد"
+
+#: src/connect.c:578
+#, fuzzy
+msgid "Use the list to choose the screen size to use."
+msgstr "استخدم المؤشر لاختيار حجم الشاشة المطلوب استخدامه."
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "استخدم عرض ملئ الشاشة"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "استخدم عرض ملئ الشاشة"
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "استخدم متغير ملئ الشاشة البديل (-F)"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "حدد هذا الاختيار إن كنت تستخدم rdesktop مع التعديﻻت الموحّدة."
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "ألوان"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "استخدم عمق الألوان الافتراضي"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "استخدم عمق الألوان الافتراضي"
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "استخدم عمق الألوان المحدد"
+
+#: src/connect.c:649
+#, fuzzy
+msgid "Use the list to choose the color depth to use."
+msgstr "استخدم المؤشّر لاختيار عمق الألوان المطلوب استخدامه."
+
+#: src/connect.c:673
+#, fuzzy
+msgid "Remote Computer _Sound"
+msgstr "صو_ت الجهاز البعيد )غير مدعوم("
+
+#: src/connect.c:675
+#, fuzzy
+msgid "Remote Computer Sound"
+msgstr "صوت الجهاز البعيد )غير مدعوم("
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "على الجهاز المحلّي"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "على الجهاز البعيد"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "ﻻ تعرضها"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "_لوحة مفاتيح"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "لوحة مفاتيح"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "في وضع ملئ الشاشة فقط"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"استخدم لوحة المفاتيح التالية\n"
+")شيفرة مفتاح ذات حرفين)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr "تطبيق مفاتيح ويندوز المركبة)على سبيل المثال ALT+TAB) )غير مدعوم("
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "تشغيل برنامج"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "شغّل البرنامج التالي عند الإتصال"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "مسار البرنامج وإسم الملف"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "إفتح المجلد التالي"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "حسّن الأداء"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "خلفيّة المكتب )غير مدعوم("
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "أظهر محتويات النافذة خلال السحب )غير مدعوم("
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "حركة القائمة والنافذة )غير مدعوم("
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "مجموعات الألوان )غير مدعوم("
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "مكّن حفظ الصّور محلياً"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "لا ترسل أحداث الحركة"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "مكّن مفاتيح مدير النوافذ المترابطة"
+
+#: src/connect.c:921
+#, fuzzy
+msgid "Hide window manager's decorations"
+msgstr "مكّن مفاتيح مدير النوافذ المترابطة"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr ""
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "الخيارات المتوفّرة لتحسين الأداء"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "_عام"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "ع_رض"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "الم_صادر المحليّة"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "_برامج"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "أ_داء"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr ""
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "ات_صل"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "أدخل اسم ملف للحفظ بإسم..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "اختر ملف RPD لفتحه..."
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"rdesktop غير موجود في مسار الدليل.\n"
+"رجاءً التأكّد من تثبيت rdesktop."
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"vncviewer أو xvncviewer غير\n"
+"موجود في مسار الدليل.\n"
+"الرجاء التأكد من تثبيت VNC."
+
+#: src/support.c:642
+#, fuzzy
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"rdesktop غير موجود في مسار الدليل.\n"
+"رجاءً التأكّد من تثبيت rdesktop."
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr ""
+
+#: src/support.c:711
+#, fuzzy
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"rdesktop غير موجود في مسار الدليل.\n"
+"رجاءً التأكّد من تثبيت rdesktop."
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"أخفق التشغيل.\n"
+"رجاء تأكّد من التثبيت."
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "خطأ في مستخدم خادم المحطّة الطرفية"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "حدث خطأ."
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""
+
+#~ msgid "_More"
+#~ msgstr "_مزيد"
+
+#, fuzzy
+#~ msgid "Connection Profile"
+#~ msgstr "إعدادات الاتصال"
+
+#~ msgid "_Less"
+#~ msgstr "أ_قل"
+
+#~ msgid "RDP Pic_ker:"
+#~ msgstr "ا_ختيار RDP:"
+
+#~ msgid "Save the current settings or open saved connection"
+#~ msgstr "حفظ الإعدادات الحالية أو فتح اتصال محفوظ"
+
+#~ msgid "Small"
+#~ msgstr "صغير"
+
+#~ msgid "Large"
+#~ msgstr "كبير"
+
+#~ msgid "Less"
+#~ msgstr "أقل"
+
+#~ msgid "More"
+#~ msgstr "مزيد"
+
+#~ msgid "Bring to this computer"
+#~ msgstr "أحضر لهذا الجهاز"
+
+#~ msgid "Leave at remote computer"
+#~ msgstr "اترك على الجهاز البعيد"

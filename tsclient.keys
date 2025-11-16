@@ -1,0 +1,8 @@
+application/x-rdp
+	icon_filename=tsclient-doc
+	description=RDP Settings File
+	default_action_type=application
+	short_list_application_ids_for_novice_user_level=tsclient
+	short_list_application_ids_for_intermediate_user_level=tsclient
+	short_list_application_ids_for_advanced_user_level=tsclient
+	category=Documents/World Wide Web

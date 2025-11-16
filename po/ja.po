@@ -1,0 +1,459 @@
+# Japanese translation of tsclient.
+# This file is distributed under the same license as the tsclient package.
+# Project Vine, Daisuke SUZUKI <daisuke@linux.or.jp>, 2003.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: tsclient 0.132\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2003-12-12 05:18+0900\n"
+"Last-Translator: Daisuke SUZUKI <daisuke@linux.or.jp>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "リモートコンピュータに接続する"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "ターミナルサーバクライアント"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "ターミナルサーバクライアントアプレット"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr ""
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 ピクセル"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 ピクセル"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 ピクセル"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 ピクセル"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 ピクセル"
+
+#: src/connect.c:60
+#, fuzzy
+msgid "1400 x 1050 pixels"
+msgstr "800 x 600 ピクセル"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256色"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "3万色 (15bpp)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "6万色 (16bpp)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "フルカラー1600万色 (24bpp)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "ログオン設定"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "コンピュータ名を入力、あるいはプルダウンメニューから選択してください"
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "コンピュータ(_T):"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "プロトコル(_T):"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "ユーザ名(_U):"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "パスワード(_W):"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "ドメイン(_M):"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "クライアントホスト名(_L):"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "プロトコルファイル(_O):"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "リモートシステムの名前またはアドレスを入力してください"
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "接続に使用するプロトコルを選択してください。"
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr ""
+"RDPプロトコルは Microsoft Windows 2000 またはそれ以前のシステムに接続するため"
+"に使用します。"
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr ""
+"RDPv5プロトコルは Microsoft Windows XP またはそれ以降のシステムに接続するため"
+"に使用します。"
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr ""
+"VNCプロトコルはVNCによるデスクトップ共有をしているシステムに接続するために使"
+"用します。"
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr ""
+"XDMCPプロトコルは X が稼働しているサーバに接続するために Xnest を使用します。"
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "ICAプロトコルは Citrix サーバに接続するために使用します。"
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"リモートシステムのユーザ名を入力してください。\n"
+"VNCの場合は vnc パスワードファイルを保存したパスを入力してください。"
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "リモートシステムのパスワードを入力してください。"
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "リモートシステムのドメイン名を入力してください。"
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "このシステムのローカルホスト名を入力してください。"
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+"いくつかのプロトコルは設定を含んだファイルを必要とします。必要な場合はここに"
+"そのファイルのパスを入力してください。"
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "リモートデスクトップのサイズ"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "標準の画面サイズを使用する"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "標準の画面サイズを使用する。"
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "指定した画面サイズを使用する"
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "画面サイズの選択にリストを使用する。"
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "全画面モードで使用する"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "全画面モードで使用する"
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "別の全画面モードを使用する(-F)"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr ""
+"統合パッチを適用した rdesktop を使用している場合はここをチェックしてくださ"
+"い。"
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "色"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "標準の色深度を使用する"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "標準の色深度を使用する。"
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "指定した色深度を使用する"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "色深度の選択にリストを使用する"
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "リモートコンピュータのサウンド(_S)"
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "リモートコンピュータのサウンド"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "ローカルコンピュータ上"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "リモートコンピュータ上"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "再生しない"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "キーボード(_K)"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "キーボード"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "前画面モードでのみ使用する"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"以下のキーボード言語を使用する\n"
+"(2文字キーコード）"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"Windows のキーの組合せを有効にする\n"
+"(例: ALT+TAB) (unsuppoorted)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "プログラムを実行する"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "接続時に以下のプログラムを実行する"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "プログラムのパスおよびファイル名"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "以下のフォルダで開始する"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "パフォーマンスの最適化"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "デスクトップの背景 (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "ウィンドウ移動中もウィンドウの中身を描画する (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "メニューおよびウィンドウアニメーション (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "テーマ(u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "ビットマップキャッシュを有効にする"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "動作イベントを送信しない"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "ウィンドウマネージャのキーバインドを有効にする"
+
+#: src/connect.c:921
+msgid "Hide window manager's decorations"
+msgstr "ウィンドウマネージャの装飾を隠す"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr ""
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "利用可能なパフォーマンス最適化オプション"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "全般(_G)"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "画面(_D)"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "ローカルのリソース(_R)"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "プログラム(_P)"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "パフォーマンス(_O)"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "即時起動するための保存プロファイルを選択する"
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "接続(_O)"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "保存するファイル名を入力してください"
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "RDPファイルを選択してください..."
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"rdesktop がシステム中に見つかりませんでした。\n"
+"rdesktop が正しくインストールされているか確認\n"
+"してください。"
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"vncviewer または xvncviewer が\n"
+"見つかりません。\n"
+"vnc が正しくインストールされているか\n"
+"確認してください。"
+
+#: src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"Xnest が見つかりません。\n"
+"Xnest が正しくインストールされているか確認してください。"
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr ""
+
+#: src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"wfica が見つかりません。\n"
+"ICAClient が正しくインストールされているか確認してください。"
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"起動に失敗しました。\n"
+"正しくインストールされているか\n"
+"確認してください。"
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "ターミナルサーバクライアントエラー"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "エラーが発生しました。"
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""
+
+#~ msgid ""
+#~ "<popup name=\"button3\">\n"
+#~ "  <menuitem name=\"RunTSClient\" verb=\"RunTSClient\" _label=\"_Run "
+#~ "Terminal Server Client ...\"/>\n"
+#~ "  <menuitem name=\"About\" verb=\"About\" _label=\"_About ...\" pixtype="
+#~ "\"stock\" pixname=\"gnome-stock-about\"/>\n"
+#~ "</popup>\n"
+#~ msgstr ""
+#~ "<popup name=\"button3\">\n"
+#~ "  <menuitem name=\"RunTSClient\" verb=\"RunTSClient\" _label=\"ターミナル"
+#~ "サーバクライアントの実行(_R)...\"/>\n"
+#~ "  <menuitem name=\"About\" verb=\"About\" _label=\"情報(_A)...\" pixtype="
+#~ "\"stock\" pixname=\"gnome-stock-about\"/>\n"
+#~ "</popup>\n"

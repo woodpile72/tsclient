@@ -1,0 +1,53 @@
+2007-04-19  Jonh Wendell <wendell@bani.com.br>
+
+	- Don't show extra messages on ending a session (bug #1689130)
+	- Uses -fullscreen parameter for VNC, for a better compability
+	- Thanks to Mike Erdely <mike@erdelynet.com> for the patch
+
+2007-04-13  Jonh Wendell <wendell@bani.com.br>
+	- Misc code cleanups
+	- Added clipboard feature in RDP, closes #1689136
+
+2007-04-11  Jonh Wendell <wendell@bani.com.br>
+
+	- Replaced some deprecated gtk api
+	- Support saving passwords (Windows generated passwords still don't work,
+	  but we keep it at rdp files), fixes #1693531
+	- Fix some memory leaks
+	- Added a RDP filter on save dialog
+	- Changed a bit the quick connect combobox
+
+	* src/support.h, src/rdpfile.c, src/connect.c, src/rdpfile.h,
+	  src/support.c:
+	  - Touched files
+
+2007-03-30  Jonh Wendell <wendell@bani.com.br>
+	* configure.ac:
+	  - Replaced se.po with sv.po
+	  - Updated Swedish translation (#1690860)
+
+2007-03-28  Jonh Wendell <wendell@bani.com.br>
+	* configure.ac,
+	  po/zh_HK.po:
+	  - Added zh_HK (Chinese in Hong Kong style) translation (thanks to 
+	    Abel Cheung <abelcheung@gmail.com>)
+	  - Added Hebrew Translation (thanks to Dror Rejwan <dror@rejibyte.com>)
+	    Fixes #1690137
+
+2007-03-27  Jonh Wendell <wendell@bani.com.br>
+	* src/support.c:
+	  Added missing include for g_sprintf() prototype (patch from Debian)
+	* src/rdpfile.c (rdp_load_profile_launcher):
+	  Don't free an used variable, which wasn't allowing to use quick launch 
+	  on last menu entry - patch from Debian (fixes #1689447)
+	* applet/GNOME_TSClientApplet.server.in.in,
+	  applet/Makefile.am:
+	  Fixed category and icon for bonobo server file (patch from Ubuntu)
+
+2007-03-26  Jonh Wendell <wendell@bani.com.br>
+	* src/support.c:
+	  Cleanup about dialog (also fix a bug with close button)
+	* tsclient.desktop.in:
+	  Updated Categories field according with freedesktop spec
+	* src/connect.c:
+	  make "connect" be the default action when somebody uses the enter key

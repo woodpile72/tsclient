@@ -1,0 +1,433 @@
+# translation of tsclient.po to Punjabi
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: tsclient\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-20 16:59-0500\n"
+"PO-Revision-Date: 2005-10-03 11:28+0530\n"
+"Last-Translator: Amanpreet Singh Alam <amanpreetalam@yahoo.com>\n"
+"Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: tsclient.desktop.in.h:1
+msgid "Connect to a remote computer"
+msgstr "ਇੱਕ ਰਿਮੋਟ ਕੰਪਿਊਟਰ ਨਾਲ ਜੁੜੋ"
+
+#: tsclient.desktop.in.h:2 src/connect.c:244 src/support.c:1008
+msgid "Terminal Server Client"
+msgstr "ਟਰਮੀਨਲ ਸਰਵਰ ਕਲਾਂਇਟ"
+
+#: applet/applet.c:45 applet/applet.c:106
+msgid "Terminal Server Client Applet"
+msgstr "ਟਰਮੀਨਲ ਸਰਵਰ ਕਲਾਂਇਟ ਐਪਲਿਟ"
+
+#: applet/applet.c:234
+msgid "New Connection..."
+msgstr "ਨਵਾਂ ਕੁਨੈਕਸ਼ਨ..."
+
+#: src/connect.c:55
+msgid "640 x 480 pixels"
+msgstr "640 x 480 ਪਿਕਸਲ"
+
+#: src/connect.c:56
+msgid "800 x 600 pixels"
+msgstr "800 x 600 ਪਿਕਸਲ"
+
+#: src/connect.c:57
+msgid "1024 x 768 pixels"
+msgstr "1024 x 768 ਪਿਕਸਲ"
+
+#: src/connect.c:58
+msgid "1152 x 864 pixels"
+msgstr "1152 x 864 ਪਿਕਸਲ"
+
+#: src/connect.c:59
+msgid "1280 x 960 pixels"
+msgstr "1280 x 960 ਪਿਕਸਲ"
+
+#: src/connect.c:60
+msgid "1400 x 1050 pixels"
+msgstr "1400 x 1050 ਪਿਕਸਲ"
+
+#: src/connect.c:64
+msgid "256 Colors"
+msgstr "256 ਰੰਗ"
+
+#: src/connect.c:65
+msgid "High Color (15 bit)"
+msgstr "ਜ਼ਿਆਦਾ ਰੰਗ (15 ਬਿੱਟ)"
+
+#: src/connect.c:66
+msgid "High Color (16 bit)"
+msgstr "ਜ਼ਿਆਦਾ ਰੰਗ (16 ਬਿੱਟ)"
+
+#: src/connect.c:67
+msgid "True Color (24 bit)"
+msgstr "ਸੁੱਚੇ ਰੰਗ (24 ਬਿੱਟ)"
+
+#: src/connect.c:325 src/connect.c:327
+msgid "Logon Settings"
+msgstr "ਲਾਗਆਨ ਸਥਾਪਨ"
+
+#: src/connect.c:335
+msgid ""
+"Type the name of the computer or choose a computer from the drop-down list."
+msgstr "ਕੰਪਿਊਟਰ ਦਾ ਨਾਂ ਲਿਖੋ ਜਾਂ ਲਟਕਦੀ ਸੂਚੀ ਵਿੱਚੋਂ ਕੰਪਿਊਟਰ ਦੀ ਚੋਣ ਕਰੋ।"
+
+#: src/connect.c:359
+msgid "Compu_ter:"
+msgstr "ਕੰਪਿਊਟਰ (_t):"
+
+#: src/connect.c:367
+msgid "Pro_tocol:"
+msgstr "ਪਰੋਟੋਕਾਲ (_t):"
+
+#: src/connect.c:375
+msgid "_User Name:"
+msgstr "ਉਪਭੋਗੀ ਨਾਂ (_U):"
+
+#: src/connect.c:383
+msgid "Pass_word:"
+msgstr "ਗੁਪਤ-ਕੋਡ(_w):"
+
+#: src/connect.c:391
+msgid "Do_main:"
+msgstr "ਡੋਮੇਨ (_m):"
+
+#: src/connect.c:399
+msgid "C_lient Hostname:"
+msgstr "ਕਲਾਂਇਟ ਮੇਜ਼ਬਾਨ ਨਾਂ(_l):"
+
+#: src/connect.c:407
+msgid "Prot_ocol File:"
+msgstr "ਪਰੋਟੋਕਾਲ ਫਾਇਲ (_o):"
+
+#: src/connect.c:427
+msgid "Enter the name or address of the remote system."
+msgstr "ਰਿਮੋਟ ਮਸ਼ੀਨ ਦਾ ਨਾਂ ਜਾਂ ਸਿਰਨਾਵਾਂ ਦਿਓ।"
+
+#: src/connect.c:434
+msgid "Select the protocol to use for this connection."
+msgstr "ਇਸ ਕੁਨੈਕਸ਼ਨ ਲਈ ਵਰਤਣ ਲਈ ਪਰੋਟੋਕਾਲ ਦੀ ਚੋਣ ਕਰੋ।"
+
+#: src/connect.c:441
+msgid ""
+"RDP protocol is used to connect to Microsoft Windows 2000 and older systems."
+msgstr "RDP ਪਰੋਟੋਕਾਲ ਮਾਈਕਰੋਸਾਫਟ ਵਿੰਡੋ 2000 ਅਤੇ ਪੁਰਾਣੇ ਸਿਸਟਮਾ ਨਾਲ ਜੁੜਨ ਲਈ ਵਰਤਿਆ ਜਾਦਾ ਹੈ।"
+
+#: src/connect.c:448
+msgid ""
+"RDPv5 protocol is used to connect to Microsoft Windows XP and newer systems."
+msgstr "RDPv5 ਪਰੋਟੋਕਾਲ ਮਾਈਕਰੋਸਾਫ਼ਟ ਵਿੰਡੋ XP ਅਤੇ ਨਵੇਂ ਸਿਸਟਮਾਂ ਨਾਲ ਜੁੜਨ ਲਈ ਵਰਤਿਆ ਜਾਦਾ ਹੈ।"
+
+#: src/connect.c:455
+msgid ""
+"VNC protocol is used to connect to systems sharing the desktop by using VNC."
+msgstr "VNC ਪਰੋਟੋਕਾਲ ਸਿਸਟਮਾਂ ਨੂੰ VNC ਰਾਹੀਂ ਵੇਹੜਾ ਸਾਂਝਾ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ।"
+
+#: src/connect.c:466
+msgid "XDMCP protocol uses Xnest to connect to servers running X."
+msgstr "XDMCP ਪਰੋਟੋਕਾਲ ਚੱਲ ਰਹੇ X ਸਰਵਰਾਂ ਨਾਲ Xnest ਰਾਹੀਂ ਜੁੜਨ ਲਈ ਸਹਾਇਕ ਹੈ।"
+
+#: src/connect.c:473
+msgid "ICA protocol is used to connect to Citrix servers."
+msgstr "ICA ਪਰੋਟੋਕਾਲ Citrix ਸਰਵਰਾਂ ਨਾਲ ਜੁੜਨ ਲਈ ਸਹਾਇਕ ਹੈ।"
+
+#: src/connect.c:489
+msgid ""
+"Enter the username for the remote system.\n"
+"For VNC, enter the path to your saved vnc password file."
+msgstr ""
+"ਰਿਮੋਟ ਸਿਸਟਮਾਂ ਲਈ ਉਪਭੋਗੀ ਨਾਂ ਦਿਓ।\n"
+"VNC ਲਈ, vnc ਗੁਪਤ-ਕੋਡ ਫਾਇਲ ਲਈ ਮਾਰਗ ਦਿਓ।"
+
+#: src/connect.c:498
+msgid "Enter the password for the remote system."
+msgstr "ਰਿਮੋਟ ਸਿਸਟਮ ਲਈ ਗੁਪਤ-ਕੋਡ ਦਿਓ।"
+
+#: src/connect.c:506
+msgid "Enter the domain for the remote system."
+msgstr "ਰਿਮੋਟ ਕੰਪਿਊਟਰ ਲਈ ਡੋਮੇਨ ਦਿਓ।"
+
+#: src/connect.c:514
+msgid "Enter the local hostname for this system."
+msgstr "ਇਸ ਸਿਟਮ ਲਈ ਸਥਾਨਕ ਮੇਜ਼ਬਾਨ-ਨਾਂ ਦਿਓ।"
+
+#: src/connect.c:526
+msgid ""
+"Some protocols require a file containing settings. If required, enter the "
+"path to the file here."
+msgstr ""
+"ਕੁਝ ਪਰੋਟੋਕਾਲਾਂ ਨੂੰ ਸਥਾਪਨ ਰੱਖਣ ਵਾਲੀ ਫਾਇਲ ਦੀ ਲੋੜ ਪੈਂਦੀ ਹੈ। ਜੇਕਰ ਲੋੜ ਹੋਵੇ ਤਾਂ, ਫਾਇਲ ਲਈ ਮਾਰਗ ਇੱਥੇ "
+"ਦਿਓ।"
+
+#: src/connect.c:545 src/connect.c:547
+msgid "Remote Desktop Size"
+msgstr "ਰਿਮੋਟ ਵੇਹੜਾ ਅਕਾਰ"
+
+#: src/connect.c:565
+msgid "Use default screen size"
+msgstr "ਮੂਲ ਪਰਦਾ ਅਕਾਰ ਵਰਤੋਂ"
+
+#: src/connect.c:569
+msgid "Use the default screen size."
+msgstr "ਮੂਲ ਪਰਦਾ ਅਕਾਰ ਵਰਤੋਂ।"
+
+#: src/connect.c:574
+msgid "Use specified screen size"
+msgstr "ਦਿੱਤਾ ਪਰਦਾ ਅਕਾਰ ਵਰਤੋਂ"
+
+#: src/connect.c:578
+msgid "Use the list to choose the screen size to use."
+msgstr "ਵਰਤਣ ਲਈ ਪਰਦਾ ਅਕਾਰ ਲਈ ਸੂਚੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+
+#: src/connect.c:590
+msgid "Operate in full screen mode"
+msgstr "ਪੂਰੇ ਪਰਦੇ ਉੱਤੇ ਚਲਾਓ"
+
+#: src/connect.c:594
+msgid "Work in full screen mode."
+msgstr "ਪੂਰੀ ਸਕਰੀਨ ਉੱਤੇ ਚਲਾਓ।"
+
+#: src/connect.c:603
+msgid "Use alternate full screen switch (-F)"
+msgstr "ਪੂਰੇ ਪਰਦੇ ਨੂੰ ਬਦਲ ਲਈ ਸਵਿੱਚ ਵਰਤੋਂ (-F)"
+
+#: src/connect.c:607
+msgid "Check this if you use rdesktop with the unified patches."
+msgstr "ਜੇਕਰ ਤੁਸੀਂ ਇਕਸਾਰ ਪੈਂਚਾਂ ਨਾਲ rdesktop ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹੋ ਤਾਂ ਇਹ ਦਬਾਉ।"
+
+#: src/connect.c:616 src/connect.c:618
+msgid "Colors"
+msgstr "ਰੰਗ"
+
+#: src/connect.c:636
+msgid "Use default color depth"
+msgstr "ਮੂਲ ਰੰਗ ਡੂੰਘਾਈ ਵਰਤੋਂ"
+
+#: src/connect.c:640
+msgid "Use the default color depth."
+msgstr "ਮੂਲ ਰੰਗ ਡੂੰਘਾਈ ਵਰਤੋਂ।"
+
+#: src/connect.c:645
+msgid "Use specified color depth"
+msgstr "ਦਿੱਤੀ ਰੰਗ ਡੂੰਘਾਈ ਵਰਤੋਂ"
+
+#: src/connect.c:649
+msgid "Use the list to choose the color depth to use."
+msgstr "ਰੰਗ ਡੂੰਘਾਈ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਸੂਚੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+
+#: src/connect.c:673
+msgid "Remote Computer _Sound"
+msgstr "ਰਿਮੋਟ ਕੰਪਿਊਟਰ ਧੁਨੀ (_S)"
+
+#: src/connect.c:675
+msgid "Remote Computer Sound"
+msgstr "ਰਿਮੋਟ ਕੰਪਿਊਟਰ ਧੁਨੀ"
+
+#: src/connect.c:697 src/connect.c:701 src/connect.c:748
+msgid "On the local computer"
+msgstr "ਸਥਾਨਕ ਕੰਪਿਊਟਰ ਉੱਤੇ"
+
+#: src/connect.c:706 src/connect.c:710 src/connect.c:751
+msgid "On the remote computer"
+msgstr "ਰਿਮੋਟ ਕੰਪਿਊਟਰ ਉੱਤੇ"
+
+#: src/connect.c:714 src/connect.c:718
+msgid "Do not play"
+msgstr "ਚਲਾਓ ਨਾ"
+
+#: src/connect.c:729
+msgid "_Keyboard"
+msgstr "ਕੀ-ਬੋਰਡ(_K)"
+
+#: src/connect.c:731
+msgid "Keyboard"
+msgstr "ਕੀ-ਬੋਰਡ"
+
+#: src/connect.c:754
+msgid "In full screen mode only"
+msgstr "ਸਿਰਫ਼ ਪੂਰੇ ਪਰਦੇ ਉੱਤੇ ਹੀ"
+
+#: src/connect.c:760
+msgid ""
+"Use the following keyboard language\n"
+"(2 char keycode)"
+msgstr ""
+"ਹੇਠ ਦਿੱਤੀ ਕੀ-ਬੋਰਡ ਭਾਸ਼ਾ ਹੀ ਵਰਤੋਂ\n"
+"(2 ਅੱਖਰ ਕੀ-ਕੋਡ)"
+
+#: src/connect.c:788
+msgid ""
+"Apply Windows key combinations\n"
+"(for example ALT+TAB) (unsupported)"
+msgstr ""
+"ਵਿੰਡੋ ਸਵਿੱਚ ਸੰਯੋਗ ਲਾਗੂ\n"
+"(ਉਦਾਹਰਨ ਲਈ, ALT+TAB) (ਨਾ-ਸਹਾਇਕ)"
+
+#: src/connect.c:811 src/connect.c:813
+msgid "Start a Program"
+msgstr "ਇੱਕ ਪਰੋਗਰਾਮ ਚਲਾਓ"
+
+#: src/connect.c:828
+msgid "Start the following program on connection"
+msgstr "ਕੁਨੈਕਸ਼ਨ ਉੱਤੇ ਹੇਠ ਦਿੱਤਾ ਪਰੋਗਰਾਮ ਚਲਾਓ"
+
+#: src/connect.c:835
+msgid "Program path and filename"
+msgstr "ਪਰੋਗਰਾਮ ਮਾਰਗ ਅਤੇ ਫਾਇਲ ਨਾਂ"
+
+#: src/connect.c:848
+msgid "Start in the following folder"
+msgstr "ਹੇਠ ਦਿੱਤੇ ਫੋਲਡਰ ਵਿੱਚ ਚਾਲੂ"
+
+#: src/connect.c:870 src/connect.c:872
+msgid "Optimize Performance"
+msgstr "ਅਨੁਕੂਲ ਸਮੱਰਥਾ"
+
+#: src/connect.c:893
+msgid "Desktop background (u)"
+msgstr "ਵੇਹੜਾ ਪਿੱਠਭੂਮੀ (u)"
+
+#: src/connect.c:897
+msgid "Show content of window while dragging (u)"
+msgstr "ਚੁੱਕਣ ਦੌਰਾਨ ਝਰੋਖੇ ਦੇ ਭਾਗ ਵੇਖਾਓ (u)"
+
+#: src/connect.c:901
+msgid "Menu and window animation (u)"
+msgstr "ਮੇਨੂ ਅਤੇ ਝਰੋਖਾ ਸਜੀਵਤਾ ਵੇਖਾਓ (u)"
+
+#: src/connect.c:905
+msgid "Themes (u)"
+msgstr "ਸਰੂਪ (u)"
+
+#: src/connect.c:909
+msgid "Enable bitmap caching"
+msgstr "ਬਿੱਟਮੈਪ ਕੈਂਚੇ ਯੋਗ"
+
+#: src/connect.c:913
+msgid "Do not send motion events"
+msgstr "ਚੱਲਦੇ ਘਟਨਾਵਾਂ ਨਾ ਭੇਜੋ"
+
+#: src/connect.c:917
+msgid "Enable window manager's key bindings"
+msgstr "ਝਰੋਖਾ ਪਰਬੰਧਕ ਸਵਿੱਚ ਸੰਯੋਗ ਯੋਗ"
+
+#: src/connect.c:921
+msgid "Hide window manager's decorations"
+msgstr "ਝਰੋਖਾ ਪਰਬੰਧਕ ਸਜਾਵਟ ਓਹਲੇ"
+
+#: src/connect.c:925
+msgid "Attach to console"
+msgstr "ਕੰਨਸੋਲ ਨਾਲ ਜੋੜੋ"
+
+#: src/connect.c:930
+msgid "Options available for optimizing performance"
+msgstr "ਅਨੁਕੂਲ ਸਮੱਰਥਾ ਲਈ ਉਪਲੱਬਧ ਚੋਣਾਂ"
+
+#.
+#. These are the labels for the notebook control
+#.
+#: src/connect.c:943
+msgid "_General"
+msgstr "ਸਧਾਰਨ(_G)"
+
+#: src/connect.c:948
+msgid "_Display"
+msgstr "ਦਰਿਸ਼(_D)"
+
+#: src/connect.c:953
+msgid "Local _Resources"
+msgstr "ਸਥਾਨਕ ਸਰੋਤ(_R)"
+
+#: src/connect.c:958
+msgid "_Programs"
+msgstr "ਪਰੋਗਰਾਮ(_P)"
+
+#: src/connect.c:963
+msgid "Perf_ormance"
+msgstr "ਸਮਰੱਥਾ(_o)"
+
+#: src/connect.c:989
+msgid "Select a saved profile to launch it immediately."
+msgstr "ਤਰੁੰਤ ਚਲਾਉਣ ਲਈ ਇੱਕ ਚੁਣਿਆ ਪਰੋਫਾਇਲ ਚੁਣੋ।"
+
+#: src/connect.c:1047
+msgid "Co_nnect"
+msgstr "ਜੁੜੋ(_n)"
+
+#: src/connect.c:1441
+msgid "Input a filename to save as..."
+msgstr "ਇੰਞ ਸੰਭਾਲਣ ਲਈ ਇੱਕ ਫਾਇਲ-ਨਾਂ ਦਿਓ..."
+
+#: src/connect.c:1500 src/connect.c:1551
+msgid "Choose an RDP file to open..."
+msgstr "ਖੋਲਣ ਲਈ ਇੱਕ RDP ਫਾਇਲ ਚੁਣੋ..."
+
+#: src/support.c:365
+msgid ""
+"rdesktop was not found in your path.\n"
+"Please verify your rdesktop installation."
+msgstr ""
+"rdesktop ਤੁਹਾਡੇ ਮਾਰਗ ਵਿੱਚ ਨਹੀਂ ਹੈ।\n"
+"ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ rdesktop ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+
+#: src/support.c:533
+msgid ""
+"vncviewer or xvncviewer were\n"
+" not found in your path.\n"
+"Please verify your vnc installation."
+msgstr ""
+"vncviewer ਜਾਂ xvncviewer ਤੁਹਾਡੇ\n"
+" ਵੇਹੜੇ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।\n"
+"ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ vnc ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+
+#: src/support.c:642
+msgid ""
+"Xnest was not found in your path.\n"
+"Please verify your Xnest installation."
+msgstr ""
+"Xnest ਤੁਹਾਡੇ ਮਾਰਗ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।\n"
+"ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ Xnest ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+
+#: src/support.c:651
+msgid "Could not find a free X display."
+msgstr "ਇੱਕ ਖਾਲੀ X ਦਰਿਸ਼ ਨਹੀਂ ਮਿਲ ਸਕਿਆ ਹੈ।"
+
+#: src/support.c:711
+msgid ""
+"wfica was not found in your path.\n"
+"Please verify your ICAClient installation."
+msgstr ""
+"wfica ਤੁਹਾਡੇ ਮਾਰਗ ਵਿੱਚ ਨਹੀਂ ਹੈ।\n"
+"ਆਪਣੀ ICAClient ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+
+#: src/support.c:837
+msgid ""
+"Failed to spawn.\n"
+"Please verify your installation."
+msgstr ""
+"ਸਵੈਪਨ ਦੀ ਜਾਂਚ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ।\n"
+"ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+
+#. create the widgets
+#: src/support.c:908 src/support.c:971
+msgid "Terminal Server Client Error"
+msgstr "ਟਰਮੀਨਲ ਸਰਵਰ ਕਲਾਂਇਟ ਗਲਤੀ"
+
+#: src/support.c:917 src/support.c:923 src/support.c:977 src/support.c:983
+msgid "An error has occurred."
+msgstr "ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ।"
+
+#. Create the expander
+#: src/support.c:936
+msgid "Details"
+msgstr ""

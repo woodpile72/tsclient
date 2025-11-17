@@ -12,6 +12,9 @@ Features:
 - MRU JSON list stored in `~/.tsclient/mru.tsc` and consumed by the Cinnamon applet
 - Quick protocol/profile picker embedded in the main UI
 - Cinnamon panel applet under `applet/cinnamon-tsclient/` that launches recent profiles
+- Automatically falls back to GTK's cairo renderer so it works even without
+  `/dev/dri` (e.g. Flatpak sandboxes, remote shells, or strictly confined
+  desktops)
 
 Requirements:
 - rdesktop >= 1.3.0 or a compatible RDP CLI (freerdp works too)
@@ -31,6 +34,14 @@ Building RPM packages:
 2. Run `./configure && make dist`.
 3. Copy the tarball into `~/rpmbuild/SOURCES` and call
    `rpmbuild -ba tsclient.spec`.
+
+Building Flatpak packages:
+1. Install Flatpak + Builder (`flatpak install flathub org.flatpak.Builder`).
+2. For local builds, run `flatpak run org.flatpak.Builder --user --force-clean \
+   --disable-rofiles-fuse --install builddir com.tsclient.TSClient.yml`.
+3. For Flathub submissions, update `com.tsclient.app.yml` with the final
+   tarball URL/SHA256 (see release instructions below) and submit a PR to the
+   Flathub repo.
 
 Basic VNC support:
  makes a call to vncviewer which must be in your path. if a port is needed, 

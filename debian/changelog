@@ -1,3 +1,13 @@
+tsclient (3.4-1) unstable; urgency=medium
+
+  * Default GTK's renderer to cairo so the app runs without /dev/dri access.
+  * Install Cinnamon applet conditionally to fix Debian builds on systems
+    without the optional files.
+  * Add intltool skip list to keep autopoint-based tests quiet.
+  * Refresh Flatpak packaging bits for the Flathub submission.
+
+ -- Erick Woods <erick@gnomepro.com>  Mon, 17 Nov 2025 02:15:00 -0600
+
 tsclient (3.0-1) unstable; urgency=medium
 
   * Initial Debian packaging for the GTK4 port.

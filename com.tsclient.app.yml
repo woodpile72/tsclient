@@ -1,0 +1,40 @@
+app-id: com.tsclient.app
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+command: tsclient
+
+finish-args:
+  - --share=network
+  - --socket=x11
+  - --socket=wayland
+  - --device=dri
+
+modules:
+  - name: intltool
+    cleanup:
+      - '*'
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
+        sha256: 67c74d94196c68c6f485b21f9a58deb31b131b2b4380d73d2b31a5068742f8a6
+  - name: rdesktop
+    buildsystem: autotools
+    config-opts:
+      - --prefix=/app
+      - --disable-smartcard
+    sources:
+      - type: archive
+        url: https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
+        sha256: 473c2f312391379960efe41caad37852c59312bc8f100f9b5f26609ab5704288
+  - name: tsclient
+    buildsystem: autotools
+    config-opts:
+      - --prefix=/app
+      - --disable-maintainer-mode
+      - --disable-dependency-tracking
+    sources:
+      - type: archive
+        url: https://github.com/erick/tsclient/releases/download/v3.4/tsclient-3.4.tar.gz
+        sha256: 29f1d62b607e6fbc083315d8bb3b4667d9041703d3c286c6f9d7b0fb82d0cd72

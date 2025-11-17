@@ -1,0 +1,7 @@
+# Exclude generated or debug-symbol copies that intltool sees during Debian builds.
+builddir/files/lib/debug/source/tsclient/src/connect.c
+builddir/files/lib/debug/source/tsclient/src/mrulist.c
+builddir/files/lib/debug/source/tsclient/src/rdpfile.c
+builddir/files/lib/debug/source/tsclient/src/support.c
+builddir/files/lib/debug/source/tsclient/src/tsc-presets.h
+src/tsc-presets.h

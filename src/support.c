@@ -89,6 +89,13 @@ void add_pixmap_directory (const gchar *directory) {
 gchar* find_pixmap_file (const gchar *filename) {
   GList *elem;
   gchar *pathname = NULL;
+  static const gchar *fallback_dirs[] = {
+    "icons",
+    "./icons",
+    "/usr/share/tsclient/icons",
+    "/app/share/tsclient/icons",
+    NULL
+  };
   /* We step through each of the pixmaps directory to find it. */
   elem = pixmaps_directories;
   while (elem) {
@@ -100,6 +107,17 @@ gchar* find_pixmap_file (const gchar *filename) {
     }
     g_free (candidate);
     elem = elem->next;
+  }
+
+  if (!pathname) {
+    for (const gchar **dir = fallback_dirs; *dir; dir++) {
+      gchar *candidate = g_build_filename (*dir, filename, NULL);
+      if (g_file_test (candidate, G_FILE_TEST_EXISTS)) {
+        pathname = candidate;
+        break;
+      }
+      g_free (candidate);
+    }
   }
   if (tsc_pixmap_debug_enabled ()) {
     if (pathname)
@@ -475,7 +493,7 @@ int tsc_launch_remote (rdp_file *rdp_in, int launch_async, gchar** error)
 	}
         return 1;
       }
-      sprintf(buffer, cmd);
+      g_strlcpy(buffer, cmd, sizeof(buffer));
       c_argv[c_argc++] = g_strdup (buffer);
 
       sprintf(buffer, "-T%s - %s", rdp->full_address, _("Terminal Server Client"));
@@ -679,7 +697,7 @@ int tsc_launch_remote (rdp_file *rdp_in, int launch_async, gchar** error)
       }
       sflags += G_SPAWN_SEARCH_PATH;
       
-      sprintf(buffer, cmd);
+      g_strlcpy(buffer, cmd, sizeof(buffer));
       c_argv[c_argc++] = g_strdup (buffer);
 
       if (rdp->screen_mode_id == 2) {
@@ -778,7 +796,7 @@ int tsc_launch_remote (rdp_file *rdp_in, int launch_async, gchar** error)
       if (g_find_program_in_path ("Xnest")) {
         sflags += G_SPAWN_SEARCH_PATH;
         
-        sprintf(buffer, "Xnest");
+        g_strlcpy(buffer, "Xnest", sizeof(buffer));
         c_argv[c_argc++] = strdup(buffer);
       } else {
 	if(error) {
@@ -855,7 +873,7 @@ int tsc_launch_remote (rdp_file *rdp_in, int launch_async, gchar** error)
 	}
         return 1;
       }
-      sprintf(buffer, cmd);
+      g_strlcpy(buffer, cmd, sizeof(buffer));
       c_argv[c_argc++] = g_strdup (buffer);
 
       if ( rdp->username && strlen (rdp->username) ) {

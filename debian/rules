@@ -11,6 +11,8 @@ override_dh_auto_configure:
 override_dh_auto_install:
 	dh_auto_install
 	# Install Cinnamon applet alongside the generic copy so Cinnamon finds it.
-	APPLET_DIR=debian/tsclient/usr/share/cinnamon/applets/tsclient@cinnamon && \
-	 mkdir -p $$APPLET_DIR && \
-	 cp -a debian/tsclient/usr/share/tsclient/cinnamon-applet/. $$APPLET_DIR/
+	if [ -d debian/tsclient/usr/share/tsclient/cinnamon-applet ]; then \
+	 APPLET_DIR=debian/tsclient/usr/share/cinnamon/applets/tsclient@cinnamon; \
+	 mkdir -p $$APPLET_DIR; \
+	 cp -a debian/tsclient/usr/share/tsclient/cinnamon-applet/. $$APPLET_DIR/; \
+	fi

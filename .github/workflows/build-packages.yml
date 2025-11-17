@@ -1,0 +1,101 @@
+name: Build Packages
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build_deb_rpm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential debhelper rpm
+
+      - name: Build DEB package
+        run: |
+          mkdir -p build/deb
+          # Replace with your build instructions
+          make clean
+          make
+          # Create a simple DEB structure
+          mkdir -p build/deb/tsclient/usr/local/bin
+          cp tsclient build/deb/tsclient/usr/local/bin/
+          mkdir -p build/deb/tsclient/DEBIAN
+          cat <<EOF > build/deb/tsclient/DEBIAN/control
+Package: tsclient
+Version: ${GITHUB_REF_NAME#v}
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Erick Woods <none>
+Description: Remote desktop client for RDP/VNC/SSH
+EOF
+          dpkg-deb --build build/deb/tsclient tsclient_${GITHUB_REF_NAME#v}_amd64.deb
+
+      - name: Build RPM package
+        run: |
+          mkdir -p rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+          tar czf rpmbuild/SOURCES/tsclient.tar.gz .
+          cat <<EOF > rpmbuild/SPECS/tsclient.spec
+Name: tsclient
+Version: ${GITHUB_REF_NAME#v}
+Release: 1
+Summary: Remote desktop client for RDP/VNC/SSH
+License: GPLv3+
+Source0: tsclient.tar.gz
+
+%description
+tsclient - classic remote desktop client revived.
+
+%prep
+%setup -q
+
+%build
+make
+
+%install
+mkdir -p %{buildroot}/usr/local/bin
+cp tsclient %{buildroot}/usr/local/bin/tsclient
+
+%files
+/usr/local/bin/tsclient
+EOF
+          rpmbuild -ba rpmbuild/SPECS/tsclient.spec
+          cp rpmbuild/RPMS/x86_64/*.rpm .
+
+      - name: Upload DEB & RPM
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: |
+            *.deb
+            *.rpm
+
+  flatpak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Flatpak tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y flatpak flatpak-builder
+
+      - name: Build Flatpak
+        run: |
+          flatpak-builder --force-clean build-dir com.tsclient.app.json
+          flatpak build-bundle build-dir tsclient.flatpak com.tsclient.app
+
+      - name: Upload Flatpak
+        uses: actions/upload-artifact@v4
+        with:
+          name: flatpak
+          path: tsclient.flatpak
+

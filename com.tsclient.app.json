@@ -1,0 +1,29 @@
+{
+  "id": "com.tsclient.app",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "23.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "tsclient",
+  "finish-args": [
+    "--share=network",
+    "--socket=x11",
+    "--socket=wayland"
+  ],
+  "modules": [
+    {
+      "name": "tsclient",
+      "buildsystem": "simple",
+      "build-commands": [
+        "make",
+        "install -D tsclient /app/bin/tsclient"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/woodpile72/tsclient.git"
+        }
+      ]
+    }
+  ]
+}
+

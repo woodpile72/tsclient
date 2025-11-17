@@ -1,5 +1,5 @@
 %define	name		tsclient
-%define	version		3.0
+%define	version		3.4
 %define	release		1
 %define	_desktop        %{_datadir}/applications
 %define	_serverdir      %{_prefix}/lib/bonobo/servers
@@ -65,5 +65,9 @@ cp -a applet/cinnamon-tsclient %{_buildroot}%{_datadir}/tsclient/cinnamon-applet
 
 
 %changelog
+* Mon Nov 17 2025 - Erick Woods <erick@gnomepro.com>
+- 3.4 release: default GTK to cairo renderer, refreshed GTK4 packaging, and
+  Flatpak/intltool fixes.
+
 * Mon Sep 30 2002 - Erick Woods <erick@gnomepro.com>
- - This file was created
+- This file was created

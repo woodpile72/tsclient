@@ -1,3 +1,5 @@
+- v.3.4.  GTK renderer defaults to cairo, Debian/RPM packages refreshed, and
+          Flatpak manifest now builds out of the box with intltool + icons.
 - v.3.0.  I'm Back!  GTK4 port, JSON profiles, Cinnamon applet, and a new lease on life.
 - v.0.150.  fixes, lots of other stuff (See Changelog file) - Hope this is last version before a completely rewrite
 - v.0.148.  fixes, updated about dialog, lots of other stuff

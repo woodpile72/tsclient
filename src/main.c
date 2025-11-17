@@ -42,6 +42,10 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (PACKAGE, "UTF-8");
   textdomain (PACKAGE);
 
+  /* Default to the software renderer so we don't require /dev/dri access. */
+  if (g_getenv ("GSK_RENDERER") == NULL)
+    g_setenv ("GSK_RENDERER", "cairo", TRUE);
+
   home        = tsc_home_path ();
   tsc_default = g_build_path ("/", home, "default.tsc", NULL);
   tsc_last    = g_build_path ("/", home, "last.tsc", NULL);

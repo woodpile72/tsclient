@@ -46,7 +46,7 @@ install-data-local:
 	    if test -f $$icon; then \
 	      $(INSTALL_DATA) $$icon $(DESTDIR)$(tsciconsdir); \
 	    fi \
-	  done \
+	  done; \
 	  for size in $(icon_sizes); do \
 	    base=tsclient_$${size}x$${size}.png; \
 	    src=$(srcdir)/icons/$$base; \
@@ -79,7 +79,7 @@ dist-hook:
 	    if test -f $$icon; then \
 	      cp -p $$icon $(distdir)/icons; \
 	    fi \
-	  done \
+	  done; \
 	fi
 
 install-man1:

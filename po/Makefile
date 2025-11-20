@@ -19,7 +19,7 @@
 
 GETTEXT_PACKAGE = tsclient
 PACKAGE = tsclient
-VERSION = 3.0
+VERSION = 3.4.1
 
 SHELL = /bin/sh
 
@@ -35,7 +35,7 @@ datarootdir = ${prefix}/share
 libdir = ${exec_prefix}/lib
 localedir = ${datarootdir}/locale
 subdir = po
-install_sh = ${SHELL} /home/erick/Projects/tsclient-0.150/install-sh
+install_sh = ${SHELL} /home/erick/Projects/tsclient/install-sh
 # Automake >= 1.8 provides $(MKDIR_P).
 # Until it can be supposed, use the safe fallback:
 mkdir_p = $(install_sh) -d

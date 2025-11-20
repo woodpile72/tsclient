@@ -161,14 +161,14 @@ am__define_uniq_tagged_files = \
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp \
 	$(top_srcdir)/mkinstalldirs
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' aclocal-1.16
+ACLOCAL = ${SHELL} '/home/erick/Projects/tsclient/missing' aclocal-1.16
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS}
 ALL_LINGUAS = ar ca cs da de el es fi fr gr he hu id it ja mk ms nl_NL nb pa pl_PL pt_BR pt_PT ru sv tr xh zh_CN zh_HK zh_TW
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' autoconf
-AUTOHEADER = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' autoheader
-AUTOMAKE = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' automake-1.16
+AUTOCONF = ${SHELL} '/home/erick/Projects/tsclient/missing' autoconf
+AUTOHEADER = ${SHELL} '/home/erick/Projects/tsclient/missing' autoheader
+AUTOMAKE = ${SHELL} '/home/erick/Projects/tsclient/missing' automake-1.16
 AWK = gawk
 CATALOGS =  ar.gmo ca.gmo cs.gmo da.gmo de.gmo el.gmo es.gmo fi.gmo fr.gmo gr.gmo he.gmo hu.gmo id.gmo it.gmo ja.gmo mk.gmo ms.gmo nl_NL.gmo nb.gmo pa.gmo pl_PL.gmo pt_BR.gmo pt_PT.gmo ru.gmo sv.gmo tr.gmo xh.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo
 CATOBJEXT = .gmo
@@ -212,8 +212,8 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAINT = #
-MAKEINFO = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' makeinfo
+MAINT = 
+MAKEINFO = ${SHELL} '/home/erick/Projects/tsclient/missing' makeinfo
 MKDIR_P = /usr/bin/mkdir -p
 MKINSTALLDIRS = .//mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
@@ -225,10 +225,10 @@ PACKAGE_BUGREPORT = http://www.gnomepro.com/tsclient
 PACKAGE_CFLAGS = -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -mfpmath=sse -msse -msse2 -pthread 
 PACKAGE_LIBS = -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lvulkan -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 
 PACKAGE_NAME = tsclient
-PACKAGE_STRING = tsclient 3.0
+PACKAGE_STRING = tsclient 3.4.1
 PACKAGE_TARNAME = tsclient
 PACKAGE_URL = 
-PACKAGE_VERSION = 3.0
+PACKAGE_VERSION = 3.4.1
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
@@ -241,12 +241,12 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = 
 USE_NLS = yes
-VERSION = 3.0
+VERSION = 3.4.1
 XGETTEXT = /usr/bin/xgettext
-abs_builddir = /home/erick/Projects/tsclient-0.150/src
-abs_srcdir = /home/erick/Projects/tsclient-0.150/src
-abs_top_builddir = /home/erick/Projects/tsclient-0.150
-abs_top_srcdir = /home/erick/Projects/tsclient-0.150
+abs_builddir = /home/erick/Projects/tsclient/src
+abs_srcdir = /home/erick/Projects/tsclient/src
+abs_top_builddir = /home/erick/Projects/tsclient
+abs_top_srcdir = /home/erick/Projects/tsclient
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -265,7 +265,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/erick/Projects/tsclient-0.150/install-sh
+install_sh = ${SHELL} /home/erick/Projects/tsclient/install-sh
 intltool__v_merge_options_ = $(intltool__v_merge_options_$(AM_DEFAULT_VERBOSITY))
 intltool__v_merge_options_0 = -q
 libdir = ${exec_prefix}/lib
@@ -306,7 +306,7 @@ all: all-am
 
 .SUFFIXES:
 .SUFFIXES: .c .o .obj
-$(srcdir)/Makefile.in: # $(srcdir)/Makefile.am  $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -330,9 +330,9 @@ Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 
-$(top_srcdir)/configure: # $(am__configure_deps)
+$(top_srcdir)/configure:  $(am__configure_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
-$(ACLOCAL_M4): # $(am__aclocal_m4_deps)
+$(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
 install-binPROGRAMS: $(bin_PROGRAMS)

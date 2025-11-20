@@ -233,14 +233,14 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' aclocal-1.16
+ACLOCAL = ${SHELL} '/home/erick/Projects/tsclient/missing' aclocal-1.16
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS}
 ALL_LINGUAS = ar ca cs da de el es fi fr gr he hu id it ja mk ms nl_NL nb pa pl_PL pt_BR pt_PT ru sv tr xh zh_CN zh_HK zh_TW
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' autoconf
-AUTOHEADER = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' autoheader
-AUTOMAKE = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' automake-1.16
+AUTOCONF = ${SHELL} '/home/erick/Projects/tsclient/missing' autoconf
+AUTOHEADER = ${SHELL} '/home/erick/Projects/tsclient/missing' autoheader
+AUTOMAKE = ${SHELL} '/home/erick/Projects/tsclient/missing' automake-1.16
 AWK = gawk
 CATALOGS =  ar.gmo ca.gmo cs.gmo da.gmo de.gmo el.gmo es.gmo fi.gmo fr.gmo gr.gmo he.gmo hu.gmo id.gmo it.gmo ja.gmo mk.gmo ms.gmo nl_NL.gmo nb.gmo pa.gmo pl_PL.gmo pt_BR.gmo pt_PT.gmo ru.gmo sv.gmo tr.gmo xh.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo
 CATOBJEXT = .gmo
@@ -284,8 +284,8 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAINT = #
-MAKEINFO = ${SHELL} '/home/erick/Projects/tsclient-0.150/missing' makeinfo
+MAINT = 
+MAKEINFO = ${SHELL} '/home/erick/Projects/tsclient/missing' makeinfo
 MKDIR_P = /usr/bin/mkdir -p
 MKINSTALLDIRS = .//mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
@@ -297,10 +297,10 @@ PACKAGE_BUGREPORT = http://www.gnomepro.com/tsclient
 PACKAGE_CFLAGS = -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -mfpmath=sse -msse -msse2 -pthread 
 PACKAGE_LIBS = -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lvulkan -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 
 PACKAGE_NAME = tsclient
-PACKAGE_STRING = tsclient 3.0
+PACKAGE_STRING = tsclient 3.4.1
 PACKAGE_TARNAME = tsclient
 PACKAGE_URL = 
-PACKAGE_VERSION = 3.0
+PACKAGE_VERSION = 3.4.1
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
@@ -313,12 +313,12 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = 
 USE_NLS = yes
-VERSION = 3.0
+VERSION = 3.4.1
 XGETTEXT = /usr/bin/xgettext
-abs_builddir = /home/erick/Projects/tsclient-0.150
-abs_srcdir = /home/erick/Projects/tsclient-0.150
-abs_top_builddir = /home/erick/Projects/tsclient-0.150
-abs_top_srcdir = /home/erick/Projects/tsclient-0.150
+abs_builddir = /home/erick/Projects/tsclient
+abs_srcdir = /home/erick/Projects/tsclient
+abs_top_builddir = /home/erick/Projects/tsclient
+abs_top_srcdir = /home/erick/Projects/tsclient
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -337,7 +337,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/erick/Projects/tsclient-0.150/install-sh
+install_sh = ${SHELL} /home/erick/Projects/tsclient/install-sh
 intltool__v_merge_options_ = $(intltool__v_merge_options_$(AM_DEFAULT_VERBOSITY))
 intltool__v_merge_options_0 = -q
 libdir = ${exec_prefix}/lib
@@ -396,7 +396,7 @@ all: config.h
 .SUFFIXES:
 am--refresh: Makefile
 	@:
-$(srcdir)/Makefile.in: # $(srcdir)/Makefile.am  $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -422,9 +422,9 @@ Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	$(SHELL) ./config.status --recheck
 
-$(top_srcdir)/configure: # $(am__configure_deps)
+$(top_srcdir)/configure:  $(am__configure_deps)
 	$(am__cd) $(srcdir) && $(AUTOCONF)
-$(ACLOCAL_M4): # $(am__aclocal_m4_deps)
+$(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
 
@@ -435,7 +435,7 @@ config.h: stamp-h1
 stamp-h1: $(srcdir)/config.h.in $(top_builddir)/config.status
 	@rm -f stamp-h1
 	cd $(top_builddir) && $(SHELL) ./config.status config.h
-$(srcdir)/config.h.in: # $(am__configure_deps) 
+$(srcdir)/config.h.in:  $(am__configure_deps) 
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f stamp-h1
 	touch $@
@@ -953,7 +953,7 @@ install-data-local:
 	    if test -f $$icon; then \
 	      $(INSTALL_DATA) $$icon $(DESTDIR)$(tsciconsdir); \
 	    fi \
-	  done \
+	  done; \
 	  for size in $(icon_sizes); do \
 	    base=tsclient_$${size}x$${size}.png; \
 	    src=$(srcdir)/icons/$$base; \
@@ -986,7 +986,7 @@ dist-hook:
 	    if test -f $$icon; then \
 	      cp -p $$icon $(distdir)/icons; \
 	    fi \
-	  done \
+	  done; \
 	fi
 
 install-man1:

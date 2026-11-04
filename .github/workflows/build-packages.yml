@@ -18,6 +18,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential debhelper intltool pkg-config libgtk-4-dev xvfb
+      - name: Regenerate local build configuration
+        run: |
+          autoreconf -fi
+          ./configure --prefix=/usr
       - name: Build Debian package
         run: dpkg-buildpackage -b -us -uc
       - name: Check GTK radio groups

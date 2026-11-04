@@ -279,28 +279,19 @@ tsc_radio_assign_group (GSList *group)
     g_object_set_data (G_OBJECT (iter->data), "tsc-radio-group", group);
 }
 
-static void
-tsc_radio_button_handle_toggle (GtkCheckButton *button, gpointer user_data)
-{
-  (void) user_data;
-  if (!gtk_check_button_get_active (button))
-    return;
-
-  GSList *group = g_object_get_data (G_OBJECT (button), "tsc-radio-group");
-  for (GSList *iter = group; iter; iter = iter->next) {
-    GtkWidget *other = iter->data;
-    if (other != GTK_WIDGET (button))
-      gtk_check_button_set_active (GTK_CHECK_BUTTON (other), FALSE);
-  }
-}
-
 static inline void
 gtk_radio_button_set_group (GtkWidget *button, GSList *group)
 {
   GSList *new_group = group;
   if (new_group) {
-    if (!g_slist_find (new_group, button))
+    if (!g_slist_find (new_group, button)) {
+      /* Standalone legacy radio buttons start active. Clear that state
+       * before joining so the existing group's selection is preserved. */
+      gtk_check_button_set_active (GTK_CHECK_BUTTON (button), FALSE);
+      gtk_check_button_set_group (GTK_CHECK_BUTTON (button),
+                                  GTK_CHECK_BUTTON (new_group->data));
       new_group = g_slist_prepend (new_group, button);
+    }
   } else {
     new_group = g_slist_prepend (NULL, button);
   }
@@ -318,8 +309,6 @@ gtk_radio_button_new_with_mnemonic (GSList *group, const gchar *label)
 {
   GtkWidget *button = gtk_check_button_new_with_mnemonic (label);
   gtk_widget_add_css_class (button, "radio");
-  g_signal_connect (button, "toggled",
-                    G_CALLBACK (tsc_radio_button_handle_toggle), NULL);
   gtk_radio_button_set_group (button, group);
   if (!group)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (button), TRUE);

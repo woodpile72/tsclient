@@ -1,3 +1,4 @@
+- v.3.4.2. Add FreeRDP connections and fix size, color and sound radio groups.
 - v.3.4.  GTK renderer defaults to cairo, Debian/RPM packages refreshed, and
           Flatpak manifest now builds out of the box with intltool + icons.
 - v.3.0.  I'm Back!  GTK4 port, JSON profiles, Cinnamon applet, and a new lease on life.

@@ -685,10 +685,11 @@ create_frmConnect (void)
 
   const gchar *protocol_items[] = {
     _("RDPv4 (legacy)"),
-    _("RDPv5 (recommended)"),
+    _("RDPv5 (rdesktop)"),
     _("VNC"),
     _("XDMCP"),
     _("ICA"),
+    _("RDP (FreeRDP)"),
     NULL
   };
   optProtocol = tsc_dropdown_new (protocol_items);
@@ -1783,6 +1784,9 @@ on_protocol_changed (GtkDropDown *dropdown, GParamSpec *pspec, gpointer user_dat
   gint protocol = 0;
 
   switch (idx) {
+  case 5:
+    protocol = 5;
+    break;
   case 1:
     protocol = 4;
     break;

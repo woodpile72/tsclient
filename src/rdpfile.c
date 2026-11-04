@@ -464,6 +464,9 @@ int rdp_file_set_screen (rdp_file *rdp_in, GtkWidget *main_window)
 
   widget = lookup_widget (main_window, "optProtocol");
   switch (rdp->protocol) {
+  case 5:
+    tsc_dropdown_set_selected (widget, 5);
+    break;
   case 1:
     tsc_dropdown_set_selected (widget, 2);
     break;
@@ -768,6 +771,9 @@ int rdp_file_get_screen (rdp_file *rdp_in, GtkWidget *main_window)
 
   widget = lookup_widget (main_window, "optProtocol");
   switch (tsc_dropdown_get_selected (widget)) {
+  case 5:
+    rdp->protocol = 5;
+    break;
   case 1:
     rdp->protocol = 4;
     break;

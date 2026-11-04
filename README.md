@@ -17,7 +17,7 @@ Features:
   desktops)
 
 Requirements:
-- rdesktop >= 1.3.0 or a compatible RDP CLI (freerdp works too)
+- rdesktop >= 1.9.0, or FreeRDP 2/3 (xfreerdp or xfreerdp3)
 - vncviewer >= 4.0 for VNC sessions
 - glib >= 2.76.0
 - gtk4 >= 4.10
@@ -49,3 +49,15 @@ Basic VNC support:
  supported VNC options are -fullscreen, -geometry, -depth and -viewonly 
  (set by checking "no motion events"). For a vncpasswd file, put the full 
  path to the file in the "Protocol File" field.
+
+FreeRDP connections:
+- Select “RDP (FreeRDP)” in the Protocol menu and save the profile as `.tsc`.
+  Existing RDPv4/RDPv5 profiles continue to use rdesktop.
+- tsclient looks for `xfreerdp3`, then `xfreerdp`, on PATH. Arguments are passed
+  directly to the client, without a shell. Server/port, credentials, resolution,
+  fullscreen, color depth, sound, clipboard, console session, window decorations,
+  window manager keys, alternate shell and desktop appearance are supported.
+- rdesktop-specific controls are disabled for FreeRDP. FreeRDP retains its own
+  authentication, TLS and certificate validation defaults.
+- The current Flatpak bundles rdesktop only. FreeRDP must be installed inside
+  the sandbox to use this option there; a host installation is not sufficient.

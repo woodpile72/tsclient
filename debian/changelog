@@ -1,3 +1,10 @@
+tsclient (3.4.2-1) unstable; urgency=medium
+
+  * Add selectable FreeRDP support with saved profile selection.
+  * Fix initial selection and exclusivity of size, color and sound options.
+
+ -- Erick Woods <erick@gnomepro.com>  Wed, 04 Nov 2026 14:51:34 -0600
+
 tsclient (3.4-1) unstable; urgency=medium
 
   * Default GTK's renderer to cairo so the app runs without /dev/dri access.

@@ -11,6 +11,7 @@
 #include <stdlib.h> 
 
 #include <gtk/gtk.h>
+#include "freerdp.h"
 #include <gdk/gdk.h>
 #include <glib.h>
 #include <glib/gprintf.h>
@@ -480,6 +481,9 @@ int tsc_launch_remote (rdp_file *rdp_in, int launch_async, gchar** error)
   rdp = rdp_in;
   
   if (strlen(rdp->full_address)) {
+
+    if (rdp->protocol == 5)
+      return tsc_launch_freerdp (rdp, launch_async, error);
 
     cmd = NULL;
 
@@ -1240,7 +1244,7 @@ void tsc_about_dialog ()
     "GNU General Public License (GPL)\n<http://www.gnu.org/licenses/gpl.html>");
 
   const gchar *comments = \
-    _("Terminal Server Client is a frontend for \nrdesktop, vncviewer, wfica and xnest.");
+    _("Terminal Server Client is a frontend for \nrdesktop, FreeRDP, vncviewer, wfica and xnest.");
   
   gchar *translators;
   /* Translators comment: put your own name here to appear in the about dialog. */
@@ -1329,8 +1333,20 @@ tsc_set_protocol_widgets (GtkWidget *main_win, gint protocol)
   }
   gtk_widget_set_sensitive ((GtkWidget*) g_object_get_data (G_OBJECT (main_win), "chkHideWMDecorations"), FALSE);
 
+  /* These controls use rdesktop-specific semantics or flags. */
+  const gchar *legacy_controls[] = {
+    "chkDisableEncryption", "chkDisableClientEncryption", "optTlsVersion",
+    "chkForceBitmap", "chkBackingStore", "chkDisableCtrl", "chkSyncNumlock",
+    "txtKeyboardLang", "txtCodepage", "chkBitmapCache", "chkNoMotionEvents", NULL
+  };
+  for (guint i = 0; legacy_controls[i]; i++) {
+    GtkWidget *control = g_object_get_data (G_OBJECT (main_win), legacy_controls[i]);
+    if (control) gtk_widget_set_sensitive (control, protocol != 5);
+  }
+
   switch (protocol) {
   case 0:  // rdp v4
+  case 5:  // FreeRDP
   case 4:  // rdp v5
     gtk_widget_set_sensitive ((GtkWidget*) g_object_get_data (G_OBJECT (main_win), "txtPassword"), TRUE);
     gtk_widget_set_sensitive ((GtkWidget*) g_object_get_data (G_OBJECT (main_win), "btnProtoFile"), FALSE);

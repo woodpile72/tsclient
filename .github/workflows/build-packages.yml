@@ -28,9 +28,12 @@ jobs:
         run: |
           cc -Isrc $(pkg-config --cflags gtk4) tests/test-radio-groups.c $(pkg-config --libs gtk4) -o /tmp/test-radio-groups
           GSK_RENDERER=cairo xvfb-run -a /tmp/test-radio-groups
+      - name: Collect packages
+        run: |
+          mkdir -p artifacts
+          cp ../tsclient_*.deb ../tsclient-dbgsym_*.ddeb artifacts/
       - uses: actions/upload-artifact@v4
         with:
           name: debian-packages
-          path: |
-            ../tsclient_*.deb
-            ../tsclient-dbgsym_*.ddeb
+          path: artifacts/
+          if-no-files-found: error

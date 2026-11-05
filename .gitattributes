@@ -1,0 +1,17 @@
+# Retain generated build machinery for source builds, exclude it from Linguist.
+/configure linguist-generated=true
+/aclocal.m4 linguist-generated=true
+/config.h.in linguist-generated=true
+Makefile.in linguist-generated=true
+/po/Makefile.in.in linguist-generated=true
+
+# Standard third-party Autotools/intltool helpers, not application source.
+/compile linguist-vendored=true
+/config.guess linguist-vendored=true
+/config.sub linguist-vendored=true
+/depcomp linguist-vendored=true
+/install-sh linguist-vendored=true
+/missing linguist-vendored=true
+/mkinstalldirs linguist-vendored=true
+/test-driver linguist-vendored=true
+/intltool-*.in linguist-vendored=true

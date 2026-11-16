@@ -1224,8 +1224,7 @@ void tsc_error_message (gchar *message)
 void tsc_about_dialog ()
 {
   const gchar *name      = _("Terminal Server Client");
-  const gchar *copyright = "(C) 2002-2025 Erick Woods\n"
-			   "(C) 2007 Jonh Wendell";
+  const gchar *copyright = "(C) 2002-2025 Erick Woods";
   const gchar *website = "http://www.erick.com/";
 
   const gchar *authors[] = {

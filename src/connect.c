@@ -417,6 +417,7 @@ create_frmConnect (void)
   GtkWidget *frameSecurity;
   GtkWidget *lblSecurityFrame;
   GtkWidget *tblSecurity;
+  GtkWidget *imgSecurity;
   GtkWidget *optTlsVersion;
   GtkWidget *chkDisableEncryption;
   GtkWidget *chkDisableClientEncryption;
@@ -760,20 +761,27 @@ create_frmConnect (void)
   gtk_container_add (GTK_CONTAINER (frameSecurity), tblSecurity);
   gtk_table_set_col_spacings (GTK_TABLE (tblSecurity), 6);
 
+  imgSecurity = create_pixmap (frmConnect, "icon_security.svg");
+  gtk_table_attach (GTK_TABLE (tblSecurity), imgSecurity, 0, 1, 0, 3,
+                    (GtkAttachOptions) (0),
+                    (GtkAttachOptions) (0), 0, 0);
+  gtk_misc_set_padding (GTK_MISC (imgSecurity), 3, 3);
+  tsc_align_panel_icon (imgSecurity);
+
   optTlsVersion = tsc_dropdown_new (tls_version_labels);
-  gtk_table_attach (GTK_TABLE (tblSecurity), optTlsVersion, 0, 2, 0, 1,
+  gtk_table_attach (GTK_TABLE (tblSecurity), optTlsVersion, 1, 2, 0, 1,
                     (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
   gtk_widget_set_tooltip_text (optTlsVersion, _("Choose which TLS version to advertise to the server."));
   tsc_dropdown_set_selected (optTlsVersion, 0);
 
   chkDisableEncryption = gtk_check_button_new_with_mnemonic (_("Disable all encryption (-e)"));
-  gtk_table_attach (GTK_TABLE (tblSecurity), chkDisableEncryption, 0, 2, 1, 2,
+  gtk_table_attach (GTK_TABLE (tblSecurity), chkDisableEncryption, 1, 2, 1, 2,
                     (GtkAttachOptions) (GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
   chkDisableClientEncryption = gtk_check_button_new_with_mnemonic (_("Disable client-to-server encryption (-E)"));
-  gtk_table_attach (GTK_TABLE (tblSecurity), chkDisableClientEncryption, 0, 2, 2, 3,
+  gtk_table_attach (GTK_TABLE (tblSecurity), chkDisableClientEncryption, 1, 2, 2, 3,
                     (GtkAttachOptions) (GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
@@ -1309,6 +1317,7 @@ create_frmConnect (void)
   HOOKUP_OBJECT (frmConnect, frameSecurity, "frameSecurity");
   HOOKUP_OBJECT (frmConnect, lblSecurityFrame, "lblSecurityFrame");
   HOOKUP_OBJECT (frmConnect, tblSecurity, "tblSecurity");
+  HOOKUP_OBJECT (frmConnect, imgSecurity, "imgSecurity");
   HOOKUP_OBJECT (frmConnect, optTlsVersion, "optTlsVersion");
   HOOKUP_OBJECT (frmConnect, chkDisableEncryption, "chkDisableEncryption");
   HOOKUP_OBJECT (frmConnect, chkDisableClientEncryption, "chkDisableClientEncryption");

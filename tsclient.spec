@@ -1,5 +1,5 @@
 %define	name		tsclient
-%define	version		3.4.2
+%define	version		3.4.4
 %define	release		1
 %define	_desktop        %{_datadir}/applications
 %define	_serverdir      %{_prefix}/lib/bonobo/servers

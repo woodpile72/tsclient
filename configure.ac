@@ -1,4 +1,4 @@
-AC_INIT([tsclient], [3.4.2],
+AC_INIT([tsclient], [3.4.4],
         [http://www.gnomepro.com/tsclient])
 
 AM_INIT_AUTOMAKE

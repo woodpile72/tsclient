@@ -1,3 +1,34 @@
+tsclient (3.4.4-1) unstable; urgency=medium
+
+  * Add the Security section icon and tidy About credits.
+
+ -- Erick Woods <erick@gnomepro.com>  Mon, 16 Nov 2026 15:26:13 -0600
+
+tsclient (3.4.2-5) unstable; urgency=medium
+
+  * Replace the pale raster key with Humanity vector key-ring artwork.
+
+ -- Erick Woods <erick@gnomepro.com>  Mon, 16 Nov 2026 15:23:17 -0600
+
+tsclient (3.4.2-4) unstable; urgency=medium
+
+  * Use the high-resolution GNOME key icon to avoid upscaling blur.
+
+ -- Erick Woods <erick@gnomepro.com>  Mon, 16 Nov 2026 15:21:12 -0600
+
+tsclient (3.4.2-3) unstable; urgency=medium
+
+  * Use the GNOME theme key icon for the Security section.
+  * Remove duplicate copyright display credit from the About dialog.
+
+ -- Erick Woods <erick@gnomepro.com>  Mon, 16 Nov 2026 15:19:06 -0600
+
+tsclient (3.4.2-2) unstable; urgency=medium
+
+  * Add a bundled key icon beside the Security controls.
+
+ -- Erick Woods <erick@gnomepro.com>  Mon, 16 Nov 2026 15:15:20 -0600
+
 tsclient (3.4.2-1) unstable; urgency=medium
 
   * Add selectable FreeRDP support with saved profile selection.

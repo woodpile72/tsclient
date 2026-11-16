@@ -17,3 +17,10 @@ License: GPL-3+
  .
  On Debian systems, the complete text of the GNU General Public
  License version 3 can be found in /usr/share/common-licenses/GPL-3.
+
+Files: icons/icon_security.svg
+Copyright: Daniel Fore
+           Jonian Guveli
+           K. Vishnoo Charan Reddy
+License: GPL-2
+ See /usr/share/common-licenses/GPL-2 for the complete license.

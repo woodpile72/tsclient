@@ -29,6 +29,8 @@ CLEANFILES = \
 	$(NULL)
 
 EXTRA_DIST = \
+	applet/applet.c \
+	applet/applet.h \
 	autogen.sh \
 	$(desktop_in_files) \
 	$(applications_DATA)	\
@@ -120,3 +122,7 @@ install-man: $(MANS)
 uninstall-man:
 	@$(NORMAL_UNINSTALL)
 	$(MAKE) $(AM_MAKEFLAGS) uninstall-man1
+
+# intltool can leave a lock file after regenerating translations.
+distclean-local:
+	rm -f po/.intltool-merge-cache.lock

@@ -231,6 +231,9 @@ int main (int argc, char **argv)
   g_assert_true (g_str_has_prefix (profile_dir, home));
   g_free (profile_dir);
   tsc_check_files ();
+  /* Use checkout assets, including in out-of-tree builds and fresh CI runners. */
+  g_assert_true (g_file_test (TEST_ICON_DIR "/icon_laptop.png", G_FILE_TEST_IS_REGULAR));
+  add_pixmap_directory (TEST_ICON_DIR);
   create_frmConnect ();
   g_test_add_func ("/ui/radio-groups", test_radio_groups);
   g_test_add_func ("/ui/profile-roundtrip", test_profile_screen);

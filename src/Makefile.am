@@ -39,7 +39,7 @@ test_session_SOURCES = ../tests/test-session.c session.c session.h
 test_session_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
 test_session_LDADD = @PACKAGE_LIBS@
 test_ui_SOURCES = ../tests/test-ui.c $(common_sources)
-test_ui_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
+test_ui_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir) -DTEST_ICON_DIR=\""$(abs_srcdir)/../icons"\"
 test_ui_LDADD = @PACKAGE_LIBS@
 
 test_credentials_SOURCES = ../tests/test-credentials.c credentials.c credentials.h rdpfile.h

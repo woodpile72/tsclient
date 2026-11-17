@@ -1,6 +1,9 @@
 #ifndef RDPFILE_H
 #define RDPFILE_H
 
+#include <glib.h>
+typedef struct _GtkWidget GtkWidget;
+
 /***************************************
 *                                      *
 *   Definitions                        *
@@ -50,6 +53,7 @@ typedef struct
   int keyboardhook;
   char *local_codepage;
   int no_motion_events;
+  int remember_password;
   char *password;
   char *win_password;
   char *progman_group;
@@ -71,6 +75,9 @@ typedef struct
 
 
 int rdp_file_init (rdp_file *rdp_in);
+void rdp_file_clear (rdp_file *rdp);
+void rdp_file_free (rdp_file *rdp);
+rdp_file *rdp_file_copy (const rdp_file *rdp);
 int rdp_file_load (rdp_file *rdp_in, const char *fqpath);
 int rdp_file_save (rdp_file *rdp_in, const char *fqpath);
 int rdp_file_set_screen (rdp_file *rdp_in, GtkWidget *main_window);

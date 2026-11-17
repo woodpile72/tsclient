@@ -7,7 +7,7 @@
 #endif
 
 #include <gtk/gtk.h>
-#include "gtkcompat.h"
+#include <glib/gi18n.h>
 
 #ifdef TSCLIENT_DEBUG
 #define DEBUG 1
@@ -17,14 +17,9 @@
 
 #define TSC_WM_COMPLEX 0
 #define TSC_WM_COMPACT 1
-#define MAX_ARGVS 16
-#define MAX_ARGV_LEN 255
-
-#define HOOKUP_OBJECT(component,widget,name) \
-  g_object_set_data (G_OBJECT (component), name, widget)
 
 /*
- * This function returns a widget in a component created by Glade.
+ * Return a registered form control from its window or one of its children.
  * Call it with the toplevel widget in the component (i.e. a window/dialog),
  * or alternatively any widget in the component, and the name of the widget
  * you want returned.
@@ -56,9 +51,6 @@ int tsc_check_files ();
 
 gchar *tsc_home_path ();
 
-int tsc_launch_remote (rdp_file *rdp_in, int launch_async, gchar** error);
-
-void tsc_connect_error (rdp_file * rdp, const gchar* error);
 void tsc_error_message (gchar *message);
 
 void tsc_about_dialog ();

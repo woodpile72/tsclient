@@ -29,6 +29,9 @@ CLEANFILES = \
 	$(NULL)
 
 EXTRA_DIST = \
+	README.md \
+	tests/run-credentials-keyring.sh \
+	tests/test-credentials-keyring.c \
 	applet/applet.c \
 	applet/applet.h \
 	autogen.sh \

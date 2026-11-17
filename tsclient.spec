@@ -1,73 +1,53 @@
-%define	name		tsclient
-%define	version		3.4.4
-%define	release		1
-%define	_desktop        %{_datadir}/applications
-%define	_serverdir      %{_prefix}/lib/bonobo/servers
-%define	_buildroot      %{_tmppath}/%{name}-%{version}
+Name:           tsclient
+Version:        3.5.0
+Release:        1%{?dist}
+Summary:        GTK4 frontend for remote desktop clients
+License:        GPL-3.0-or-later
+URL:            https://github.com/woodpile72/tsclient
+Source0:        %{url}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 
-Summary:  Terminal Server Client GTK4 frontend for remote desktop tools.
-Name:     %{name}
-Version:  %{version}
-Release:  %{release}
-License:  GPLv3+
-Group:    User Interface/Desktops
-URL:      http://%{name}.sourceforge.net/ 
-Vendor:		Erick Woods <erick@gnomepro.com>
-Source:		%{name}-%{version}.tar.gz
-BuildRoot:	/var/tmp/%{name}-%{version}
-Requires:	glib2 >= 2.76.0, gtk4 >= 4.10, rdesktop >= 1.3.0, vnc >= 4.0
-BuildRequires:	glib2-devel >= 2.76.0, gtk4-devel >= 4.10
-
+BuildRequires:  gcc
+BuildRequires:  make
+BuildRequires:  intltool
+BuildRequires:  gettext
+BuildRequires:  pkgconfig(gtk4) >= 4.10
+BuildRequires:  pkgconfig(json-glib-1.0)
+BuildRequires:  pkgconfig(libsecret-1)
+Requires:       rdesktop >= 1.9.0
 
 %description
-Terminal Server Client is a GTK4 frontend for rdesktop, VNC, and other remote
-desktop tools.  This package also ships a Cinnamon panel applet (installed under
-%{_datadir}/tsclient/cinnamon-applet) that can be copied into
-~/.local/share/cinnamon/applets for quick profile launches.
-
+TSClient is a GTK4 frontend for rdesktop, FreeRDP, VNC viewers, Xnest,
+and the Citrix ICA client. It reads Windows RDP files and saves JSON
+profiles, with optional password storage in the desktop keyring.
+Additional backends are optional and must be installed separately.
 
 %prep
-%setup
-
+%setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%_prefix
-make
+%configure
+%make_build
 
+%check
+# Display-dependent tests skip automatically on headless builders.
+%make_build check
 
 %install
-[ -n "%{_buildroot}" -a "%{_buildroot}" != / ] && rm -rf %{_buildroot}
-make prefix=%{_buildroot}%{_prefix} install
-mkdir -p %{_buildroot}%{_desktop}
-mkdir -p %{_buildroot}%{_datadir}/tsclient/icons
-cp -a icons/* %{_buildroot}%{_datadir}/tsclient/icons/
-mkdir -p %{_buildroot}%{_datadir}/tsclient
-cp -a applet/cinnamon-tsclient %{_buildroot}%{_datadir}/tsclient/cinnamon-applet
+%make_install
+%find_lang %{name}
 
-
-%clean
-[ -n "%{_buildroot}" -a "%{_buildroot}" != / ] && rm -rf %{_buildroot}
-
-
-%files
-%defattr(-,root,root)
-%doc README ChangeLog AUTHORS NEWS
-%{_prefix}/bin/tsclient
-%{_desktop}/tsclient.desktop
-%{_datadir}/tsclient/icons
+%files -f %{name}.lang
+%license COPYING
+%doc README.md AUTHORS NEWS ChangeLog
+%{_bindir}/tsclient
+%{_datadir}/applications/tsclient.desktop
+%{_datadir}/tsclient/
 %{_datadir}/icons/hicolor/*/apps/tsclient.png
 %{_datadir}/icons/hicolor/scalable/apps/tsclient.svg
-%{_datadir}/locale/*/LC_MESSAGES/tsclient.mo
-%{_datadir}/application-registry/tsclient.*
+%{_datadir}/application-registry/tsclient.applications
 %{_datadir}/mime-info/tsclient.*
-%{_datadir}/man/man1/tsclient.1*
-%{_datadir}/tsclient/cinnamon-applet
-
+%{_mandir}/man1/tsclient.1*
 
 %changelog
-* Mon Nov 17 2025 - Erick Woods <erick@gnomepro.com>
-- 3.4 release: default GTK to cairo renderer, refreshed GTK4 packaging, and
-  Flatpak/intltool fixes.
-
-* Mon Sep 30 2002 - Erick Woods <erick@gnomepro.com>
-- This file was created
+* Mon Nov 16 2026 Erick Woods <erick@gnomepro.com> - 3.5.0-1
+- modernization efforts

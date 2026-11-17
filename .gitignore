@@ -39,3 +39,6 @@ Makefile
 /debian/tsclient/
 /debian/tsclient.*.log
 /debian/tsclient.substvars
+
+# Regression-test build output
+/src/test-*

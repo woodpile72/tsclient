@@ -247,6 +247,8 @@ CATOBJEXT = @CATOBJEXT@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
+CORE_CFLAGS = @CORE_CFLAGS@
+CORE_LIBS = @CORE_LIBS@
 CPPFLAGS = @CPPFLAGS@
 CSCOPE = @CSCOPE@
 CTAGS = @CTAGS@
@@ -381,6 +383,11 @@ CLEANFILES = \
 	$(NULL)
 
 EXTRA_DIST = \
+	README.md \
+	tests/run-credentials-keyring.sh \
+	tests/test-credentials-keyring.c \
+	applet/applet.c \
+	applet/applet.h \
 	autogen.sh \
 	$(desktop_in_files) \
 	$(applications_DATA)	\
@@ -857,7 +864,8 @@ clean-am: clean-generic mostlyclean-am
 distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -f Makefile
-distclean-am: clean-am distclean-generic distclean-hdr distclean-tags
+distclean-am: clean-am distclean-generic distclean-hdr distclean-local \
+	distclean-tags
 
 dvi: dvi-recursive
 
@@ -926,20 +934,20 @@ uninstall-am: uninstall-applicationsDATA uninstall-desktopDATA \
 	cscope cscopelist-am ctags ctags-am dist dist-all dist-bzip2 \
 	dist-gzip dist-hook dist-lzip dist-shar dist-tarZ dist-xz \
 	dist-zip dist-zstd distcheck distclean distclean-generic \
-	distclean-hdr distclean-tags distcleancheck distdir \
-	distuninstallcheck dvi dvi-am html html-am info info-am \
-	install install-am install-applicationsDATA install-data \
-	install-data-am install-data-local install-desktopDATA \
-	install-dvi install-dvi-am install-exec install-exec-am \
-	install-html install-html-am install-info install-info-am \
-	install-man install-man1 install-mimeDATA install-pdf \
-	install-pdf-am install-ps install-ps-am install-strip \
-	installcheck installcheck-am installdirs installdirs-am \
-	maintainer-clean maintainer-clean-generic mostlyclean \
-	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am uninstall-applicationsDATA uninstall-desktopDATA \
-	uninstall-local uninstall-man uninstall-man1 \
-	uninstall-mimeDATA
+	distclean-hdr distclean-local distclean-tags distcleancheck \
+	distdir distuninstallcheck dvi dvi-am html html-am info \
+	info-am install install-am install-applicationsDATA \
+	install-data install-data-am install-data-local \
+	install-desktopDATA install-dvi install-dvi-am install-exec \
+	install-exec-am install-html install-html-am install-info \
+	install-info-am install-man install-man1 install-mimeDATA \
+	install-pdf install-pdf-am install-ps install-ps-am \
+	install-strip installcheck installcheck-am installdirs \
+	installdirs-am maintainer-clean maintainer-clean-generic \
+	mostlyclean mostlyclean-generic pdf pdf-am ps ps-am tags \
+	tags-am uninstall uninstall-am uninstall-applicationsDATA \
+	uninstall-desktopDATA uninstall-local uninstall-man \
+	uninstall-man1 uninstall-mimeDATA
 
 .PRECIOUS: Makefile
 
@@ -1027,6 +1035,10 @@ install-man: $(MANS)
 uninstall-man:
 	@$(NORMAL_UNINSTALL)
 	$(MAKE) $(AM_MAKEFLAGS) uninstall-man1
+
+# intltool can leave a lock file after regenerating translations.
+distclean-local:
+	rm -f po/.intltool-merge-cache.lock
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

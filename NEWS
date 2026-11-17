@@ -1,3 +1,4 @@
+- v.3.5.0. modernization efforts
 - v.3.4.4. Add a Security section icon and tidy About credits.
 - v.3.4.2. Add FreeRDP connections and fix size, color and sound radio groups.
 - v.3.4.  GTK renderer defaults to cairo, Debian/RPM packages refreshed, and

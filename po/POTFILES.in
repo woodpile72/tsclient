@@ -14,3 +14,5 @@ src/rdpfile.h
 src/support.c
 src/support.h
 
+src/connection.c
+src/launcher.c

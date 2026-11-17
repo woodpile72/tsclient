@@ -40,33 +40,3 @@ tsc_freerdp_argv (const rdp_file *rdp, const gchar *executable)
 #undef VALUE
   return (gchar **) g_ptr_array_free (args, FALSE);
 }
-
-int
-tsc_launch_freerdp (const rdp_file *rdp, int launch_async, gchar **error)
-{
-  gchar *executable = g_find_program_in_path ("xfreerdp3");
-  gchar **argv;
-  gchar *stderr_text = NULL;
-  GError *err = NULL;
-  gint status = 0;
-  gboolean ok;
-  if (!executable) executable = g_find_program_in_path ("xfreerdp");
-  if (!executable) {
-    if (error) *error = g_strdup ("FreeRDP was not found. Install xfreerdp3 or xfreerdp in the environment running tsclient.");
-    return 1;
-  }
-  argv = tsc_freerdp_argv (rdp, executable);
-  if (launch_async)
-    ok = g_spawn_async (NULL, argv, NULL, 0, NULL, NULL, NULL, &err);
-  else {
-    ok = g_spawn_sync (NULL, argv, NULL, 0, NULL, NULL, NULL, &stderr_text, &status, &err);
-    if (ok) ok = g_spawn_check_wait_status (status, &err);
-  }
-  if (!ok && error)
-    *error = g_strdup (stderr_text && *stderr_text ? stderr_text : err->message);
-  g_clear_error (&err);
-  g_free (stderr_text);
-  g_strfreev (argv);
-  g_free (executable);
-  return ok ? 0 : 1;
-}

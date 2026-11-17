@@ -1,5 +1,5 @@
-AC_INIT([tsclient], [3.4.4],
-        [http://www.gnomepro.com/tsclient])
+AC_INIT([tsclient], [3.5.0],
+        [https://github.com/woodpile72/tsclient/issues])
 
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
@@ -53,9 +53,10 @@ if test x$ENABLE_GNOME = "xno" ; then
    :
 fi
 
-pkg_modules="gtk4"
+pkg_modules="gtk4 >= 4.10 json-glib-1.0 libsecret-1"
 
 PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+PKG_CHECK_MODULES(CORE, [gio-2.0])
 AC_SUBST(PACKAGE_CFLAGS)
 AC_SUBST(PACKAGE_LIBS)
 

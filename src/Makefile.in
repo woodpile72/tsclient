@@ -87,8 +87,10 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 bin_PROGRAMS = tsclient$(EXEEXT)
-check_PROGRAMS = test-freerdp$(EXEEXT)
-TESTS = test-freerdp$(EXEEXT)
+check_PROGRAMS = test-freerdp$(EXEEXT) test-profile$(EXEEXT) \
+	test-launcher$(EXEEXT) test-session$(EXEEXT) test-ui$(EXEEXT) \
+	test-credentials$(EXEEXT) test-mru$(EXEEXT) \
+	test-connection-credentials$(EXEEXT)
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -101,13 +103,50 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
+am_test_connection_credentials_OBJECTS = test_connection_credentials-test-connection-credentials.$(OBJEXT)
+test_connection_credentials_OBJECTS =  \
+	$(am_test_connection_credentials_OBJECTS)
+am_test_credentials_OBJECTS =  \
+	test_credentials-test-credentials.$(OBJEXT) \
+	test_credentials-credentials.$(OBJEXT)
+test_credentials_OBJECTS = $(am_test_credentials_OBJECTS)
+test_credentials_DEPENDENCIES =
 am_test_freerdp_OBJECTS = test_freerdp-test-freerdp.$(OBJEXT) \
 	test_freerdp-freerdp.$(OBJEXT)
 test_freerdp_OBJECTS = $(am_test_freerdp_OBJECTS)
 test_freerdp_DEPENDENCIES =
-am_tsclient_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
-	freerdp.$(OBJEXT) connect.$(OBJEXT) rdpfile.$(OBJEXT) \
+am_test_launcher_OBJECTS = test_launcher-test-launcher.$(OBJEXT) \
+	test_launcher-launcher.$(OBJEXT) \
+	test_launcher-freerdp.$(OBJEXT)
+test_launcher_OBJECTS = $(am_test_launcher_OBJECTS)
+test_launcher_DEPENDENCIES =
+am_test_mru_OBJECTS = test_mru-test-profile.$(OBJEXT) \
+	test_mru-profile.$(OBJEXT)
+test_mru_OBJECTS = $(am_test_mru_OBJECTS)
+test_mru_DEPENDENCIES =
+test_mru_LINK = $(CCLD) $(test_mru_CFLAGS) $(CFLAGS) \
+	$(test_mru_LDFLAGS) $(LDFLAGS) -o $@
+am_test_profile_OBJECTS = test_profile-test-profile.$(OBJEXT) \
+	test_profile-profile.$(OBJEXT)
+test_profile_OBJECTS = $(am_test_profile_OBJECTS)
+test_profile_DEPENDENCIES =
+am_test_session_OBJECTS = test_session-test-session.$(OBJEXT) \
+	test_session-session.$(OBJEXT)
+test_session_OBJECTS = $(am_test_session_OBJECTS)
+test_session_DEPENDENCIES =
+am__objects_1 = test_ui-support.$(OBJEXT) test_ui-freerdp.$(OBJEXT) \
+	test_ui-connect.$(OBJEXT) test_ui-connection.$(OBJEXT) \
+	test_ui-launcher.$(OBJEXT) test_ui-session.$(OBJEXT) \
+	test_ui-credentials.$(OBJEXT) test_ui-profile.$(OBJEXT) \
+	test_ui-rdpfile.$(OBJEXT) test_ui-mrulist.$(OBJEXT)
+am_test_ui_OBJECTS = test_ui-test-ui.$(OBJEXT) $(am__objects_1)
+test_ui_OBJECTS = $(am_test_ui_OBJECTS)
+test_ui_DEPENDENCIES =
+am__objects_2 = support.$(OBJEXT) freerdp.$(OBJEXT) connect.$(OBJEXT) \
+	connection.$(OBJEXT) launcher.$(OBJEXT) session.$(OBJEXT) \
+	credentials.$(OBJEXT) profile.$(OBJEXT) rdpfile.$(OBJEXT) \
 	mrulist.$(OBJEXT)
+am_tsclient_OBJECTS = main.$(OBJEXT) $(am__objects_2)
 tsclient_OBJECTS = $(am_tsclient_OBJECTS)
 tsclient_DEPENDENCIES =
 AM_V_P = $(am__v_P_@AM_V@)
@@ -125,11 +164,33 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = ./$(DEPDIR)/connect.Po ./$(DEPDIR)/freerdp.Po \
-	./$(DEPDIR)/main.Po ./$(DEPDIR)/mrulist.Po \
-	./$(DEPDIR)/rdpfile.Po ./$(DEPDIR)/support.Po \
+am__depfiles_remade = ./$(DEPDIR)/connect.Po ./$(DEPDIR)/connection.Po \
+	./$(DEPDIR)/credentials.Po ./$(DEPDIR)/freerdp.Po \
+	./$(DEPDIR)/launcher.Po ./$(DEPDIR)/main.Po \
+	./$(DEPDIR)/mrulist.Po ./$(DEPDIR)/profile.Po \
+	./$(DEPDIR)/rdpfile.Po ./$(DEPDIR)/session.Po \
+	./$(DEPDIR)/support.Po \
+	./$(DEPDIR)/test_connection_credentials-test-connection-credentials.Po \
+	./$(DEPDIR)/test_credentials-credentials.Po \
+	./$(DEPDIR)/test_credentials-test-credentials.Po \
 	./$(DEPDIR)/test_freerdp-freerdp.Po \
-	./$(DEPDIR)/test_freerdp-test-freerdp.Po
+	./$(DEPDIR)/test_freerdp-test-freerdp.Po \
+	./$(DEPDIR)/test_launcher-freerdp.Po \
+	./$(DEPDIR)/test_launcher-launcher.Po \
+	./$(DEPDIR)/test_launcher-test-launcher.Po \
+	./$(DEPDIR)/test_mru-profile.Po \
+	./$(DEPDIR)/test_mru-test-profile.Po \
+	./$(DEPDIR)/test_profile-profile.Po \
+	./$(DEPDIR)/test_profile-test-profile.Po \
+	./$(DEPDIR)/test_session-session.Po \
+	./$(DEPDIR)/test_session-test-session.Po \
+	./$(DEPDIR)/test_ui-connect.Po \
+	./$(DEPDIR)/test_ui-connection.Po \
+	./$(DEPDIR)/test_ui-credentials.Po \
+	./$(DEPDIR)/test_ui-freerdp.Po ./$(DEPDIR)/test_ui-launcher.Po \
+	./$(DEPDIR)/test_ui-mrulist.Po ./$(DEPDIR)/test_ui-profile.Po \
+	./$(DEPDIR)/test_ui-rdpfile.Po ./$(DEPDIR)/test_ui-session.Po \
+	./$(DEPDIR)/test_ui-support.Po ./$(DEPDIR)/test_ui-test-ui.Po
 am__mv = mv -f
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -147,8 +208,16 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(test_freerdp_SOURCES) $(tsclient_SOURCES)
-DIST_SOURCES = $(test_freerdp_SOURCES) $(tsclient_SOURCES)
+SOURCES = $(test_connection_credentials_SOURCES) \
+	$(test_credentials_SOURCES) $(test_freerdp_SOURCES) \
+	$(test_launcher_SOURCES) $(test_mru_SOURCES) \
+	$(test_profile_SOURCES) $(test_session_SOURCES) \
+	$(test_ui_SOURCES) $(tsclient_SOURCES)
+DIST_SOURCES = $(test_connection_credentials_SOURCES) \
+	$(test_credentials_SOURCES) $(test_freerdp_SOURCES) \
+	$(test_launcher_SOURCES) $(test_mru_SOURCES) \
+	$(test_profile_SOURCES) $(test_session_SOURCES) \
+	$(test_ui_SOURCES) $(tsclient_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -393,6 +462,8 @@ CATOBJEXT = @CATOBJEXT@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
+CORE_CFLAGS = @CORE_CFLAGS@
+CORE_LIBS = @CORE_LIBS@
 CPPFLAGS = @CPPFLAGS@
 CSCOPE = @CSCOPE@
 CTAGS = @CTAGS@
@@ -506,25 +577,57 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-INCLUDES = \
+AM_CPPFLAGS = \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
 	@PACKAGE_CFLAGS@
 
-tsclient_SOURCES = \
-	main.c main.h \
+common_sources = \
 	support.c support.h \
 	freerdp.c freerdp.h \
-	connect.c connect.h \
+	connect.c connect.h connection.c connection.h \
+	launcher.c launcher.h session.c session.h \
+	credentials.c credentials.h profile.c \
 	rdpfile.c rdpfile.h \
 	mrulist.c mrulist.h \
-	tsc-presets.h gtkcompat.h
+	tsc-presets.h
 
+tsclient_SOURCES = main.c main.h $(common_sources)
 tsclient_LDADD = @PACKAGE_LIBS@
+TESTS = $(check_PROGRAMS)
 test_freerdp_SOURCES = ../tests/test-freerdp.c freerdp.c freerdp.h rdpfile.h
-test_freerdp_CPPFLAGS = $(AM_CPPFLAGS) $(INCLUDES) -I$(srcdir)
+test_freerdp_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
 test_freerdp_LDADD = @PACKAGE_LIBS@
-EXTRA_DIST = ../tests/test-radio-groups.c
+test_profile_SOURCES = ../tests/test-profile.c profile.c rdpfile.h
+test_profile_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
+test_profile_LDADD = @PACKAGE_LIBS@
+test_launcher_SOURCES = ../tests/test-launcher.c launcher.c launcher.h freerdp.c freerdp.h rdpfile.h
+test_launcher_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
+test_launcher_LDADD = @PACKAGE_LIBS@
+test_session_SOURCES = ../tests/test-session.c session.c session.h
+test_session_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
+test_session_LDADD = @PACKAGE_LIBS@
+test_ui_SOURCES = ../tests/test-ui.c $(common_sources)
+test_ui_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
+test_ui_LDADD = @PACKAGE_LIBS@
+test_credentials_SOURCES = ../tests/test-credentials.c credentials.c credentials.h rdpfile.h
+test_credentials_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
+# All Secret Service functions are mocked; this test never opens a real keyring.
+test_credentials_LDADD = @CORE_LIBS@
+test_mru_SOURCES = ../tests/test-profile.c profile.c rdpfile.h
+test_mru_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir) -DTEST_MRU
+test_mru_CFLAGS = $(AM_CFLAGS) -ffunction-sections -fdata-sections
+test_mru_LDFLAGS = -Wl,--gc-sections
+test_mru_LDADD = @PACKAGE_LIBS@
+
+# connection.c is included by the test so its static callbacks can be exercised.
+# Do not compile it separately or link production credential/session functions.
+test_connection_credentials_SOURCES = ../tests/test-connection-credentials.c
+test_connection_credentials_CPPFLAGS = $(AM_CPPFLAGS) -I$(srcdir)
+test_connection_credentials_LDADD = $(filter-out -lsecret-1,@PACKAGE_LIBS@)
+
+# Automake cannot infer prerequisites from GNU make function expressions.
+test_connection_credentials_DEPENDENCIES = 
 all: all-am
 
 .SUFFIXES:
@@ -604,9 +707,37 @@ clean-binPROGRAMS:
 clean-checkPROGRAMS:
 	-test -z "$(check_PROGRAMS)" || rm -f $(check_PROGRAMS)
 
+test-connection-credentials$(EXEEXT): $(test_connection_credentials_OBJECTS) $(test_connection_credentials_DEPENDENCIES) $(EXTRA_test_connection_credentials_DEPENDENCIES) 
+	@rm -f test-connection-credentials$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_connection_credentials_OBJECTS) $(test_connection_credentials_LDADD) $(LIBS)
+
+test-credentials$(EXEEXT): $(test_credentials_OBJECTS) $(test_credentials_DEPENDENCIES) $(EXTRA_test_credentials_DEPENDENCIES) 
+	@rm -f test-credentials$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_credentials_OBJECTS) $(test_credentials_LDADD) $(LIBS)
+
 test-freerdp$(EXEEXT): $(test_freerdp_OBJECTS) $(test_freerdp_DEPENDENCIES) $(EXTRA_test_freerdp_DEPENDENCIES) 
 	@rm -f test-freerdp$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_freerdp_OBJECTS) $(test_freerdp_LDADD) $(LIBS)
+
+test-launcher$(EXEEXT): $(test_launcher_OBJECTS) $(test_launcher_DEPENDENCIES) $(EXTRA_test_launcher_DEPENDENCIES) 
+	@rm -f test-launcher$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_launcher_OBJECTS) $(test_launcher_LDADD) $(LIBS)
+
+test-mru$(EXEEXT): $(test_mru_OBJECTS) $(test_mru_DEPENDENCIES) $(EXTRA_test_mru_DEPENDENCIES) 
+	@rm -f test-mru$(EXEEXT)
+	$(AM_V_CCLD)$(test_mru_LINK) $(test_mru_OBJECTS) $(test_mru_LDADD) $(LIBS)
+
+test-profile$(EXEEXT): $(test_profile_OBJECTS) $(test_profile_DEPENDENCIES) $(EXTRA_test_profile_DEPENDENCIES) 
+	@rm -f test-profile$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_profile_OBJECTS) $(test_profile_LDADD) $(LIBS)
+
+test-session$(EXEEXT): $(test_session_OBJECTS) $(test_session_DEPENDENCIES) $(EXTRA_test_session_DEPENDENCIES) 
+	@rm -f test-session$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_session_OBJECTS) $(test_session_LDADD) $(LIBS)
+
+test-ui$(EXEEXT): $(test_ui_OBJECTS) $(test_ui_DEPENDENCIES) $(EXTRA_test_ui_DEPENDENCIES) 
+	@rm -f test-ui$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_ui_OBJECTS) $(test_ui_LDADD) $(LIBS)
 
 tsclient$(EXEEXT): $(tsclient_OBJECTS) $(tsclient_DEPENDENCIES) $(EXTRA_tsclient_DEPENDENCIES) 
 	@rm -f tsclient$(EXEEXT)
@@ -619,13 +750,41 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/connect.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/connection.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/credentials.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/freerdp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/launcher.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mrulist.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/profile.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rdpfile.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/session.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/support.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_connection_credentials-test-connection-credentials.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_credentials-credentials.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_credentials-test-credentials.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_freerdp-freerdp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_freerdp-test-freerdp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_launcher-freerdp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_launcher-launcher.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_launcher-test-launcher.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_mru-profile.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_mru-test-profile.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_profile-profile.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_profile-test-profile.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_session-session.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_session-test-session.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-connect.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-connection.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-credentials.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-freerdp.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-launcher.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-mrulist.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-profile.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-rdpfile.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-session.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-support.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_ui-test-ui.Po@am__quote@ # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -646,6 +805,48 @@ am--depfiles: $(am__depfiles_remade)
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+
+test_connection_credentials-test-connection-credentials.o: ../tests/test-connection-credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_connection_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_connection_credentials-test-connection-credentials.o -MD -MP -MF $(DEPDIR)/test_connection_credentials-test-connection-credentials.Tpo -c -o test_connection_credentials-test-connection-credentials.o `test -f '../tests/test-connection-credentials.c' || echo '$(srcdir)/'`../tests/test-connection-credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_connection_credentials-test-connection-credentials.Tpo $(DEPDIR)/test_connection_credentials-test-connection-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-connection-credentials.c' object='test_connection_credentials-test-connection-credentials.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_connection_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_connection_credentials-test-connection-credentials.o `test -f '../tests/test-connection-credentials.c' || echo '$(srcdir)/'`../tests/test-connection-credentials.c
+
+test_connection_credentials-test-connection-credentials.obj: ../tests/test-connection-credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_connection_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_connection_credentials-test-connection-credentials.obj -MD -MP -MF $(DEPDIR)/test_connection_credentials-test-connection-credentials.Tpo -c -o test_connection_credentials-test-connection-credentials.obj `if test -f '../tests/test-connection-credentials.c'; then $(CYGPATH_W) '../tests/test-connection-credentials.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-connection-credentials.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_connection_credentials-test-connection-credentials.Tpo $(DEPDIR)/test_connection_credentials-test-connection-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-connection-credentials.c' object='test_connection_credentials-test-connection-credentials.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_connection_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_connection_credentials-test-connection-credentials.obj `if test -f '../tests/test-connection-credentials.c'; then $(CYGPATH_W) '../tests/test-connection-credentials.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-connection-credentials.c'; fi`
+
+test_credentials-test-credentials.o: ../tests/test-credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_credentials-test-credentials.o -MD -MP -MF $(DEPDIR)/test_credentials-test-credentials.Tpo -c -o test_credentials-test-credentials.o `test -f '../tests/test-credentials.c' || echo '$(srcdir)/'`../tests/test-credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_credentials-test-credentials.Tpo $(DEPDIR)/test_credentials-test-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-credentials.c' object='test_credentials-test-credentials.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_credentials-test-credentials.o `test -f '../tests/test-credentials.c' || echo '$(srcdir)/'`../tests/test-credentials.c
+
+test_credentials-test-credentials.obj: ../tests/test-credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_credentials-test-credentials.obj -MD -MP -MF $(DEPDIR)/test_credentials-test-credentials.Tpo -c -o test_credentials-test-credentials.obj `if test -f '../tests/test-credentials.c'; then $(CYGPATH_W) '../tests/test-credentials.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-credentials.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_credentials-test-credentials.Tpo $(DEPDIR)/test_credentials-test-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-credentials.c' object='test_credentials-test-credentials.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_credentials-test-credentials.obj `if test -f '../tests/test-credentials.c'; then $(CYGPATH_W) '../tests/test-credentials.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-credentials.c'; fi`
+
+test_credentials-credentials.o: credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_credentials-credentials.o -MD -MP -MF $(DEPDIR)/test_credentials-credentials.Tpo -c -o test_credentials-credentials.o `test -f 'credentials.c' || echo '$(srcdir)/'`credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_credentials-credentials.Tpo $(DEPDIR)/test_credentials-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='credentials.c' object='test_credentials-credentials.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_credentials-credentials.o `test -f 'credentials.c' || echo '$(srcdir)/'`credentials.c
+
+test_credentials-credentials.obj: credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_credentials-credentials.obj -MD -MP -MF $(DEPDIR)/test_credentials-credentials.Tpo -c -o test_credentials-credentials.obj `if test -f 'credentials.c'; then $(CYGPATH_W) 'credentials.c'; else $(CYGPATH_W) '$(srcdir)/credentials.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_credentials-credentials.Tpo $(DEPDIR)/test_credentials-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='credentials.c' object='test_credentials-credentials.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_credentials_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_credentials-credentials.obj `if test -f 'credentials.c'; then $(CYGPATH_W) 'credentials.c'; else $(CYGPATH_W) '$(srcdir)/credentials.c'; fi`
 
 test_freerdp-test-freerdp.o: ../tests/test-freerdp.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_freerdp_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_freerdp-test-freerdp.o -MD -MP -MF $(DEPDIR)/test_freerdp-test-freerdp.Tpo -c -o test_freerdp-test-freerdp.o `test -f '../tests/test-freerdp.c' || echo '$(srcdir)/'`../tests/test-freerdp.c
@@ -674,6 +875,286 @@ test_freerdp-freerdp.obj: freerdp.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='freerdp.c' object='test_freerdp-freerdp.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_freerdp_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_freerdp-freerdp.obj `if test -f 'freerdp.c'; then $(CYGPATH_W) 'freerdp.c'; else $(CYGPATH_W) '$(srcdir)/freerdp.c'; fi`
+
+test_launcher-test-launcher.o: ../tests/test-launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_launcher-test-launcher.o -MD -MP -MF $(DEPDIR)/test_launcher-test-launcher.Tpo -c -o test_launcher-test-launcher.o `test -f '../tests/test-launcher.c' || echo '$(srcdir)/'`../tests/test-launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_launcher-test-launcher.Tpo $(DEPDIR)/test_launcher-test-launcher.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-launcher.c' object='test_launcher-test-launcher.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_launcher-test-launcher.o `test -f '../tests/test-launcher.c' || echo '$(srcdir)/'`../tests/test-launcher.c
+
+test_launcher-test-launcher.obj: ../tests/test-launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_launcher-test-launcher.obj -MD -MP -MF $(DEPDIR)/test_launcher-test-launcher.Tpo -c -o test_launcher-test-launcher.obj `if test -f '../tests/test-launcher.c'; then $(CYGPATH_W) '../tests/test-launcher.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-launcher.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_launcher-test-launcher.Tpo $(DEPDIR)/test_launcher-test-launcher.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-launcher.c' object='test_launcher-test-launcher.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_launcher-test-launcher.obj `if test -f '../tests/test-launcher.c'; then $(CYGPATH_W) '../tests/test-launcher.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-launcher.c'; fi`
+
+test_launcher-launcher.o: launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_launcher-launcher.o -MD -MP -MF $(DEPDIR)/test_launcher-launcher.Tpo -c -o test_launcher-launcher.o `test -f 'launcher.c' || echo '$(srcdir)/'`launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_launcher-launcher.Tpo $(DEPDIR)/test_launcher-launcher.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='launcher.c' object='test_launcher-launcher.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_launcher-launcher.o `test -f 'launcher.c' || echo '$(srcdir)/'`launcher.c
+
+test_launcher-launcher.obj: launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_launcher-launcher.obj -MD -MP -MF $(DEPDIR)/test_launcher-launcher.Tpo -c -o test_launcher-launcher.obj `if test -f 'launcher.c'; then $(CYGPATH_W) 'launcher.c'; else $(CYGPATH_W) '$(srcdir)/launcher.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_launcher-launcher.Tpo $(DEPDIR)/test_launcher-launcher.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='launcher.c' object='test_launcher-launcher.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_launcher-launcher.obj `if test -f 'launcher.c'; then $(CYGPATH_W) 'launcher.c'; else $(CYGPATH_W) '$(srcdir)/launcher.c'; fi`
+
+test_launcher-freerdp.o: freerdp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_launcher-freerdp.o -MD -MP -MF $(DEPDIR)/test_launcher-freerdp.Tpo -c -o test_launcher-freerdp.o `test -f 'freerdp.c' || echo '$(srcdir)/'`freerdp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_launcher-freerdp.Tpo $(DEPDIR)/test_launcher-freerdp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='freerdp.c' object='test_launcher-freerdp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_launcher-freerdp.o `test -f 'freerdp.c' || echo '$(srcdir)/'`freerdp.c
+
+test_launcher-freerdp.obj: freerdp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_launcher-freerdp.obj -MD -MP -MF $(DEPDIR)/test_launcher-freerdp.Tpo -c -o test_launcher-freerdp.obj `if test -f 'freerdp.c'; then $(CYGPATH_W) 'freerdp.c'; else $(CYGPATH_W) '$(srcdir)/freerdp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_launcher-freerdp.Tpo $(DEPDIR)/test_launcher-freerdp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='freerdp.c' object='test_launcher-freerdp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_launcher_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_launcher-freerdp.obj `if test -f 'freerdp.c'; then $(CYGPATH_W) 'freerdp.c'; else $(CYGPATH_W) '$(srcdir)/freerdp.c'; fi`
+
+test_mru-test-profile.o: ../tests/test-profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -MT test_mru-test-profile.o -MD -MP -MF $(DEPDIR)/test_mru-test-profile.Tpo -c -o test_mru-test-profile.o `test -f '../tests/test-profile.c' || echo '$(srcdir)/'`../tests/test-profile.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_mru-test-profile.Tpo $(DEPDIR)/test_mru-test-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-profile.c' object='test_mru-test-profile.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -c -o test_mru-test-profile.o `test -f '../tests/test-profile.c' || echo '$(srcdir)/'`../tests/test-profile.c
+
+test_mru-test-profile.obj: ../tests/test-profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -MT test_mru-test-profile.obj -MD -MP -MF $(DEPDIR)/test_mru-test-profile.Tpo -c -o test_mru-test-profile.obj `if test -f '../tests/test-profile.c'; then $(CYGPATH_W) '../tests/test-profile.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-profile.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_mru-test-profile.Tpo $(DEPDIR)/test_mru-test-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-profile.c' object='test_mru-test-profile.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -c -o test_mru-test-profile.obj `if test -f '../tests/test-profile.c'; then $(CYGPATH_W) '../tests/test-profile.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-profile.c'; fi`
+
+test_mru-profile.o: profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -MT test_mru-profile.o -MD -MP -MF $(DEPDIR)/test_mru-profile.Tpo -c -o test_mru-profile.o `test -f 'profile.c' || echo '$(srcdir)/'`profile.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_mru-profile.Tpo $(DEPDIR)/test_mru-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='profile.c' object='test_mru-profile.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -c -o test_mru-profile.o `test -f 'profile.c' || echo '$(srcdir)/'`profile.c
+
+test_mru-profile.obj: profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -MT test_mru-profile.obj -MD -MP -MF $(DEPDIR)/test_mru-profile.Tpo -c -o test_mru-profile.obj `if test -f 'profile.c'; then $(CYGPATH_W) 'profile.c'; else $(CYGPATH_W) '$(srcdir)/profile.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_mru-profile.Tpo $(DEPDIR)/test_mru-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='profile.c' object='test_mru-profile.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_mru_CPPFLAGS) $(CPPFLAGS) $(test_mru_CFLAGS) $(CFLAGS) -c -o test_mru-profile.obj `if test -f 'profile.c'; then $(CYGPATH_W) 'profile.c'; else $(CYGPATH_W) '$(srcdir)/profile.c'; fi`
+
+test_profile-test-profile.o: ../tests/test-profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_profile-test-profile.o -MD -MP -MF $(DEPDIR)/test_profile-test-profile.Tpo -c -o test_profile-test-profile.o `test -f '../tests/test-profile.c' || echo '$(srcdir)/'`../tests/test-profile.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_profile-test-profile.Tpo $(DEPDIR)/test_profile-test-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-profile.c' object='test_profile-test-profile.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_profile-test-profile.o `test -f '../tests/test-profile.c' || echo '$(srcdir)/'`../tests/test-profile.c
+
+test_profile-test-profile.obj: ../tests/test-profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_profile-test-profile.obj -MD -MP -MF $(DEPDIR)/test_profile-test-profile.Tpo -c -o test_profile-test-profile.obj `if test -f '../tests/test-profile.c'; then $(CYGPATH_W) '../tests/test-profile.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-profile.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_profile-test-profile.Tpo $(DEPDIR)/test_profile-test-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-profile.c' object='test_profile-test-profile.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_profile-test-profile.obj `if test -f '../tests/test-profile.c'; then $(CYGPATH_W) '../tests/test-profile.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-profile.c'; fi`
+
+test_profile-profile.o: profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_profile-profile.o -MD -MP -MF $(DEPDIR)/test_profile-profile.Tpo -c -o test_profile-profile.o `test -f 'profile.c' || echo '$(srcdir)/'`profile.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_profile-profile.Tpo $(DEPDIR)/test_profile-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='profile.c' object='test_profile-profile.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_profile-profile.o `test -f 'profile.c' || echo '$(srcdir)/'`profile.c
+
+test_profile-profile.obj: profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_profile-profile.obj -MD -MP -MF $(DEPDIR)/test_profile-profile.Tpo -c -o test_profile-profile.obj `if test -f 'profile.c'; then $(CYGPATH_W) 'profile.c'; else $(CYGPATH_W) '$(srcdir)/profile.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_profile-profile.Tpo $(DEPDIR)/test_profile-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='profile.c' object='test_profile-profile.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_profile_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_profile-profile.obj `if test -f 'profile.c'; then $(CYGPATH_W) 'profile.c'; else $(CYGPATH_W) '$(srcdir)/profile.c'; fi`
+
+test_session-test-session.o: ../tests/test-session.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_session-test-session.o -MD -MP -MF $(DEPDIR)/test_session-test-session.Tpo -c -o test_session-test-session.o `test -f '../tests/test-session.c' || echo '$(srcdir)/'`../tests/test-session.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_session-test-session.Tpo $(DEPDIR)/test_session-test-session.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-session.c' object='test_session-test-session.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_session-test-session.o `test -f '../tests/test-session.c' || echo '$(srcdir)/'`../tests/test-session.c
+
+test_session-test-session.obj: ../tests/test-session.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_session-test-session.obj -MD -MP -MF $(DEPDIR)/test_session-test-session.Tpo -c -o test_session-test-session.obj `if test -f '../tests/test-session.c'; then $(CYGPATH_W) '../tests/test-session.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-session.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_session-test-session.Tpo $(DEPDIR)/test_session-test-session.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-session.c' object='test_session-test-session.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_session-test-session.obj `if test -f '../tests/test-session.c'; then $(CYGPATH_W) '../tests/test-session.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-session.c'; fi`
+
+test_session-session.o: session.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_session-session.o -MD -MP -MF $(DEPDIR)/test_session-session.Tpo -c -o test_session-session.o `test -f 'session.c' || echo '$(srcdir)/'`session.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_session-session.Tpo $(DEPDIR)/test_session-session.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='session.c' object='test_session-session.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_session-session.o `test -f 'session.c' || echo '$(srcdir)/'`session.c
+
+test_session-session.obj: session.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_session-session.obj -MD -MP -MF $(DEPDIR)/test_session-session.Tpo -c -o test_session-session.obj `if test -f 'session.c'; then $(CYGPATH_W) 'session.c'; else $(CYGPATH_W) '$(srcdir)/session.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_session-session.Tpo $(DEPDIR)/test_session-session.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='session.c' object='test_session-session.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_session_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_session-session.obj `if test -f 'session.c'; then $(CYGPATH_W) 'session.c'; else $(CYGPATH_W) '$(srcdir)/session.c'; fi`
+
+test_ui-test-ui.o: ../tests/test-ui.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-test-ui.o -MD -MP -MF $(DEPDIR)/test_ui-test-ui.Tpo -c -o test_ui-test-ui.o `test -f '../tests/test-ui.c' || echo '$(srcdir)/'`../tests/test-ui.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-test-ui.Tpo $(DEPDIR)/test_ui-test-ui.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-ui.c' object='test_ui-test-ui.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-test-ui.o `test -f '../tests/test-ui.c' || echo '$(srcdir)/'`../tests/test-ui.c
+
+test_ui-test-ui.obj: ../tests/test-ui.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-test-ui.obj -MD -MP -MF $(DEPDIR)/test_ui-test-ui.Tpo -c -o test_ui-test-ui.obj `if test -f '../tests/test-ui.c'; then $(CYGPATH_W) '../tests/test-ui.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-ui.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-test-ui.Tpo $(DEPDIR)/test_ui-test-ui.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../tests/test-ui.c' object='test_ui-test-ui.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-test-ui.obj `if test -f '../tests/test-ui.c'; then $(CYGPATH_W) '../tests/test-ui.c'; else $(CYGPATH_W) '$(srcdir)/../tests/test-ui.c'; fi`
+
+test_ui-support.o: support.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-support.o -MD -MP -MF $(DEPDIR)/test_ui-support.Tpo -c -o test_ui-support.o `test -f 'support.c' || echo '$(srcdir)/'`support.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-support.Tpo $(DEPDIR)/test_ui-support.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='support.c' object='test_ui-support.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-support.o `test -f 'support.c' || echo '$(srcdir)/'`support.c
+
+test_ui-support.obj: support.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-support.obj -MD -MP -MF $(DEPDIR)/test_ui-support.Tpo -c -o test_ui-support.obj `if test -f 'support.c'; then $(CYGPATH_W) 'support.c'; else $(CYGPATH_W) '$(srcdir)/support.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-support.Tpo $(DEPDIR)/test_ui-support.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='support.c' object='test_ui-support.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-support.obj `if test -f 'support.c'; then $(CYGPATH_W) 'support.c'; else $(CYGPATH_W) '$(srcdir)/support.c'; fi`
+
+test_ui-freerdp.o: freerdp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-freerdp.o -MD -MP -MF $(DEPDIR)/test_ui-freerdp.Tpo -c -o test_ui-freerdp.o `test -f 'freerdp.c' || echo '$(srcdir)/'`freerdp.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-freerdp.Tpo $(DEPDIR)/test_ui-freerdp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='freerdp.c' object='test_ui-freerdp.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-freerdp.o `test -f 'freerdp.c' || echo '$(srcdir)/'`freerdp.c
+
+test_ui-freerdp.obj: freerdp.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-freerdp.obj -MD -MP -MF $(DEPDIR)/test_ui-freerdp.Tpo -c -o test_ui-freerdp.obj `if test -f 'freerdp.c'; then $(CYGPATH_W) 'freerdp.c'; else $(CYGPATH_W) '$(srcdir)/freerdp.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-freerdp.Tpo $(DEPDIR)/test_ui-freerdp.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='freerdp.c' object='test_ui-freerdp.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-freerdp.obj `if test -f 'freerdp.c'; then $(CYGPATH_W) 'freerdp.c'; else $(CYGPATH_W) '$(srcdir)/freerdp.c'; fi`
+
+test_ui-connect.o: connect.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-connect.o -MD -MP -MF $(DEPDIR)/test_ui-connect.Tpo -c -o test_ui-connect.o `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-connect.Tpo $(DEPDIR)/test_ui-connect.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='connect.c' object='test_ui-connect.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-connect.o `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
+
+test_ui-connect.obj: connect.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-connect.obj -MD -MP -MF $(DEPDIR)/test_ui-connect.Tpo -c -o test_ui-connect.obj `if test -f 'connect.c'; then $(CYGPATH_W) 'connect.c'; else $(CYGPATH_W) '$(srcdir)/connect.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-connect.Tpo $(DEPDIR)/test_ui-connect.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='connect.c' object='test_ui-connect.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-connect.obj `if test -f 'connect.c'; then $(CYGPATH_W) 'connect.c'; else $(CYGPATH_W) '$(srcdir)/connect.c'; fi`
+
+test_ui-connection.o: connection.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-connection.o -MD -MP -MF $(DEPDIR)/test_ui-connection.Tpo -c -o test_ui-connection.o `test -f 'connection.c' || echo '$(srcdir)/'`connection.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-connection.Tpo $(DEPDIR)/test_ui-connection.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='connection.c' object='test_ui-connection.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-connection.o `test -f 'connection.c' || echo '$(srcdir)/'`connection.c
+
+test_ui-connection.obj: connection.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-connection.obj -MD -MP -MF $(DEPDIR)/test_ui-connection.Tpo -c -o test_ui-connection.obj `if test -f 'connection.c'; then $(CYGPATH_W) 'connection.c'; else $(CYGPATH_W) '$(srcdir)/connection.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-connection.Tpo $(DEPDIR)/test_ui-connection.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='connection.c' object='test_ui-connection.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-connection.obj `if test -f 'connection.c'; then $(CYGPATH_W) 'connection.c'; else $(CYGPATH_W) '$(srcdir)/connection.c'; fi`
+
+test_ui-launcher.o: launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-launcher.o -MD -MP -MF $(DEPDIR)/test_ui-launcher.Tpo -c -o test_ui-launcher.o `test -f 'launcher.c' || echo '$(srcdir)/'`launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-launcher.Tpo $(DEPDIR)/test_ui-launcher.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='launcher.c' object='test_ui-launcher.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-launcher.o `test -f 'launcher.c' || echo '$(srcdir)/'`launcher.c
+
+test_ui-launcher.obj: launcher.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-launcher.obj -MD -MP -MF $(DEPDIR)/test_ui-launcher.Tpo -c -o test_ui-launcher.obj `if test -f 'launcher.c'; then $(CYGPATH_W) 'launcher.c'; else $(CYGPATH_W) '$(srcdir)/launcher.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-launcher.Tpo $(DEPDIR)/test_ui-launcher.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='launcher.c' object='test_ui-launcher.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-launcher.obj `if test -f 'launcher.c'; then $(CYGPATH_W) 'launcher.c'; else $(CYGPATH_W) '$(srcdir)/launcher.c'; fi`
+
+test_ui-session.o: session.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-session.o -MD -MP -MF $(DEPDIR)/test_ui-session.Tpo -c -o test_ui-session.o `test -f 'session.c' || echo '$(srcdir)/'`session.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-session.Tpo $(DEPDIR)/test_ui-session.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='session.c' object='test_ui-session.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-session.o `test -f 'session.c' || echo '$(srcdir)/'`session.c
+
+test_ui-session.obj: session.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-session.obj -MD -MP -MF $(DEPDIR)/test_ui-session.Tpo -c -o test_ui-session.obj `if test -f 'session.c'; then $(CYGPATH_W) 'session.c'; else $(CYGPATH_W) '$(srcdir)/session.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-session.Tpo $(DEPDIR)/test_ui-session.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='session.c' object='test_ui-session.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-session.obj `if test -f 'session.c'; then $(CYGPATH_W) 'session.c'; else $(CYGPATH_W) '$(srcdir)/session.c'; fi`
+
+test_ui-credentials.o: credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-credentials.o -MD -MP -MF $(DEPDIR)/test_ui-credentials.Tpo -c -o test_ui-credentials.o `test -f 'credentials.c' || echo '$(srcdir)/'`credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-credentials.Tpo $(DEPDIR)/test_ui-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='credentials.c' object='test_ui-credentials.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-credentials.o `test -f 'credentials.c' || echo '$(srcdir)/'`credentials.c
+
+test_ui-credentials.obj: credentials.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-credentials.obj -MD -MP -MF $(DEPDIR)/test_ui-credentials.Tpo -c -o test_ui-credentials.obj `if test -f 'credentials.c'; then $(CYGPATH_W) 'credentials.c'; else $(CYGPATH_W) '$(srcdir)/credentials.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-credentials.Tpo $(DEPDIR)/test_ui-credentials.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='credentials.c' object='test_ui-credentials.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-credentials.obj `if test -f 'credentials.c'; then $(CYGPATH_W) 'credentials.c'; else $(CYGPATH_W) '$(srcdir)/credentials.c'; fi`
+
+test_ui-profile.o: profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-profile.o -MD -MP -MF $(DEPDIR)/test_ui-profile.Tpo -c -o test_ui-profile.o `test -f 'profile.c' || echo '$(srcdir)/'`profile.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-profile.Tpo $(DEPDIR)/test_ui-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='profile.c' object='test_ui-profile.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-profile.o `test -f 'profile.c' || echo '$(srcdir)/'`profile.c
+
+test_ui-profile.obj: profile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-profile.obj -MD -MP -MF $(DEPDIR)/test_ui-profile.Tpo -c -o test_ui-profile.obj `if test -f 'profile.c'; then $(CYGPATH_W) 'profile.c'; else $(CYGPATH_W) '$(srcdir)/profile.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-profile.Tpo $(DEPDIR)/test_ui-profile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='profile.c' object='test_ui-profile.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-profile.obj `if test -f 'profile.c'; then $(CYGPATH_W) 'profile.c'; else $(CYGPATH_W) '$(srcdir)/profile.c'; fi`
+
+test_ui-rdpfile.o: rdpfile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-rdpfile.o -MD -MP -MF $(DEPDIR)/test_ui-rdpfile.Tpo -c -o test_ui-rdpfile.o `test -f 'rdpfile.c' || echo '$(srcdir)/'`rdpfile.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-rdpfile.Tpo $(DEPDIR)/test_ui-rdpfile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='rdpfile.c' object='test_ui-rdpfile.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-rdpfile.o `test -f 'rdpfile.c' || echo '$(srcdir)/'`rdpfile.c
+
+test_ui-rdpfile.obj: rdpfile.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-rdpfile.obj -MD -MP -MF $(DEPDIR)/test_ui-rdpfile.Tpo -c -o test_ui-rdpfile.obj `if test -f 'rdpfile.c'; then $(CYGPATH_W) 'rdpfile.c'; else $(CYGPATH_W) '$(srcdir)/rdpfile.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-rdpfile.Tpo $(DEPDIR)/test_ui-rdpfile.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='rdpfile.c' object='test_ui-rdpfile.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-rdpfile.obj `if test -f 'rdpfile.c'; then $(CYGPATH_W) 'rdpfile.c'; else $(CYGPATH_W) '$(srcdir)/rdpfile.c'; fi`
+
+test_ui-mrulist.o: mrulist.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-mrulist.o -MD -MP -MF $(DEPDIR)/test_ui-mrulist.Tpo -c -o test_ui-mrulist.o `test -f 'mrulist.c' || echo '$(srcdir)/'`mrulist.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-mrulist.Tpo $(DEPDIR)/test_ui-mrulist.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='mrulist.c' object='test_ui-mrulist.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-mrulist.o `test -f 'mrulist.c' || echo '$(srcdir)/'`mrulist.c
+
+test_ui-mrulist.obj: mrulist.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT test_ui-mrulist.obj -MD -MP -MF $(DEPDIR)/test_ui-mrulist.Tpo -c -o test_ui-mrulist.obj `if test -f 'mrulist.c'; then $(CYGPATH_W) 'mrulist.c'; else $(CYGPATH_W) '$(srcdir)/mrulist.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/test_ui-mrulist.Tpo $(DEPDIR)/test_ui-mrulist.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='mrulist.c' object='test_ui-mrulist.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_ui_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o test_ui-mrulist.obj `if test -f 'mrulist.c'; then $(CYGPATH_W) 'mrulist.c'; else $(CYGPATH_W) '$(srcdir)/mrulist.c'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -875,6 +1356,55 @@ test-freerdp.log: test-freerdp$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-profile.log: test-profile$(EXEEXT)
+	@p='test-profile$(EXEEXT)'; \
+	b='test-profile'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-launcher.log: test-launcher$(EXEEXT)
+	@p='test-launcher$(EXEEXT)'; \
+	b='test-launcher'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-session.log: test-session$(EXEEXT)
+	@p='test-session$(EXEEXT)'; \
+	b='test-session'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-ui.log: test-ui$(EXEEXT)
+	@p='test-ui$(EXEEXT)'; \
+	b='test-ui'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-credentials.log: test-credentials$(EXEEXT)
+	@p='test-credentials$(EXEEXT)'; \
+	b='test-credentials'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-mru.log: test-mru$(EXEEXT)
+	@p='test-mru$(EXEEXT)'; \
+	b='test-mru'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test-connection-credentials.log: test-connection-credentials$(EXEEXT)
+	@p='test-connection-credentials$(EXEEXT)'; \
+	b='test-connection-credentials'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 .test.log:
 	@p='$<'; \
 	$(am__set_b); \
@@ -971,13 +1501,41 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 
 distclean: distclean-am
 		-rm -f ./$(DEPDIR)/connect.Po
+	-rm -f ./$(DEPDIR)/connection.Po
+	-rm -f ./$(DEPDIR)/credentials.Po
 	-rm -f ./$(DEPDIR)/freerdp.Po
+	-rm -f ./$(DEPDIR)/launcher.Po
 	-rm -f ./$(DEPDIR)/main.Po
 	-rm -f ./$(DEPDIR)/mrulist.Po
+	-rm -f ./$(DEPDIR)/profile.Po
 	-rm -f ./$(DEPDIR)/rdpfile.Po
+	-rm -f ./$(DEPDIR)/session.Po
 	-rm -f ./$(DEPDIR)/support.Po
+	-rm -f ./$(DEPDIR)/test_connection_credentials-test-connection-credentials.Po
+	-rm -f ./$(DEPDIR)/test_credentials-credentials.Po
+	-rm -f ./$(DEPDIR)/test_credentials-test-credentials.Po
 	-rm -f ./$(DEPDIR)/test_freerdp-freerdp.Po
 	-rm -f ./$(DEPDIR)/test_freerdp-test-freerdp.Po
+	-rm -f ./$(DEPDIR)/test_launcher-freerdp.Po
+	-rm -f ./$(DEPDIR)/test_launcher-launcher.Po
+	-rm -f ./$(DEPDIR)/test_launcher-test-launcher.Po
+	-rm -f ./$(DEPDIR)/test_mru-profile.Po
+	-rm -f ./$(DEPDIR)/test_mru-test-profile.Po
+	-rm -f ./$(DEPDIR)/test_profile-profile.Po
+	-rm -f ./$(DEPDIR)/test_profile-test-profile.Po
+	-rm -f ./$(DEPDIR)/test_session-session.Po
+	-rm -f ./$(DEPDIR)/test_session-test-session.Po
+	-rm -f ./$(DEPDIR)/test_ui-connect.Po
+	-rm -f ./$(DEPDIR)/test_ui-connection.Po
+	-rm -f ./$(DEPDIR)/test_ui-credentials.Po
+	-rm -f ./$(DEPDIR)/test_ui-freerdp.Po
+	-rm -f ./$(DEPDIR)/test_ui-launcher.Po
+	-rm -f ./$(DEPDIR)/test_ui-mrulist.Po
+	-rm -f ./$(DEPDIR)/test_ui-profile.Po
+	-rm -f ./$(DEPDIR)/test_ui-rdpfile.Po
+	-rm -f ./$(DEPDIR)/test_ui-session.Po
+	-rm -f ./$(DEPDIR)/test_ui-support.Po
+	-rm -f ./$(DEPDIR)/test_ui-test-ui.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -1024,13 +1582,41 @@ installcheck-am:
 
 maintainer-clean: maintainer-clean-am
 		-rm -f ./$(DEPDIR)/connect.Po
+	-rm -f ./$(DEPDIR)/connection.Po
+	-rm -f ./$(DEPDIR)/credentials.Po
 	-rm -f ./$(DEPDIR)/freerdp.Po
+	-rm -f ./$(DEPDIR)/launcher.Po
 	-rm -f ./$(DEPDIR)/main.Po
 	-rm -f ./$(DEPDIR)/mrulist.Po
+	-rm -f ./$(DEPDIR)/profile.Po
 	-rm -f ./$(DEPDIR)/rdpfile.Po
+	-rm -f ./$(DEPDIR)/session.Po
 	-rm -f ./$(DEPDIR)/support.Po
+	-rm -f ./$(DEPDIR)/test_connection_credentials-test-connection-credentials.Po
+	-rm -f ./$(DEPDIR)/test_credentials-credentials.Po
+	-rm -f ./$(DEPDIR)/test_credentials-test-credentials.Po
 	-rm -f ./$(DEPDIR)/test_freerdp-freerdp.Po
 	-rm -f ./$(DEPDIR)/test_freerdp-test-freerdp.Po
+	-rm -f ./$(DEPDIR)/test_launcher-freerdp.Po
+	-rm -f ./$(DEPDIR)/test_launcher-launcher.Po
+	-rm -f ./$(DEPDIR)/test_launcher-test-launcher.Po
+	-rm -f ./$(DEPDIR)/test_mru-profile.Po
+	-rm -f ./$(DEPDIR)/test_mru-test-profile.Po
+	-rm -f ./$(DEPDIR)/test_profile-profile.Po
+	-rm -f ./$(DEPDIR)/test_profile-test-profile.Po
+	-rm -f ./$(DEPDIR)/test_session-session.Po
+	-rm -f ./$(DEPDIR)/test_session-test-session.Po
+	-rm -f ./$(DEPDIR)/test_ui-connect.Po
+	-rm -f ./$(DEPDIR)/test_ui-connection.Po
+	-rm -f ./$(DEPDIR)/test_ui-credentials.Po
+	-rm -f ./$(DEPDIR)/test_ui-freerdp.Po
+	-rm -f ./$(DEPDIR)/test_ui-launcher.Po
+	-rm -f ./$(DEPDIR)/test_ui-mrulist.Po
+	-rm -f ./$(DEPDIR)/test_ui-profile.Po
+	-rm -f ./$(DEPDIR)/test_ui-rdpfile.Po
+	-rm -f ./$(DEPDIR)/test_ui-session.Po
+	-rm -f ./$(DEPDIR)/test_ui-support.Po
+	-rm -f ./$(DEPDIR)/test_ui-test-ui.Po
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

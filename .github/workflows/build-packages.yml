@@ -17,17 +17,15 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential debhelper intltool pkg-config libgtk-4-dev xvfb
+          sudo apt-get install -y build-essential debhelper intltool pkg-config libgtk-4-dev libjson-glib-dev libsecret-1-dev xvfb
       - name: Regenerate local build configuration
         run: |
           autoreconf -fi
           ./configure --prefix=/usr
       - name: Build Debian package
-        run: dpkg-buildpackage -b -us -uc
-      - name: Check GTK radio groups
-        run: |
-          cc -Isrc $(pkg-config --cflags gtk4) tests/test-radio-groups.c $(pkg-config --libs gtk4) -o /tmp/test-radio-groups
-          GSK_RENDERER=cairo xvfb-run -a /tmp/test-radio-groups
+        run: GTK_A11Y=none GTK_IM_MODULE=simple GSK_RENDERER=cairo xvfb-run -a dpkg-buildpackage -b -us -uc
+      - name: Check application and profiles
+        run: GSK_RENDERER=cairo GTK_A11Y=none GTK_IM_MODULE=simple xvfb-run -a make check
       - name: Collect packages
         run: |
           mkdir -p artifacts

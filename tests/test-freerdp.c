@@ -35,25 +35,5 @@ int main (void)
   g_assert_false (has (args, "/size:1280x720"));
   g_strfreev (args);
 
-  gchar *dir = g_dir_make_tmp ("tsclient-freerdp-test-XXXXXX", NULL);
-  gchar *client = g_build_filename (dir, "xfreerdp", NULL);
-  gchar *error = NULL;
-  g_setenv ("PATH", dir, TRUE);
-  g_assert_cmpint (tsc_launch_freerdp (&rdp, 0, &error), ==, 1);
-  g_assert_nonnull (error);
-  g_clear_pointer (&error, g_free);
-  g_assert_true (g_file_set_contents (client, "#!/bin/sh\nexit 0\n", -1, NULL));
-  g_chmod (client, 0700);
-  g_assert_cmpint (tsc_launch_freerdp (&rdp, 0, &error), ==, 0);
-  g_assert_null (error);
-  g_assert_true (g_file_set_contents (client, "#!/bin/sh\necho connection-failed >&2\nexit 7\n", -1, NULL));
-  g_chmod (client, 0700);
-  g_assert_cmpint (tsc_launch_freerdp (&rdp, 0, &error), ==, 1);
-  g_assert_nonnull (strstr (error, "connection-failed"));
-  g_free (error);
-  g_remove (client);
-  g_rmdir (dir);
-  g_free (client);
-  g_free (dir);
   return 0;
 }
